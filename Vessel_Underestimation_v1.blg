@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Vessel_Underestimation_v1.aux
+Reallocating 'name_of_file' (item size: 1) to 10 items.
+The style file: opticajnl.bst
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+Database file #1: sample.bib
+Database file #2: Merkle_Master_Library.bib
+You've used 9 entries,
+            2638 wiz_defined-function locations,
+            659 strings with 6324 characters,
+and the built_in function-call counts, 3362 in all, are:
+= -- 238
+> -- 127
+< -- 2
++ -- 59
+- -- 30
+* -- 230
+:= -- 383
+add.period$ -- 21
+call.type$ -- 9
+change.case$ -- 10
+chr.to.int$ -- 0
+cite$ -- 9
+duplicate$ -- 313
+empty$ -- 329
+format.name$ -- 37
+if$ -- 744
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 80
+newline$ -- 31
+num.names$ -- 11
+pop$ -- 128
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 85
+stack$ -- 0
+substring$ -- 169
+swap$ -- 197
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 18
+width$ -- 10
+write$ -- 80
