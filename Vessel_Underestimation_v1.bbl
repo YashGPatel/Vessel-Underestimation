@@ -2,12 +2,23 @@
 \newcommand{\enquote}[1]{``#1''}
 
 \bibitem{javedOpticalCoherenceTomography2023}
-A.~Javed, A.~Khanna, E.~Palmer, \emph{et~al.}, \enquote{Optical coherence tomography angiography: A review of the current literature,} {\protect\JournalTitle{Journal of International Medical Research}} \textbf{51}, 03000605231187933 (2023). Doi: 10.1177/03000605231187933.
+A.~Javed, A.~Khanna, E.~Palmer, \emph{et~al.}, \enquote{Optical coherence
+  tomography angiography: A review of the current literature,}
+  {\protect\JournalTitle{Journal of International Medical Research}}
+  \textbf{51}, 03000605231187933 (2023). Doi: 10.1177/03000605231187933.
 
 \bibitem{fialovaPolarizationPropertiesSingle2016}
-S.~Fialov{\'a}, M.~Augustin, M.~Gl{\"o}smann, \emph{et~al.}, \enquote{Polarization properties of single layers in the posterior eyes of mice and rats investigated using high resolution polarization sensitive optical coherence tomography,} {\protect\JournalTitle{Biomedical Optics Express}} \textbf{7}, 1479--1495 (2016).
+S.~Fialov{\'a}, M.~Augustin, M.~Gl{\"o}smann, \emph{et~al.},
+  \enquote{Polarization properties of single layers in the posterior eyes of
+  mice and rats investigated using high resolution polarization sensitive
+  optical coherence tomography,} {\protect\JournalTitle{Biomedical Optics
+  Express}} \textbf{7}, 1479--1495 (2016).
 
 \bibitem{merkleHighresolutionDepthresolvedVascular2021}
-C.~W. Merkle, M.~Augustin, D.~J. Harper, \emph{et~al.}, \enquote{High-resolution, depth-resolved vascular leakage measurements using contrast-enhanced, correlation-gated optical coherence tomography in mice,} {\protect\JournalTitle{Biomedical Optics Express}} \textbf{12}, 1774--1791 (2021).
+C.~W. Merkle, M.~Augustin, D.~J. Harper, \emph{et~al.},
+  \enquote{High-resolution, depth-resolved vascular leakage measurements using
+  contrast-enhanced, correlation-gated optical coherence tomography in mice,}
+  {\protect\JournalTitle{Biomedical Optics Express}} \textbf{12}, 1774--1791
+  (2021).
 
 \end{thebibliography}
