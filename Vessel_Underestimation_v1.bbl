@@ -21,4 +21,46 @@ C.~W. Merkle, M.~Augustin, D.~J. Harper, \emph{et~al.},
   {\protect\JournalTitle{Biomedical Optics Express}} \textbf{12}, 1774--1791
   (2021).
 
+\bibitem{panUltrasensitiveDetection3D2014}
+Y.~Pan, J.~You, N.~D. Volkow, \emph{et~al.}, \enquote{Ultrasensitive detection
+  of {{3D}} cerebral microvascular network dynamics in vivo,}
+  {\protect\JournalTitle{NeuroImage}} \textbf{103}, 492--501 (2014).
+
+\bibitem{cimallaShearFlowinducedOptical2011}
+P.~Cimalla, J.~Walther, M.~Mittasch, and E.~Koch, \enquote{Shear flow-induced
+  optical inhomogeneity of blood assessed in vivo and in vitro by spectral
+  domain optical coherence tomography in the 1.3 {$\mu$}m wavelength range,}
+  {\protect\JournalTitle{Journal of Biomedical Optics}} \textbf{16}, 116020
+  (2011).
+
+\bibitem{merkleLaminarMicrovascularTransit2016}
+C.~W. Merkle and V.~J. Srinivasan, \enquote{Laminar microvascular transit time
+  distribution in the mouse somatosensory cortex revealed by {{Dynamic Contrast
+  Optical Coherence Tomography}},} {\protect\JournalTitle{NeuroImage}}
+  \textbf{125}, 350--362 (2016).
+
+\bibitem{augustinMultifunctionalOCTImage2016}
+M.~Augustin, S.~Fialov{\'a}, R.~Plasenzotti, \emph{et~al.},
+  \enquote{Multi-functional {{OCT}} image processing for rodent eyes,}  (OSA -
+  The Optical Society, Center for Medical Physics and Biomedical Engineering,
+  Medical University of Vienna, Waehringer Guertel 18-20, 4L, Vienna, A-1090,
+  Austria, 2016), p.~3. Export Date: 10 June 2020 Correspondence Address:
+  Augustin, M.; Center for Medical Physics and Biomedical Engineering, Medical
+  University of Vienna, Waehringer Guertel 18-20, 4L, Austria; email:
+  marco.augustin@meduniwien.ac.at.
+
+\bibitem{srinivasanRapidVolumetricAngiography2010}
+V.~J. Srinivasan, J.~Y. Jiang, M.~A. Yaseen, \emph{et~al.}, \enquote{Rapid
+  volumetric angiography of cortical microvasculature with optical coherence
+  tomography,} {\protect\JournalTitle{Optics Letters}} \textbf{35}, 43--45
+  (2010).
+
+\bibitem{harperRetinalAnalysisMouse2020}
+D.~J. Harper, M.~Augustin, A.~Lichtenegger, \emph{et~al.}, \enquote{Retinal
+  analysis of a mouse model of {{Alzheimer}}'s disease with multicontrast
+  optical coherence tomography,} {\protect\JournalTitle{Neurophotonics}}
+  \textbf{7}, 015006 (2020). Export Date: 4 June 2020 Correspondence Address:
+  Harper, D.J.; Medical University of Vienna, Center for Medical Physics and
+  Biomedical EngineeringAustria; email: danielle.harper@meduniwien.ac.at.
+
 \end{thebibliography}
