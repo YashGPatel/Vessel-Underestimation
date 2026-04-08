@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \newcommand{\enquote}[1]{``#1''}
 
 \bibitem{javedOpticalCoherenceTomography2023}
@@ -21,6 +21,17 @@ C.~W. Merkle, M.~Augustin, D.~J. Harper, \emph{et~al.},
   {\protect\JournalTitle{Biomedical Optics Express}} \textbf{12}, 1774--1791
   (2021).
 
+\bibitem{Son2017}
+T.~Son, B.~Wang, Y.~Lu, \emph{et~al.}, \enquote{Concurrent {{OCT}} imaging of
+  stimulus evoked retinal neural activation and hemodynamic responses,}
+  {\protect\JournalTitle{Proceedings of SPIE--the International Society for
+  Optical Engineering}} \textbf{10045}, 1004522 (2017).
+
+\bibitem{sonFunctionalOCTReveals2024}
+T.~Son, G.~Ma, and X.~Yao, \enquote{Functional {{OCT}} reveals anisotropic
+  changes of retinal flicker-evoked vasodilation,}
+  {\protect\JournalTitle{Optics Letters}} \textbf{49}, 2121--2124 (2024).
+
 \bibitem{panUltrasensitiveDetection3D2014}
 Y.~Pan, J.~You, N.~D. Volkow, \emph{et~al.}, \enquote{Ultrasensitive detection
   of {{3D}} cerebral microvascular network dynamics in vivo,}
@@ -41,12 +52,13 @@ C.~W. Merkle and V.~J. Srinivasan, \enquote{Laminar microvascular transit time
 
 \bibitem{augustinMultifunctionalOCTImage2016}
 M.~Augustin, S.~Fialov{\'a}, R.~Plasenzotti, \emph{et~al.},
-  \enquote{Multi-functional {{OCT}} image processing for rodent eyes,}  (OSA -
-  The Optical Society, Center for Medical Physics and Biomedical Engineering,
-  Medical University of Vienna, Waehringer Guertel 18-20, 4L, Vienna, A-1090,
-  Austria, 2016), p.~3. Export Date: 10 June 2020 Correspondence Address:
-  Augustin, M.; Center for Medical Physics and Biomedical Engineering, Medical
-  University of Vienna, Waehringer Guertel 18-20, 4L, Austria; email:
+  \enquote{Multi-functional {{OCT}} image processing for rodent eyes,} in
+  \emph{Optical Tomography and Spectroscopy,}  (OSA - The Optical Society,
+  Center for Medical Physics and Biomedical Engineering, Medical University of
+  Vienna, Waehringer Guertel 18-20, 4L, Vienna, A-1090, Austria, 2016), p.~3.
+  Export Date: 10 June 2020 Correspondence Address: Augustin, M.; Center for
+  Medical Physics and Biomedical Engineering, Medical University of Vienna,
+  Waehringer Guertel 18-20, 4L, Austria; email:
   marco.augustin@meduniwien.ac.at.
 
 \bibitem{srinivasanRapidVolumetricAngiography2010}
@@ -62,5 +74,26 @@ D.~J. Harper, M.~Augustin, A.~Lichtenegger, \emph{et~al.}, \enquote{Retinal
   \textbf{7}, 015006 (2020). Export Date: 4 June 2020 Correspondence Address:
   Harper, D.J.; Medical University of Vienna, Center for Medical Physics and
   Biomedical EngineeringAustria; email: danielle.harper@meduniwien.ac.at.
+
+\bibitem{untrachtTowardsStandardisingRetinal2024}
+G.~R. Untracht, M.~S. Durkee, M.~Zhao, \emph{et~al.}, \enquote{Towards
+  standardising retinal oct angiography image analysis with open-source toolbox
+  octava,} {\protect\JournalTitle{Scientific Reports}} \textbf{14} (2024).
+
+\bibitem{hormelMaximumValueProjection2018}
+T.~T. Hormel, J.~Wang, S.~T. Bailey, \emph{et~al.}, \enquote{Maximum value
+  projection produces better en face oct angiograms than mean value
+  projection,} {\protect\JournalTitle{Biomedical Optics Express}} \textbf{9},
+  6412 (2018).
+
+\bibitem{sampsonTowardsStandardizingRetinal2022}
+D.~M. Sampson, A.~M. Dubis, F.~K. Chen, \emph{et~al.}, \enquote{Towards
+  standardizing retinal optical coherence tomography angiography: a review,}
+  {\protect\JournalTitle{Light, Science \& Applications}} \textbf{11} (2022).
+
+\bibitem{leeGeneratingRetinalFlow2019}
+C.~S. Lee, A.~J. Tyring, Y.~Wu, \emph{et~al.}, \enquote{Generating retinal flow
+  maps from structural optical coherence tomography with artificial
+  intelligence,} {\protect\JournalTitle{Scientific Reports}} \textbf{9} (2019).
 
 \end{thebibliography}
