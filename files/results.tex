@@ -1,0 +1,128 @@
+% Results
+
+\subsection{Qualitative assessment of vessel underestimation}
+\label{subsec:qualitative}
+Figure~\ref{fig:enface} presents en-face OCTA maximum intensity projections of the superficial vascular plexus (SVP), intermediate capillary plexus (ICP), and deep capillary plexus (DCP) before and after intravascular administration of Intralipid 20\%. Across all three layers, vessels appeared visibly wider and brighter following contrast enhancement, consistent with prior reports that OCTA underestimates vessel calibre in the absence of a contrast agent~\cite{merkleHighresolutionDepthresolvedVascular2021}. This effect was most pronounced in the SVP, where the major retinal arteries and veins appeared noticeably thicker after contrast administration. In the ICP and DCP, the capillary networks also showed improved visibility, though the effect was less dramatic owing to the smaller vessel calibres.
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=0.55\linewidth]{figures/Figure_1.pdf}
+\caption{En-face OCTA maximum intensity projections of the superficial vascular plexus (SVP), intermediate capillary plexus (ICP), and deep capillary plexus (DCP) before (left) and after (right) intravascular administration of Intralipid 20\%. Vessels appear visibly wider and brighter post-contrast across all layers, most prominently in the SVP.}
+\label{fig:enface}
+\end{figure}
+
+To investigate the temporal dynamics of this contrast enhancement, DyC-OCT B-scans were acquired at a single cross-sectional location over time (Fig.~\ref{fig:dycoct}). Prior to contrast injection, the vessel cross-sections appeared as small, dim spots in the angiogram (Fig.~\ref{fig:dycoct}a). At peak contrast, the Intralipid uniformly filled the vascular lumen, revealing the full extent of the vessel cross-section (Fig.~\ref{fig:dycoct}b). The post-contrast phase showed a return towards baseline, though vessel cross-sections remained more visible than before injection (Fig.~\ref{fig:dycoct}c). The maximum intensity projection and corresponding binary mask over time (Figs.~\ref{fig:dycoct}d--e) illustrate the temporal evolution of the vessel appearance. The OCTA intensity time course (Fig.~\ref{fig:dycoct}f) shows a sharp increase at the time of injection, followed by a gradual decline to a new steady state that remained elevated above the pre-contrast baseline.
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=\linewidth]{figures/Figure_2.pdf}
+\caption{Dynamic-contrast OCT (DyC-OCT) B-scan angiograms at (a) pre-contrast, (b) peak contrast, and (c) post-contrast timepoints. (d) Maximum intensity projection and (e) binarisation of the vessel cross-sections over time, with coloured boxes indicating the pre-contrast (blue), peak-contrast (green), and post-contrast (red) windows. (f) Mean OCTA intensity as a function of time, showing the contrast bolus dynamics. Scale bars: 100~\textmu m.}
+\label{fig:dycoct}
+\end{figure}
+
+\FloatBarrier
+\subsection{Model-based diameter estimation}
+\label{subsec:model_fitting}
+The generalised Gaussian (GG) function was selected to accommodate the range of vessel intensity profiles encountered in the data (Fig.~\ref{fig:gg_model}a). At $\beta = 2$, the GG reduces to a standard Gaussian, while increasing $\beta$ yields progressively flat-topped profiles. Because larger vessels tend to exhibit a plateau of high angiogram signal at their centre---owing to the central stream of perpendicularly oriented RBCs---the GG provides a more flexible model than the standard Gaussian, which tapers too rapidly at the vessel shoulders. An example vessel intensity profile is shown in Fig.~\ref{fig:gg_model}b, where the GG fit (red) more closely follows the flat-topped shape of the measured profile compared with the standard Gaussian fit (blue), which underestimates the vessel width by failing to capture the shoulder region.
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=\linewidth]{figures/Figure_3.pdf}
+\caption{(a) Generalised Gaussian (GG) function for shape parameters $\beta = 1$, 2, 3, and 4. At $\beta = 2$ the function reduces to a standard Gaussian; higher $\beta$ values produce increasingly flat-topped profiles. (b) Example en-face vessel intensity profile (black) with standard Gaussian (blue) and GG (red) fits. The GG provides a closer match to the flat-topped vessel profile, particularly at the shoulders.}
+\label{fig:gg_model}
+\end{figure}
+
+\subsection{Linearity of model-based methods}
+\label{subsec:linearity_model}
+To evaluate the accuracy of the model-based diameter measurements, the modelled diameter was plotted against the contrast-enhanced ground truth diameter for each vessel across three contrast conditions: pre-contrast, peak contrast, and post-contrast (Fig.~\ref{fig:scatter_model}). Six combinations were evaluated: two projection methods (MIP and MeIP) by three model-width metrics (Gaussian $1/e^2$, GG FWHM, and GG $1/e^2$). A slope of $m = 1$ along the identity line indicates perfect agreement with the ground truth, and the coefficient of determination ($R^2$) quantifies the linearity of the relationship.
+
+For the Gaussian $1/e^2$ width, pre-contrast measurements yielded slopes of $m = 0.70$ ($R^2 = 0.83$) for MIP and $m = 0.73$ ($R^2 = 0.84$) for MeIP, indicating substantial underestimation (Figs.~\ref{fig:scatter_model}a,b). With contrast enhancement, the slopes increased markedly: peak-contrast MeIP measurements reached $m = 1.04$ ($R^2 = 0.95$), and post-contrast $m = 1.04$ ($R^2 = 0.97$), approaching unity.
+
+The GG FWHM metric consistently returned diameters well below the ground truth, with pre-contrast slopes of $m = 0.42$ (MIP) and $m = 0.43$ (MeIP), and even peak-contrast slopes of only $m = 0.66$ (MIP) and $m = 0.81$ (MeIP) (Figs.~\ref{fig:scatter_model}c,d). This systematic underestimation is expected, as the FWHM captures the width at 50\% of peak amplitude, which is inherently narrower than the full vessel extent.
+
+The GG $1/e^2$ width provided the best overall performance (Figs.~\ref{fig:scatter_model}e,f). For MeIP, peak-contrast measurements achieved $m = 0.98$ ($R^2 = 0.97$) and post-contrast measurements reached $m = 1.00$ ($R^2 = 0.97$), indicating near-perfect agreement with the ground truth. Even pre-contrast measurements with MeIP + GG $1/e^2$ showed a slope of $m = 0.71$ ($R^2 = 0.88$), representing the highest pre-contrast $R^2$ among all model-width metrics evaluated. MIP-based GG $1/e^2$ measurements similarly achieved near-unity post-contrast slopes ($m = 1.02$, $R^2 = 0.93$), though with slightly lower $R^2$ compared to MeIP.
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=\linewidth]{figures/Figure_4.pdf}
+\caption{Modelled vessel diameter versus contrast-enhanced ground truth diameter for model-based methods. Top row: maximum intensity projection (MIP); bottom row: mean intensity projection (MeIP). Columns correspond to (a,b) Gaussian $1/e^2$ width, (c,d) GG FWHM, and (e,f) GG $1/e^2$ width. Regression lines and statistics are shown for pre-contrast (blue), peak-contrast (green), and post-contrast (red) conditions. The black line indicates the identity line ($m = 1$).}
+\label{fig:scatter_model}
+\end{figure}
+
+\subsection{Linearity of binarisation-based methods}
+\label{subsec:linearity_bw}
+The same linearity analysis was performed for binarisation-based (BW) diameter measurements at five threshold levels (BW-1 through BW-5, in order of increasing stringency) for both MIP (Fig.~\ref{fig:scatter_bw_mip}) and MeIP (Fig.~\ref{fig:scatter_bw_meip}).
+
+For MIP (Fig.~\ref{fig:scatter_bw_mip}), pre-contrast slopes decreased monotonically with increasing threshold, from $m = 0.61$ ($R^2 = 0.58$) at BW-1 to $m = 0.24$ ($R^2 = 0.24$) at BW-5. Even at the lowest threshold, the pre-contrast slope fell well short of unity, and both slope and $R^2$ degraded substantially at higher thresholds. Peak-contrast measurements showed a similar decline, from $m = 0.96$ ($R^2 = 0.88$) at BW-1 to $m = 0.65$ ($R^2 = 0.74$) at BW-5. These results demonstrate that MIP binarisation is highly sensitive to the choice of threshold and that no single threshold simultaneously achieves both accurate and linear diameter estimation.
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=0.5\linewidth]{figures/Figure_5.pdf}
+\caption{Binarisation-based (BW) vessel diameter versus ground truth for maximum intensity projection (MIP) at five threshold levels: (a) BW-1 (lowest) through (e) BW-5 (highest). Regression lines and statistics are shown for pre-contrast (blue), peak-contrast (green), and post-contrast (red) conditions. Both slope and $R^2$ decrease monotonically with increasing threshold stringency.}
+\label{fig:scatter_bw_mip}
+\end{figure}
+
+For MeIP (Fig.~\ref{fig:scatter_bw_meip}), the results were more favourable. Pre-contrast slopes ranged from $m = 0.83$ ($R^2 = 0.59$) at BW-1 to $m = 0.53$ ($R^2 = 0.65$) at BW-5. Notably, the $R^2$ values remained relatively stable or even improved slightly with increasing threshold, in contrast to the steep decline observed for MIP. Peak-contrast MeIP measurements at the intermediate threshold BW-3 achieved $m = 0.99$ ($R^2 = 0.86$), closely approaching unity. However, the peak-contrast slopes at the lowest threshold BW-1 slightly overestimated the ground truth ($m = 1.14$), indicating that MeIP-based binarisation can overcompensate at lenient thresholds. Overall, MeIP provided more reliable binarisation-based measurements than MIP, consistent with the observation that mean projection preserves the lateral extent of the vessel profile more faithfully than maximum projection.
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=0.5\linewidth]{figures/Figure_6.pdf}
+\caption{Binarisation-based (BW) vessel diameter versus ground truth for mean intensity projection (MeIP) at five threshold levels: (a) BW-1 (lowest) through (e) BW-5 (highest). Regression lines and statistics are shown for pre-contrast (blue), peak-contrast (green), and post-contrast (red) conditions. MeIP yields higher slopes and more stable $R^2$ values compared with MIP (Fig.~\ref{fig:scatter_bw_mip}).}
+\label{fig:scatter_bw_meip}
+\end{figure}
+
+\subsection{Repeatability and linearity summary}
+\label{subsec:repeatability}
+To directly compare the repeatability and linearity of all methods, the coefficient of variation (CoV) and $R^2$ were computed across repeated measurements and plotted as bar charts for MIP and MeIP separately (Fig.~\ref{fig:cov_r2}).
+
+For MIP-based measurements (Fig.~\ref{fig:cov_r2}a), the CoV of BW methods increased with threshold stringency, rising from approximately 0.19 at BW-1 to 0.46 at BW-5 for pre-contrast data. In contrast, the model-based methods (G-$e^2$, GG-HM, GG-$e^2$) exhibited CoV values of approximately 0.24--0.26 for pre-contrast data, with reduced values of approximately 0.18 post-contrast. For MeIP-based measurements (Fig.~\ref{fig:cov_r2}b), the BW CoV values were lower and more stable across thresholds (approximately 0.17--0.19 pre-contrast), and the model-based CoV values were lower still (approximately 0.13--0.15 pre-contrast, decreasing to approximately 0.08 post-contrast).
+
+The linearity results followed a complementary pattern. For MIP (Fig.~\ref{fig:cov_r2}c), the BW $R^2$ values declined sharply from approximately 0.59 at BW-1 to 0.23 at BW-5 for pre-contrast data, while the model-based $R^2$ values ranged from 0.80 to 0.86 pre-contrast and reached 0.90--0.97 at peak and post-contrast. For MeIP (Fig.~\ref{fig:cov_r2}d), the BW $R^2$ values were more stable (approximately 0.60--0.65 pre-contrast) but still substantially lower than the model-based values (0.83--0.85 pre-contrast, reaching 0.95--0.98 post-contrast). Taken together, these results demonstrate that model-based methods consistently outperformed binarisation in both repeatability and linearity across all contrast conditions, and that MeIP-based processing yielded superior performance compared with MIP for both method categories.
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=\linewidth]{figures/Figure_7.pdf}
+\caption{Summary of repeatability and linearity across all diameter measurement methods. (a,b) Coefficient of variation (CoV) for MIP and MeIP, respectively. (c,d) Coefficient of determination ($R^2$) for MIP and MeIP, respectively. Bars are grouped by method (BW-1 through BW-5, G-$e^2$, GG-HM, GG-$e^2$) and colour-coded by contrast condition: pre-contrast (blue), peak-contrast (green), and post-contrast (red). Model-based methods consistently show lower CoV and higher $R^2$ than binarisation-based methods.}
+\label{fig:cov_r2}
+\end{figure}
+
+\subsection{Functional flicker stimulation}
+\label{subsec:flicker}
+To investigate whether the choice of diameter measurement method affects the detection of physiological vascular responses, functional flicker stimulation was performed in a C57BL/6 mouse and vessel diameter was measured before and after photoreceptor stimulation using each of the three approaches (Fig.~\ref{fig:flicker}).
+
+The Gaussian and GG model-based time series (Figs.~\ref{fig:flicker}a,b) showed visible diameter increases following stimulation onset for most of the five vessels examined, consistent with the expected neurovascular coupling-driven vasodilation. The binarised angiogram time series (Fig.~\ref{fig:flicker}c), however, showed the opposite trend: a paradoxical decrease in measured diameter following stimulation. Bar charts summarising the mean pre- and post-stimulation diameters per vessel (Figs.~\ref{fig:flicker}d--f) confirmed this pattern. For the Gaussian model, four of five vessels showed significant diameter increases ($p < 0.01$), with percentage changes of $+9.2\%$, $+9.6\%$, $+28.5\%$, and $+4.9\%$ for vessels 1, 2, 4, and 5, respectively (Fig.~\ref{fig:table}). The GG model similarly detected significant increases in three of five vessels ($+9.9\%$, $+28.4\%$, and $+3.1\%$ for vessels 2, 4, and 5). In marked contrast, the binarised method detected significant diameter \emph{decreases} in four of five vessels ($-12.5\%$, $-10.2\%$, $-4.2\%$, and $-9.3\%$ for vessels 1, 2, 3, and 5).
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=\linewidth]{figures/Figure_8.pdf}
+\caption{Functional flicker stimulation results. (a--c) Time series of vessel diameter during baseline and post-stimulation periods for (a) Gaussian model, (b) generalised Gaussian model, and (c) binarised angiogram, across five vessels. Dashed lines indicate stimulation onset and offset. (d--f) Mean diameter per vessel before (dark bars) and after (light bars) stimulation for each method; veins are shown in blue/cyan and arteries in dark/light red. Significance levels: $^{**}p < 0.01$, $^{***}p < 0.001$. (g) Angiogram signal intensity time series and (h) mean intensity per vessel before and after stimulation. Model-based methods detect the expected vasodilation, whereas the binarised method paradoxically reports vasoconstriction.}
+\label{fig:flicker}
+\end{figure}
+
+The explanation for this paradoxical binarisation result lies in the concomitant change in angiogram signal intensity. Following stimulation, the angiogram intensity decreased significantly for all five vessels ($p < 0.0005$), with reductions ranging from $-14.1\%$ to $-19.9\%$ (Figs.~\ref{fig:flicker}g,h; Fig.~\ref{fig:table}). Because the binarised diameter is derived from the number of pixels exceeding a fixed threshold, a reduction in signal intensity directly translates to fewer above-threshold pixels and hence a smaller apparent diameter---even if the true vessel diameter has increased.
+
+To quantify this confounding, the correlation between diameter change and angiogram intensity change was computed for each method (Figs.~\ref{fig:scatter_intensity},~\ref{fig:table}). For the binarised method, the per-vessel correlations were uniformly positive and strong ($\rho = 0.59$, $0.80$, $0.27$, $0.46$, $0.52$ for vessels 1--5), yielding an overall correlation of $\rho = 0.523$ ($p < 0.0005$). This indicates that the binarised diameter measurement is substantially confounded by the angiogram signal intensity. In contrast, the Gaussian model yielded an overall correlation of $\rho = -0.101$ and the GG model yielded $\rho = -0.098$, confirming that the model-based diameter measurements are effectively independent of angiogram signal intensity fluctuations. These results demonstrate that model-based fitting not only provides more accurate and repeatable diameter measurements, but also recovers physiologically meaningful vascular responses that binarisation-based methods can misrepresent.
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=\linewidth]{figures/Figure_9.pdf}
+\caption{Measured vessel diameter as a function of angiogram signal intensity during functional flicker stimulation for (a) Gaussian model, (b) generalised Gaussian model, and (c) binarised angiogram. Each colour represents one of five vessels; $\rho$ denotes the Pearson correlation coefficient. The binarised method shows strong positive correlations between diameter and signal intensity, indicating confounding, whereas model-based methods show weak or no correlation.}
+\label{fig:scatter_intensity}
+\end{figure}
+
+\begin{table}[htbp]
+\caption{Summary of flicker stimulation results. Top: percentage diameter change per vessel for each method together with corresponding $p$-values. Bottom: Pearson correlation ($\rho$) between measured diameter and angiogram signal intensity for each method and vessel. Overall correlations: Gaussian $= -0.101$, GG $= -0.098$, BW $= 0.523$.}
+\label{fig:table}
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l c c c c c c c c c c}
+\hline
+\textbf{Change in Diameter} & \multicolumn{2}{c}{\textbf{Vessel 1}} & \multicolumn{2}{c}{\textbf{Vessel 2}} & \multicolumn{2}{c}{\textbf{Vessel 3}} & \multicolumn{2}{c}{\textbf{Vessel 4}} & \multicolumn{2}{c}{\textbf{Vessel 5}} \\
+\hline
+Gaussian (\% Change) & \textbf{9.2} & $p < 0.0005$ & \textbf{9.6} & $p = 0.0019$ & 1.5 & $p = 0.59$ & \textbf{28.5} & $p < 0.0005$ & \textbf{4.9} & $p = 0.0008$ \\
+Gen.\ Gaussian (\% Change) & 1.5 & $p = 0.28$ & \textbf{9.9} & $p < 0.0005$ & $-0.6$ & $p = 0.79$ & \textbf{28.4} & $p < 0.0005$ & \textbf{3.1} & $p = 0.0034$ \\
+Binarised (\% Change) & $\mathbf{-12.5}$ & $p < 0.0005$ & $\mathbf{-10.2}$ & $p < 0.0005$ & $\mathbf{-4.2}$ & $p = 0.0011$ & 1.0 & $p = 0.404$ & $\mathbf{-9.3}$ & $p < 0.0005$ \\
+Angiogram Intensity (\% Change) & $\mathbf{-14.1}$ & $p < 0.0005$ & $\mathbf{-18.2}$ & $p < 0.0005$ & $\mathbf{-14.3}$ & $p < 0.0005$ & $\mathbf{-19.9}$ & $p < 0.0005$ & $\mathbf{-16.3}$ & $p < 0.0005$ \\
+\hline
+\\[-0.5em]
+\hline
+\textbf{Correlation to Intensity} & \multicolumn{2}{c}{\textbf{Vessel 1}} & \multicolumn{2}{c}{\textbf{Vessel 2}} & \multicolumn{2}{c}{\textbf{Vessel 3}} & \multicolumn{2}{c}{\textbf{Vessel 4}} & \multicolumn{2}{c}{\textbf{Vessel 5}} \\
+\hline
+Gaussian Diameter Corr.\ & $-0.07$ & $p = 0.48$ & \textbf{0.23} & $p = 0.019$ & $\mathbf{-0.28}$ & $p = 0.0044$ & $-0.15$ & $p = 0.14$ & $\mathbf{-0.24}$ & $p = 0.018$ \\
+Gen.\ Gaussian Diameter Corr.\ & 0.03 & $p = 0.79$ & 0.07 & $p = 0.47$ & $\mathbf{-0.28}$ & $p = 0.0056$ & $-0.14$ & $p = 0.16$ & $-0.18$ & $p = 0.081$ \\
+Binarised Diameter Corr.\ & \textbf{0.59} & $p < 0.0005$ & \textbf{0.80} & $p < 0.0005$ & \textbf{0.27} & $p = 0.0077$ & \textbf{0.46} & $p < 0.0005$ & \textbf{0.52} & $p < 0.0005$ \\
+\hline
+\end{tabular}%
+}
+\end{table}

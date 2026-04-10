@@ -9,3 +9,6 @@ It is clear from the results that model-based approaches outperform traditional 
 
 \subsection{Threshholding}
 The results presented here used a basic, global threshold for the binarization of the angiogram data.  There are numerous other approaches for binarizing the angiogram, which will most likely each behave differently.  For example, angiogram signals can be enhanced with vesselness filters and dynamic thresholds can be used to binarize images with varying SNR.  When applying a vesselness filter, it is possible to enhance the shape of the angiogram and omit noise, but it is also possible for such enhancement to overcompensate the signal, leading to larger than expected vessel appearance.  Dynamic thresholding can also yield a more uniform angiogram appearance, but similarly risks over- or undercompensating vessels given that threshold level directly affects the measured diameter.  Further analysis of these other methods would be required to determine their efficacy in returning accurate and precise diameter values. 
+
+\subsection{Literature Comparison}
+Discuss the paper~\cite{hormelMaximumValueProjection2018}: `Maximum value projection produces better enface OCT angiograms than mean value projection'.
