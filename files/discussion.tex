@@ -1,6 +1,12 @@
 % Discussion
 \subsection{Maximum Intensity or Mean Intensity?}
 
+\begin{figure}[htbp]
+\centering\includegraphics[width=\linewidth]{figures/Figure_9.pdf}
+\caption{Measured vessel diameter as a function of angiogram signal intensity during functional flicker stimulation for (a) Gaussian model, (b) generalised Gaussian model, and (c) binarised angiogram. Each colour represents one of five vessels; $\rho$ denotes the Pearson correlation coefficient. The binarised method shows strong positive correlations between diameter and signal intensity, indicating confounding, whereas model-based methods show weak or no correlation.}
+~\label{fig:scatter_intensity}
+\end{figure}
+
 \subsection{Future Directions}
 A future direction of this work to to move toward fully automated segmentation and calculation vessel diameters from enface angiogram maps.  While ROIs were manually selected in this work, it is also possible to automatically segment angiographic data using traditional skeletonization methods, which are commonly used for automated OCTA analysis.  From a skeletonized image, vessel angle can be computed for further extraction of vascular cross-sections perpendicular to the vessel axis.  These cross-sections could then be processed using the model-based methods described here to enable fully automated analysis of 3D OCTA data sets, rather than the semi-automated approach shown here for 2D OCTA data.  This type of model-based approach is particularly important for comparing 3D volumes acquired at different time points in the mouse eye as there are often intensity losses caused by drying of the eye, cataract formation, etc.  As we have shown in this work, even low levels of intensity loss occurring over a short time window can significantly impact the measured vessel diameter when using a binarization approach, but not when using the models presented here.
 

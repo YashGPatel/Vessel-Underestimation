@@ -29,7 +29,7 @@ For each vessel of interest, a rectangular ROI encompassing the vessel cross-sec
 
 \subsubsection{Vessel diameter calculation}
 \label{subsubsec:vessel_dameter}
-Two parametric models were then fitted to these one-dimensional intensity profiles from the previous step, using nonlinear least-squares regression in MATLAB.
+Two parametric models were then fitted (Fig.~\ref{fig:gg_model}a) to these one-dimensional intensity profiles from the previous step, using nonlinear least-squares regression in MATLAB.
 
 The first model was a standard Gaussian function:
 \begin{equation}
@@ -44,6 +44,12 @@ The second model was a generalised Gaussian (GG) function:
 f(x) = A \exp\!\left(-{\left(\frac{|x - \mu|}{\alpha}\right)}^{\!\beta}\right) + C
 \end{equation}
 where $A$ is the peak amplitude, $\mu$ is the centre position, $\alpha$ is the scale parameter, $\beta$ is the shape parameter, and $C$ is a constant baseline offset. Given the imaging system configuration, all vessels are expected to produce at minimum a Gaussian intensity profile in the B-scan cross-section, and so profiles sharper than Gaussian profile ($\beta < 2$) are therefore not technically meaningful. The shape parameter $\beta$ was hence constrained to $\beta \geq 2$ during fitting. With this constraint, the GG accommodated to profiles ranging from Gaussian ($\beta = 2$, where $\sigma = \alpha / \sqrt{2}$) to increasingly flat-topped ($\beta > 2$).
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=\linewidth]{figures/Figure_3.pdf}
+\caption{(a) GG function for shape parameters $\beta = 1$, 2, 3, and 4. At $\beta = 2$ the function reduces to a standard Gaussian; higher $\beta$ values produce increasingly flat-topped profiles.~(b) Example en-face vessel intensity profile (black) with standard Gaussian (blue) and GG (red) fits.}
+~\label{fig:gg_model}
+\end{figure}
 
 Two standard width metrics were calculated from the fitted models: the full width at half maximum (FWHM) and the $1/e^2$ width. For the standard Gaussian fit, the $1/e^2$ width was calculated as:
 \begin{equation}
