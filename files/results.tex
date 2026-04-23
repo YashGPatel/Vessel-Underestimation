@@ -43,13 +43,13 @@ The GG FWHM metric consistently returned diameters well below the ground truth, 
 
 \subsection{Linearity and accuracy of binarisation}
 ~\label{subsec:linearity_accuracy_bw}
-Linearity and accuracy analysis was also performed for diameter measured from binarised (BW) en face images at five threshold levels (BW-1 through BW-5, in order of ascending threshold values) for both MIP (Fig.~\ref{fig:scatter_bw_mip}) and MeIP (Fig.~\ref{fig:scatter_bw_meip}).
+Linearity and accuracy analysis was also performed for diameter measured from binarised black and white (BW) en face images at five threshold levels (BW-1 through BW-5, in order of ascending threshold values) for both MIP (Fig.~\ref{fig:scatter_bw_mip}) and MeIP (Fig.~\ref{fig:scatter_bw_meip}).
 
 For MIP (Fig.~\ref{fig:scatter_bw_mip}), pre-contrast slopes values decreased with increasing threshold, from $m = 0.61$ ($R^2 = 0.58$) at BW-1 to $m = 0.24$ ($R^2 = 0.24$) at BW-5. Both slope and $R^2$ degraded substantially at higher threshold values. Peak contrast measurements showed a similar decline, from $m = 0.96$ ($R^2 = 0.88$) at BW-1 to $m = 0.65$ ($R^2 = 0.74$) at BW-5. Post-contrast measurements also showed a decline, from $m = 0.92$ ($R^2 = 0.76$) at BW-1 to $m = 0.54$ ($R^2 = 0.34$) at BW-5.
 
 \begin{figure}[H]
 \centering\includegraphics[width=\linewidth,height=\dimexpr\textheight-\pagetotal-8\baselineskip\relax,keepaspectratio]{figures/Figure_5.pdf}
-\caption{Vessel diameter measured from binarised (BW) images versus ground truth for MIP at five threshold levels: (a) BW-1 (lowest) through (e) BW-5 (highest). Regression lines and statistics are shown for pre-contrast (blue), peak contrast (green), and post-contrast (red). Both slope $m$ and $R^2$ decrease with increasing threshold values.}
+\caption{Vessel diameter measured from BW images versus ground truth for MIP at five threshold levels: (a) BW-1 (lowest) through (e) BW-5 (highest). Regression lines and statistics are shown for pre-contrast (blue), peak contrast (green), and post-contrast (red). Both slope $m$ and $R^2$ decrease with increasing threshold values.}
 ~\label{fig:scatter_bw_mip}
 \end{figure}
 
@@ -57,21 +57,21 @@ For MeIP (Fig.~\ref{fig:scatter_bw_meip}), the pre-contrast slope decreased from
 
 \begin{figure}[H]
 \centering\includegraphics[width=\linewidth,height=\dimexpr\textheight-\pagetotal-8\baselineskip\relax,keepaspectratio]{figures/Figure_6.pdf}
-\caption{Vessel diameter measured from binarised (BW) images versus ground truth for MeIP at five threshold levels: (a) BW-1 (lowest) through (e) BW-5 (highest). Regression lines and statistics are shown for pre-contrast (blue), peak contrast (green), and post-contrast (red) conditions. MeIP yielded higher slopes and more stable $R^2$ values compared to MIP (Fig.~\ref{fig:scatter_bw_mip}).}
+\caption{Vessel diameter measured from BW images versus ground truth for MeIP at five threshold levels: (a) BW-1 (lowest) through (e) BW-5 (highest). Regression lines and statistics are shown for pre-contrast (blue), peak contrast (green), and post-contrast (red) conditions. MeIP yielded higher slopes and more stable $R^2$ values compared to MIP (Fig.~\ref{fig:scatter_bw_mip}).}
 ~\label{fig:scatter_bw_meip}
 \end{figure}
 
 \subsection{Repeatability and linearity comparision across all methods}
 ~\label{subsec:comparision_all_methods}
-To compare the repeatability and linearity across model based and binarised methods, the coefficient of variation (CoV) and $R^2$ were computed and are plotted as bar charts for MIP and MeIP separately (Fig.~\ref{fig:cov_r2}).
+\textcolor{red}{(confirm the values reported here with the actual data, as these are just extracted from the bar plots.)}
 
-For MIP-based measurements (Fig.~\ref{fig:cov_r2}a), the CoV of BW methods increased with threshold stringency, rising from approximately 0.19 at BW-1 to 0.46 at BW-5 for pre-contrast data. In contrast, the model-based methods (G-$e^2$, GG-HM, GG-$e^2$) exhibited CoV values of approximately 0.24--0.26 for pre-contrast data, with reduced values of approximately 0.18 post-contrast. For MeIP-based measurements (Fig.~\ref{fig:cov_r2}b), the BW CoV values were lower and more stable across thresholds (approximately 0.17--0.19 pre-contrast), and the model-based CoV values were lower still (approximately 0.13--0.15 pre-contrast, decreasing to approximately 0.08 post-contrast).
+To compare the repeatability and linearity across BW1--5 and the model based approach, the coefficient of variation (CoV) and $R^2$ were computed (Fig.~\ref{fig:cov_r2}). For MIP based measurements (Fig.~\ref{fig:cov_r2}a), the CoV of BW method increased with increase in threshold while the CoV of the model based methods remained relatively stable. With increase in threshold values BW1--5, the CoV increased from approximately 0.2 to 0.47 for pre-contrast, 0.17 to 0.32 for peak contrast, and 0.1 to 0.18 for post-contrast data. The model based methods (G-$e^2$, GG-HM, GG-$e^2$) exhibited CoV values of approximately 0.24--0.27 for pre-contrast data, with reduced values of approximately 0.16--0.18 post-contrast. For MeIP based measurements (Fig.~\ref{fig:cov_r2}b), the BW CoV values were lower and more stable across thresholds, with values observed as approximately 0.18--0.20 pre-contrast, 0.16--0.17 peak contrast, and 0.09--0.13 post-contrast. The model based CoV values were lower as well, with values observed as approximately 0.13--0.15 pre-contrast, increasing slightly to 0.13--0.16, and then decreasing to approximately 0.09--0.10 post-contrast.
 
-The linearity results followed a complementary pattern. For MIP (Fig.~\ref{fig:cov_r2}c), the BW $R^2$ values declined sharply from approximately 0.59 at BW-1 to 0.23 at BW-5 for pre-contrast data, while the model-based $R^2$ values ranged from 0.80 to 0.86 pre-contrast and reached 0.90--0.97 at peak and post-contrast. For MeIP (Fig.~\ref{fig:cov_r2}d), the BW $R^2$ values were more stable (approximately 0.60--0.65 pre-contrast) but still substantially lower than the model-based values (0.83--0.85 pre-contrast, reaching 0.95--0.98 post-contrast). Taken together, these results demonstrate that model-based methods consistently outperformed binarisation in both repeatability and linearity across all contrast conditions, and that MeIP-based processing yielded superior performance compared with MIP for both method categories.
+The linearity results followed a complementary pattern. For MIP (Fig.~\ref{fig:cov_r2}c), the BW $R^2$ values declined sharply from approximately 0.59 at BW-1 to 0.23 at BW-5 for pre-contrast data, while the model based $R^2$ values ranged from 0.80 to 0.86 pre-contrast and reached 0.90--0.97 at peak and post-contrast. For MeIP (Fig.~\ref{fig:cov_r2}d), the BW $R^2$ values were more stable (approximately 0.60--0.65 pre-contrast) but still substantially lower than the model based values (0.83--0.85 pre-contrast, reaching 0.95--0.98 post-contrast). Taken together, these results demonstrate that model based methods consistently outperformed binarisation in both repeatability and linearity across all contrast conditions, and that MeIP based processing yielded superior performance compared with MIP for both method categories.
 
 \begin{figure}[H]
 \centering\includegraphics[width=\linewidth,height=\dimexpr\textheight-\pagetotal-10\baselineskip\relax,keepaspectratio]{figures/Figure_7.pdf}
-\caption{Summary of repeatability and linearity across all diameter measurement methods. (a,b) Coefficient of variation (CoV) for MIP and MeIP, respectively. (c,d) Coefficient of determination ($R^2$) for MIP and MeIP, respectively. Bars are grouped by method (BW-1 through BW-5, G-$e^2$, GG-HM, GG-$e^2$) and colour-coded by contrast condition: pre-contrast (blue), peak-contrast (green), and post-contrast (red). Model-based methods consistently show lower CoV and higher $R^2$ than binarisation-based methods.}
+\caption{Summary of repeatability and linearity across all diameter measurement methods. (a,b) Coefficient of variation (CoV) for MIP and MeIP, respectively. (c,d) Coefficient of determination ($R^2$) for MIP and MeIP, respectively. Bars are grouped by method (BW-1 through BW-5, G-$e^2$, GG-HM, GG-$e^2$) and colour-coded by contrast condition: pre-contrast (blue), peak-contrast (green), and post-contrast (red). Model based methods consistently show lower CoV and higher $R^2$ than binarisation based methods.}
 ~\label{fig:cov_r2}
 \end{figure}
 
