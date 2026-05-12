@@ -90,4 +90,10 @@ C.~S. Lee, A.~J. Tyring, Y.~Wu, \emph{et~al.}, \enquote{Generating retinal flow
   maps from structural optical coherence tomography with artificial
   intelligence,} {\protect\JournalTitle{Scientific Reports}} \textbf{9} (2019).
 
+\bibitem{bernucciInvestigationArtifactsRetinal2018}
+M.~T. Bernucci, C.~W. Merkle, and V.~J. Srinivasan, \enquote{Investigation of
+  artifacts in retinal and choroidal {{OCT}} angiography with a contrast
+  agent,} {\protect\JournalTitle{Biomedical Optics Express}} \textbf{9},
+  1020--1040 (2018).
+
 \end{thebibliography}
