@@ -32,13 +32,13 @@ DyC OCTA projections helped visualise the temporal changes in vessel diameter pr
 \label{fig:dycoct}
 \end{figure}
 
-\subsection{Accuracy and linearity of diameter measurements}
-\label{subsec:linearity_accuracy_model}
-To evaluate the accuracy and linearity of all diameter measurement approaches, the calculated diameter values were plotted against the ground truth for each vessel across three conditions: pre-contrast, peak contrast, and post-contrast. A linear regression was fitted to each condition, yielding the slope ($m$) and coefficient of determination ($R^2$), which are summarised in Table~\ref{tab:accuracy_linearity}. A slope of $m = 1$ (black line) indicated perfect agreement with the ground truth, and $R^2$ quantified the goodness of fit of the linear model. For the model-based methods, six combinations were evaluated: two projection methods (MIP and MeIP) by three width metrics ($w_{1/e^2,\,\mathrm{G}}$, $\mathrm{FWHM}_{\mathrm{GG}}$, and $w_{1/e^2,\,\mathrm{GG}}$; Fig.~\ref{fig:scatter_model}). For the binarisation-based methods, diameter was measured at five threshold levels (BW-1 through BW-5) for both MIP (Fig.~\ref{fig:scatter_bw_mip}) and MeIP (Fig.~\ref{fig:scatter_bw_meip}). 
+\subsection{Accuracy and precision of diameter measurements}
+\label{subsec:accuracy_precision}
+To evaluate the accuracy and precision of all diameter measurement approaches, the calculated diameter values were plotted against the ground truth for each vessel across three conditions: pre-contrast, peak contrast, and post-contrast. A linear regression was fitted to each condition, yielding the slope ($m$) and coefficient of determination ($R^2$). A slope of $m = 1$ (black line) indicated perfect agreement with the ground truth, and $R^2$ quantified the goodness of fit of the linear model. Additionally, the coefficient of variation (CoV) was computed for each method to assess measurement precision (repeatability). All metrics are summarised in Table~\ref{tab:accuracy_linearity}. For the model-based methods, six combinations were evaluated: two projection methods (MIP and MeIP) by three width metrics ($w_{1/e^2,\,\mathrm{G}}$, $\mathrm{FWHM}_{\mathrm{GG}}$, and $w_{1/e^2,\,\mathrm{GG}}$; Fig.~\ref{fig:scatter_model}). For the binarisation-based methods, diameter was measured at five threshold levels (BW-1 through BW-5) for both MIP (Fig.~\ref{fig:scatter_bw_mip}) and MeIP (Fig.~\ref{fig:scatter_bw_meip}).
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering\includegraphics[width=\linewidth,height=\dimexpr\textheight-\pagetotal-8\baselineskip\relax,keepaspectratio]{figures/Figure_4.pdf}
-\caption{Modelled versus ground truth vessel diameter using MIP (top row) and MeIP (bottom row). Columns correspond to (a,b) Gaussian $1/e^2$ width, (c,d) GG FWHM, and (e,f) GG $1/e^2$ width. Regression lines and statistics are shown for pre-contrast (blue), peak contrast (green), and post-contrast (red) conditions. The black line indicates the identity line ($m = 1$).}
+\caption{Modelled versus ground truth vessel diameter using MIP (top row) and MeIP (bottom row). Columns correspond to (a, b) $w_{1/e^2,\,\mathrm{G}}$, (c, d) $\mathrm{FWHM}_{\mathrm{GG}}$, and (e, f) $w_{1/e^2,\,\mathrm{GG}}$. Linear regression lines and statistics are shown for pre-contrast (blue), peak contrast (green), and post-contrast (red) conditions. The black line indicates the identity line ($m = 1$).}
 \label{fig:scatter_model}
 \end{figure}
 
@@ -46,20 +46,28 @@ All model-based methods underestimated vessel diameter in pre-contrast data, wit
 
 \begin{figure}[htbp]
 \centering\includegraphics[width=\linewidth,keepaspectratio]{figures/Figure_5.pdf}
-\caption{Vessel diameter measured from BW images versus ground truth for MIP at five threshold levels: (a) BW-1 through (e) BW-5. Regression lines and statistics are shown for pre-contrast (blue), peak contrast (green), and post-contrast (red). Both slope $m$ and $R^2$ decrease with increasing threshold values.}
+\caption{Vessel diameter measured from binarised masks versus ground truth for MIP at five threshold levels: (a) BW-1 through (e) BW-5. Linear regression lines and statistics are shown for pre-contrast (blue), peak contrast (green), and post-contrast (red) conditions.}
 \label{fig:scatter_bw_mip}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering\includegraphics[width=\linewidth,keepaspectratio]{figures/Figure_6.pdf}
-\caption{Vessel diameter measured from BW images versus ground truth for MeIP at five threshold levels: (a) BW-1 through (e) BW-5. Regression lines and statistics are shown for pre-contrast (blue), peak contrast (green), and post-contrast (red) conditions. MeIP yielded higher slopes and more stable $R^2$ values compared to MIP (Fig.~\ref{fig:scatter_bw_mip}).}
+\caption{Vessel diameter measured from binarised masks versus ground truth for MeIP at five threshold levels: (a) BW-1 through (e) BW-5. Linear regression lines and statistics are shown for pre-contrast (blue), peak contrast (green), and post-contrast (red) conditions.}
 \label{fig:scatter_bw_meip}
 \end{figure}
 
-For binarisation-based methods, the slope decreased with increase in threshold values across all contrast conditions and projections (Table~\ref{tab:accuracy_linearity}). MeIP $m$ values were consistently higher than MIP across all threshold and contrast conditions. Also, across all contrast conditions, $m$ dropped more significantly with increase in threshold for MIP than for MeIP. For MIP, the pre- and post-contrast $R^2$ decreased substantially with increase in threshold, whereas for MeIP, the $R^2$ remained relatively stable. At lower threshold values and at peak and post-contrast, MeIP overestimated the vessel diameter more than MIP. At peak and post-contrast, MeIP BW-3 achieved a slope of $m = 0.99$ and $m = 0.97$ respectively, though with a lower $R^2 = 0.86$ and $R^2 = 0.80$ respectively, compared to $w_{1/e^2,\,\mathrm{GG}}$ which achieved $m = 1.001$ with a higher $R^2 = 0.97$. Overall, MeIP provided more reliable binarisation-based diameter measurements than MIP.
+For binary mask based methods, the slope decreased with increase in threshold values across all contrast conditions and projections (Table~\ref{tab:accuracy_linearity}). MeIP $m$ values were consistently higher than MIP across all threshold and contrast conditions. Also, across all contrast conditions, $m$ dropped more significantly with increase in threshold for MIP than for MeIP. For MIP, the pre- and post-contrast $R^2$ decreased substantially with increase in threshold, whereas for MeIP, the $R^2$ remained relatively stable. At lower threshold values and at peak and post-contrast, MeIP overestimated the vessel diameter more than MIP. At peak and post-contrast, MeIP BW-3 achieved a slope of $m = 0.99$ and $m = 0.97$ respectively, though with a lower $R^2 = 0.86$ and $R^2 = 0.80$ respectively, compared to $w_{1/e^2,\,\mathrm{GG}}$ which achieved $m = 1.001$ with a higher $R^2 = 0.97$. Overall, MeIP provided more reliable binarisation-based diameter measurements than MIP.
+
+The precision of each method was assessed via the CoV (Table~\ref{tab:accuracy_linearity}, Fig.~\ref{fig:cov_r2}). For MIP, the binary mask based CoV increased substantially with threshold, whereas the model-based CoV remained stable across all contrast conditions. For MeIP, the binary mask based CoV was notably more stable across thresholds than for MIP, and the model-based CoV values were lower overall, though they increased slightly at peak contrast before decreasing post-contrast. Across both binary mask based and model-based methods, MeIP yielded lower CoV values compared to MIP pre-contrast and more stable values post-contrast. All in all, model-based methods consistently outperformed binarisation in both accuracy and precision, and MeIP yielded superior performance compared to MIP across all methods.
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=\linewidth,keepaspectratio]{figures/Figure_7.pdf}
+\caption{Summary of accuracy and precision across all diameter measurement methods. (a,\,b) Coefficient of variation (CoV) and (c,\,d) coefficient of determination ($R^2$) for MIP (a,\,c) and MeIP (b,\,d), respectively. Bars are grouped by method (BW-1 through BW-5, G-$e^2$, GG-HM, GG-$e^2$) and colour-coded by contrast condition: pre-contrast (blue), peak-contrast (green), and post-contrast (red).}
+\label{fig:cov_r2}
+\end{figure}
 
 \begin{table}[htbp]
-\caption{Summary of slope ($m$) and coefficient of determination ($R^2$) for all diameter measurement methods across pre-contrast, peak contrast, and post-contrast conditions. Methods are grouped as binarisation-based and model-based. Bold slope values indicate agreement within 10\% of unity ($0.9 \leq m \leq 1.1$).}
+\caption{Summary of slope ($m$), coefficient of determination ($R^2$), and coefficient of variation (CoV) for all diameter measurement methods across pre-contrast, peak contrast, and post-contrast conditions. Methods are grouped as binary mask based and model-based. Bold values indicate slope agreement within 10\% of unity ($0.9 \leq m \leq 1.1$), strong linearity ($R^2 \geq 0.90$), or high precision ($\mathrm{CoV} \leq 0.10$). \textcolor{red}{(confirm values with MATLAB.)}}
 \label{tab:accuracy_linearity}
 \centering
 \resizebox{\textwidth}{!}{%
@@ -77,26 +85,18 @@ Post & \textbf{0.92} & 1.11 & 0.82 & \textbf{1.03} & 0.73 & \textbf{0.97} & 0.63
 \multicolumn{17}{l}{\textit{Coefficient of determination ($R^2$)}} \\
 \hline
 Pre  & 0.58 & 0.59 & 0.54 & 0.62 & 0.45 & 0.64 & 0.34 & 0.65 & 0.24 & 0.65 & 0.83 & 0.84 & 0.79 & 0.83 & 0.87 & 0.88 \\
-Peak & 0.88 & 0.78 & 0.89 & 0.82 & 0.86 & 0.86 & 0.81 & 0.88 & 0.74 & 0.89 & 0.87 & 0.95 & 0.95 & 0.95 & 0.98 & 0.97 \\
-Post & 0.76 & 0.77 & 0.69 & 0.79 & 0.57 & 0.80 & 0.45 & 0.80 & 0.34 & 0.78 & 0.89 & 0.97 & 0.95 & 0.98 & 0.93 & 0.97 \\
+Peak & 0.88 & 0.78 & 0.89 & 0.82 & 0.86 & 0.86 & 0.81 & 0.88 & 0.74 & 0.89 & 0.87 & \textbf{0.95} & \textbf{0.95} & \textbf{0.95} & \textbf{0.98} & \textbf{0.97} \\
+Post & 0.76 & 0.77 & 0.69 & 0.79 & 0.57 & 0.80 & 0.45 & 0.80 & 0.34 & 0.78 & 0.89 & \textbf{0.97} & \textbf{0.95} & \textbf{0.98} & \textbf{0.93} & \textbf{0.97} \\
+\hline
+\multicolumn{17}{l}{\textit{Coefficient of variation (CoV)} \textcolor{red}{(values extracted from bar plots -- confirm with MATLAB)}} \\
+\hline
+Pre  & 0.20 & 0.20 & 0.24 & 0.20 & 0.29 & 0.19 & 0.37 & 0.19 & 0.47 & 0.20 & 0.26 & 0.14 & 0.26 & 0.15 & 0.25 & 0.14 \\
+Peak & 0.17 & 0.16 & 0.20 & 0.15 & 0.23 & 0.17 & 0.27 & 0.18 & 0.32 & 0.18 & 0.22 & 0.16 & 0.23 & 0.17 & 0.21 & 0.15 \\
+Post & \textbf{0.10} & 0.12 & \textbf{0.10} & 0.12 & 0.11 & 0.11 & 0.15 & \textbf{0.10} & 0.19 & \textbf{0.09} & 0.19 & \textbf{0.10} & 0.19 & 0.11 & 0.16 & \textbf{0.09} \\
 \hline
 \end{tabular}%
 }
 \end{table}
-
-\subsection{Repeatability and linearity comparison across all methods}
-\label{subsec:comparison_all_methods}
-\textcolor{red}{(confirm the values reported here with the actual data, as these are just extracted from the bar plots.)}
-
-To compare the repeatability and linearity across BW1--5 and the model based approach, the coefficient of variation (CoV) and $R^2$ were computed (Fig.~\ref{fig:cov_r2}). For MIP based measurements (Fig.~\ref{fig:cov_r2}a), the CoV of BW method increased with increase in threshold while the CoV of the model based methods remained relatively stable. With increase in threshold values BW1--5, the CoV increased from approximately 0.2 to 0.47 for pre-contrast, 0.17 to 0.32 for peak contrast, and 0.1 to 0.18 for post-contrast data. The model based methods (G-$e^2$, GG-HM, GG-$e^2$) exhibited CoV values of approximately 0.24--0.27 for pre-contrast data, with reduced values of approximately 0.16--0.18 post-contrast. For MeIP based measurements (Fig.~\ref{fig:cov_r2}b), the BW CoV values were lower and more stable across thresholds, with values observed as approximately 0.18--0.20 pre-contrast, 0.16--0.17 peak contrast, and 0.09--0.13 post-contrast. The model based CoV values were lower as well, with values observed as approximately 0.13--0.15 pre-contrast, increasing slightly to 0.13--0.16, and then decreasing to approximately 0.09--0.10 post-contrast.
-
-The linearity results followed a complementary pattern. For MIP (Fig.~\ref{fig:cov_r2}c), the BW $R^2$ values declined sharply from approximately 0.59 at BW-1 to 0.23 at BW-5 for pre-contrast data, while the model based $R^2$ values ranged from 0.80 to 0.86 pre-contrast and reached 0.90--0.97 at peak and post-contrast. For MeIP (Fig.~\ref{fig:cov_r2}d), the BW $R^2$ values were more stable (approximately 0.60--0.65 pre-contrast) but still substantially lower than the model based values (0.83--0.85 pre-contrast, reaching 0.95--0.98 post-contrast). Taken together, these results demonstrate that model based methods consistently outperformed binarisation in both repeatability and linearity across all contrast conditions, and that MeIP based processing yielded superior performance compared with MIP for both method categories.
-
-\begin{figure}[H]
-\centering\includegraphics[width=\linewidth,height=\dimexpr\textheight-\pagetotal-10\baselineskip\relax,keepaspectratio]{figures/Figure_7.pdf}
-\caption{Summary of repeatability and linearity across all diameter measurement methods. (a,b) Coefficient of variation (CoV) for MIP and MeIP, respectively. (c,d) Coefficient of determination ($R^2$) for MIP and MeIP, respectively. Bars are grouped by method (BW-1 through BW-5, G-$e^2$, GG-HM, GG-$e^2$) and colour-coded by contrast condition: pre-contrast (blue), peak-contrast (green), and post-contrast (red). Model based methods consistently show lower CoV and higher $R^2$ than binarisation based methods.}
-\label{fig:cov_r2}
-\end{figure}
 
 \subsection{Functional flicker stimulation}
 \label{subsec:flicker}
@@ -139,4 +139,4 @@ Binarised Diameter Corr.\ & \textbf{0.59} & $p < 0.0005$ & \textbf{0.80} & $p < 
 \end{tabular}%
 }
 \end{table}
-% ~\FloatBarrier~%print all pending figures/tables right here, don’t let them move past this point.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+% ~\FloatBarrier~%print all pending figures/tables right here, don’t let them move past this point.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
