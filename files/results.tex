@@ -16,7 +16,7 @@
 % \label{fig:enface}
 % \end{figure}
 
-\begin{figure}[H] 
+\begin{figure}[htb] 
 \centering\includegraphics[width=0.45\linewidth,keepaspectratio]{figures/Figure_1.pdf} 
 \caption{OCTA MIP en face of the SVP, ICP, and DCP before (left) and after (right) the administration of Intralipid 20\%. Vessels appear visibly wider and brighter post-contrast across all layers, most prominently in the larger vessels.}
 \label{fig:enface}
@@ -26,7 +26,7 @@ Figure~\ref{fig:enface} shows OCTA MIP en face of the superficial vascular plexu
 
 DyC OCTA projections helped visualise the temporal changes in vessel diameter pre- and post-contrast injection (Fig.~\ref{fig:dycoct}). Pre-contrast injection, the vessel cross-sections appeared narrower than their true diameter (Fig.~\ref{fig:dycoct}a), which could be due to lateral edge signal suppression by the RBC orientation artefact~\cite{bernucciInvestigationArtifactsRetinal2018}.~\textcolor{red}{At peak contrast, the Intralipid filled the vascular lumen uniformly and showed the full extent of the vessel cross-section (Fig.~\ref{fig:dycoct}b). However, the high scattering nature of the contrast agent produced light diffusion beyond the vessel wall, resulting in an apparent vessel diameter that slightly exceeded the true anatomical diameter. In the post-contrast phase, the signal stabilised as the initial bolus cleared, and the vessel boundaries remained more visible than before injection without the overestimation observed at peak contrast (Fig.~\ref{fig:dycoct}c). The MIP and the corresponding binary mask over time (Figs.~\ref{fig:dycoct}d--e) showed the observed temporal changes in vessel diameter across the three phases. The mean OCTA intensity (Fig.~\ref{fig:dycoct}f) showed a sharp increase post-contrast injection, followed by a decrease to a new steady state that remained elevated above the pre-contrast baseline.} These observations confirm that the contrast agent does significantly enhance vessel visibility and diameter, and that the post-contrast images show improved vessel delineation compared to pre-contrast.
 
-\begin{figure}[H]
+\begin{figure}[htb]
 \centering\includegraphics[width=\linewidth,height=\dimexpr\textheight-\pagetotal-8\baselineskip\relax,keepaspectratio]{figures/Figure_2.pdf}
 \caption{DyC-OCT B-scan angiograms at (a) pre-contrast, (b) peak contrast, and (c) post-contrast timepoints.~(d) MIP and (e) binarisation of the vessel cross-sections over time, with coloured boxes indicating the pre-contrast (blue), peak-contrast (green), and post-contrast (red) windows.~(f) Mean OCTA intensity over time, showing the temporal intensity dynamics.~\textcolor{red}{All scale bars are 100\,\textmu{}m.}}
 \label{fig:dycoct}
@@ -34,7 +34,7 @@ DyC OCTA projections helped visualise the temporal changes in vessel diameter pr
 
 \subsection{Accuracy and precision of diameter measurements}
 \label{subsec:accuracy_precision}
-To evaluate the accuracy and precision of all diameter measurement approaches, the calculated diameter values were plotted against the ground truth for each vessel across three conditions: pre-contrast, peak contrast, and post-contrast. A linear regression was fitted to each condition, yielding the slope ($m$) and coefficient of determination ($R^2$). A slope of $m = 1$ (black line) indicated perfect agreement with the ground truth, and $R^2$ quantified the goodness of fit of the linear model. Additionally, the coefficient of variation (CoV) was computed for each method to assess measurement precision (repeatability). All metrics are summarised in Table~\ref{tab:accuracy_linearity}. For the model-based methods, six combinations were evaluated: two projection methods (MIP and MeIP) by three width metrics ($w_{1/e^2,\,\mathrm{G}}$, $\mathrm{FWHM}_{\mathrm{GG}}$, and $w_{1/e^2,\,\mathrm{GG}}$; Fig.~\ref{fig:scatter_model}). For the binarisation-based methods, diameter was measured at five threshold levels (BW-1 through BW-5) for both MIP (Fig.~\ref{fig:scatter_bw_mip}) and MeIP (Fig.~\ref{fig:scatter_bw_meip}).
+The accuracy ($m$, $R^2$) and precision (CoV) of all diameter measurement methods are summarised in Table~\ref{tab:accuracy_linearity}.
 
 \begin{figure}[htbp]
 \centering\includegraphics[width=\linewidth,height=\dimexpr\textheight-\pagetotal-8\baselineskip\relax,keepaspectratio]{figures/Figure_4.pdf}
@@ -56,9 +56,9 @@ All model-based methods underestimated vessel diameter in pre-contrast data, wit
 \label{fig:scatter_bw_meip}
 \end{figure}
 
-For binary mask based methods, the slope decreased with increase in threshold values across all contrast conditions and projections (Table~\ref{tab:accuracy_linearity}). MeIP $m$ values were consistently higher than MIP across all threshold and contrast conditions. Also, across all contrast conditions, $m$ dropped more significantly with increase in threshold for MIP than for MeIP. For MIP, the pre- and post-contrast $R^2$ decreased substantially with increase in threshold, whereas for MeIP, the $R^2$ remained relatively stable. At lower threshold values and at peak and post-contrast, MeIP overestimated the vessel diameter more than MIP. At peak and post-contrast, MeIP BW-3 achieved a slope of $m = 0.99$ and $m = 0.97$ respectively, though with a lower $R^2 = 0.86$ and $R^2 = 0.80$ respectively, compared to $w_{1/e^2,\,\mathrm{GG}}$ which achieved $m = 1.001$ with a higher $R^2 = 0.97$. Overall, MeIP provided more reliable binarisation-based diameter measurements than MIP.
+For binary mask based methods, the slope decreased with increasing threshold across all contrast conditions and projections (Table~\ref{tab:accuracy_linearity}). This degradation was steeper for MIP than for MeIP. MIP slopes dropped from near unity at BW-1 to well below it at BW-5, whereas MeIP slopes declined more gradually and remained closer to unity across the threshold range. MeIP slopes were consistently higher than MIP at every threshold and contrast condition, though at lower thresholds and at peak and post-contrast, MeIP tended to slightly overestimate vessel diameter. The $R^2$ values followed a similar pattern. For MIP, pre- and post-contrast $R^2$ decreased substantially with increasing threshold, whereas for MeIP, $R^2$ remained relatively stable. Overall, MeIP provided more reliable binarisation-based diameter measurements than MIP.
 
-The precision of each method was assessed via the CoV (Table~\ref{tab:accuracy_linearity}, Fig.~\ref{fig:cov_r2}). For MIP, the binary mask based CoV increased substantially with threshold, whereas the model-based CoV remained stable across all contrast conditions. For MeIP, the binary mask based CoV was notably more stable across thresholds than for MIP, and the model-based CoV values were lower overall, though they increased slightly at peak contrast before decreasing post-contrast. Across both binary mask based and model-based methods, MeIP yielded lower CoV values compared to MIP pre-contrast and more stable values post-contrast. All in all, model-based methods consistently outperformed binarisation in both accuracy and precision, and MeIP yielded superior performance compared to MIP across all methods.
+The precision of each method was assessed via the CoV (Table~\ref{tab:accuracy_linearity}, Fig.~\ref{fig:cov_r2}). For MIP, the binary mask based CoV increased substantially with threshold, whereas the model-based CoV remained stable across all contrast conditions. For MeIP, the binary mask based CoV was notably more stable across thresholds than for MIP, and the model-based CoV values were lower overall, though they increased slightly at peak contrast before decreasing post-contrast. Across both methods, MeIP yielded lower CoV values than MIP pre-contrast and more stable values post-contrast. Among the model-based metrics, $\mathrm{FWHM}_{\mathrm{GG}}$ consistently exhibited the weakest accuracy while maintaining comparable precision. Overall, model-based methods consistently outperformed binarisation in both accuracy and precision, and MeIP yielded superior performance compared to MIP across all methods.
 
 \begin{figure}[htbp]
 \centering\includegraphics[width=\linewidth,keepaspectratio]{figures/Figure_7.pdf}
@@ -88,7 +88,7 @@ Pre  & 0.58 & 0.59 & 0.54 & 0.62 & 0.45 & 0.64 & 0.34 & 0.65 & 0.24 & 0.65 & 0.8
 Peak & 0.88 & 0.78 & 0.89 & 0.82 & 0.86 & 0.86 & 0.81 & 0.88 & 0.74 & 0.89 & 0.87 & \textbf{0.95} & \textbf{0.95} & \textbf{0.95} & \textbf{0.98} & \textbf{0.97} \\
 Post & 0.76 & 0.77 & 0.69 & 0.79 & 0.57 & 0.80 & 0.45 & 0.80 & 0.34 & 0.78 & 0.89 & \textbf{0.97} & \textbf{0.95} & \textbf{0.98} & \textbf{0.93} & \textbf{0.97} \\
 \hline
-\multicolumn{17}{l}{\textit{Coefficient of variation (CoV)} \textcolor{red}{(values extracted from bar plots -- confirm with MATLAB)}} \\
+\multicolumn{17}{l}{\textit{Coefficient of variation (CoV)} \textcolor{red}{(values extracted from bar plots, confirm with MATLAB)}} \\
 \hline
 Pre  & 0.20 & 0.20 & 0.24 & 0.20 & 0.29 & 0.19 & 0.37 & 0.19 & 0.47 & 0.20 & 0.26 & 0.14 & 0.26 & 0.15 & 0.25 & 0.14 \\
 Peak & 0.17 & 0.16 & 0.20 & 0.15 & 0.23 & 0.17 & 0.27 & 0.18 & 0.32 & 0.18 & 0.22 & 0.16 & 0.23 & 0.17 & 0.21 & 0.15 \\
@@ -100,43 +100,35 @@ Post & \textbf{0.10} & 0.12 & \textbf{0.10} & 0.12 & 0.11 & 0.11 & 0.15 & \textb
 
 \subsection{Functional flicker stimulation}
 \label{subsec:flicker}
-To investigate whether the choice of diameter measurement method affects the detection of physiological vascular responses, functional flicker stimulation was performed in a C57BL/6 mouse and vessel diameter was measured before and after photoreceptor stimulation using each of the three approaches (Fig.~\ref{fig:flicker}).
+The model-based diameter time series (Figs.~\ref{fig:flicker}a,b) showed increase in diameter post-stimulation for most of the vessels. The binary mask based diameter time series (\textcolor{red}{BW-3};Fig.~\ref{fig:flicker}c) showed a mixed trend, where most vessels showed a decrease in diameter post-stimulation. Bar plots of the mean diameter pre- and post-stimulation (Figs.~\ref{fig:flicker}d--f) confirmed this pattern. For the Gaussian model, four of five vessels showed significant diameter increases ($p < 0.01$), and the GG model showed significant increases in three of five vessels (Table~\ref{tab:flicker}). In contrast, the binary mask based diameter showed significant decreases in four of five vessels.
 
-The Gaussian and GG model-based time series (Figs.~\ref{fig:flicker}a,b) showed visible diameter increases following stimulation onset for most of the five vessels examined, consistent with the expected neurovascular coupling-driven vasodilation. The binarised angiogram time series (Fig.~\ref{fig:flicker}c), however, showed the opposite trend: a paradoxical decrease in measured diameter following stimulation. Bar charts summarising the mean pre- and post-stimulation diameters per vessel (Figs.~\ref{fig:flicker}d--f) confirmed this pattern. For the Gaussian model, four of five vessels showed significant diameter increases ($p < 0.01$), with percentage changes of $+9.2\%$, $+9.6\%$, $+28.5\%$, and $+4.9\%$ for vessels 1, 2, 4, and 5, respectively (Fig.~\ref{fig:table}). The GG model similarly detected significant increases in three of five vessels ($+9.9\%$, $+28.4\%$, and $+3.1\%$ for vessels 2, 4, and 5). In marked contrast, the binarised method detected significant diameter \emph{decreases} in four of five vessels ($-12.5\%$, $-10.2\%$, $-4.2\%$, and $-9.3\%$ for vessels 1, 2, 3, and 5).
-
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering\includegraphics[width=\linewidth,height=\dimexpr\textheight-\pagetotal-14\baselineskip\relax,keepaspectratio]{figures/Figure_8.pdf}
-\caption{Functional flicker stimulation results. (a--c) Time series of vessel diameter during baseline and post-stimulation periods for (a) Gaussian model, (b) generalised Gaussian model, and (c) binarised angiogram, across five vessels. Dashed lines indicate stimulation onset and offset. (d--f) Mean diameter per vessel before (dark bars) and after (light bars) stimulation for each method; veins are shown in blue/cyan and arteries in dark/light red. Significance levels: $^{**}p < 0.01$, $^{***}p < 0.001$. (g) Angiogram signal intensity time series and (h) mean intensity per vessel before and after stimulation. Model-based methods detect the expected vasodilation, whereas the binarised method paradoxically reports vasoconstriction.}
+\caption{Functional flicker stimulation results. (a--c) Vessel diameter time series pre- and post-stimulation for (a) Gaussian model, (b) Generalised Gaussian model, and (c) binarised angiogram, across five vessels. Vertical dashed lines indicate stimulation onset and offset. (d--f) Mean diameter per vessel before (dark bars) and after (light bars) stimulation for each method. Veins are shown in blue/cyan and arteries in dark/light red. Significance levels: $^{**}p < 0.01$, $^{***}p < 0.001$. (g) Angiogram intensity time series and (h) mean angiogram intensity per vessel pre- and post-stimulation.}
 \label{fig:flicker}
 \end{figure}
 
-The explanation for this paradoxical binarisation result lies in the concomitant change in angiogram signal intensity. Following stimulation, the angiogram intensity decreased significantly for all five vessels ($p < 0.0005$), with reductions ranging from $-14.1\%$ to $-19.9\%$ (Figs.~\ref{fig:flicker}g,h; Fig.~\ref{fig:table}). Because the binarised diameter is derived from the number of pixels exceeding a fixed threshold, a reduction in signal intensity directly translates to fewer above-threshold pixels and hence a smaller apparent diameter, even if the true vessel diameter has increased.
-
-To quantify this confounding, the correlation between diameter change and angiogram intensity change was computed for each method (Table~\ref{fig:table}). For the binarised method, the per-vessel correlations were uniformly positive and strong ($\rho = 0.59$, $0.80$, $0.27$, $0.46$, $0.52$ for vessels 1--5), yielding an overall correlation of $\rho = 0.523$ ($p < 0.0005$). This indicates that the binarised diameter measurement is substantially confounded by the angiogram signal intensity. In contrast, the Gaussian model yielded an overall correlation of $\rho = -0.101$ and the GG model yielded $\rho = -0.098$, confirming that the model-based diameter measurements are effectively independent of angiogram signal intensity fluctuations. These results demonstrate that model-based fitting not only provides more accurate and repeatable diameter measurements, but also recovers physiologically meaningful vascular responses that binarisation-based methods can misrepresent.
+The angiogram intensity time series (Fig.~\ref{fig:flicker}g) showed a visible decline in angiogram intensity during the duration of the DyC-OCT scan across all five vessels. The mean intensity comparison pre- and post-stimulation (Fig.~\ref{fig:flicker}h) confirmed that the decrease was significant for all vessels, ranging from $-14.1\%$ to $-19.9\%$ (Table~\ref{tab:flicker}). The binary mask based method showed uniformly positive per-vessel correlations, with an overall correlation of $\rho = 0.523$ ($p < 0.0005$). The Gaussian and GG models yielded overall correlations of $\rho = -0.101$ and $\rho = -0.098$, respectively. These results demonstrated that the model-based diameter calculation provided more accurate and repeatable measurements, and also recovered physiologically meaningful vascular responses that binary mask based methods misrepresented.
 
 \begin{table}[htbp]
-\caption{Summary of flicker stimulation results. Top: percentage diameter change per vessel for each method together with corresponding $p$-values. Bottom: Pearson correlation ($\rho$) between measured diameter and angiogram signal intensity for each method and vessel. Overall correlations: Gaussian $= -0.101$, GG $= -0.098$, BW $= 0.523$.}
-\label{fig:table}
+\caption{Flicker stimulation results. $\Delta d$: diameter change (\%); $\rho$: Correlation between diameter and angiogram intensity; $\Delta I$: intensity change (\%). Statistically significant values are bold ($^{*}p < 0.05$, $^{**}p < 0.01$, $^{***}p < 0.001$).}
+\label{tab:flicker}
 \centering
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{l c c c c c c c c c c}
+\footnotesize
+\begin{tabular}{l | c c | c c | c c | c}
 \hline
-\textbf{Change in Diameter} & \multicolumn{2}{c}{\textbf{Vessel 1}} & \multicolumn{2}{c}{\textbf{Vessel 2}} & \multicolumn{2}{c}{\textbf{Vessel 3}} & \multicolumn{2}{c}{\textbf{Vessel 4}} & \multicolumn{2}{c}{\textbf{Vessel 5}} \\
+ & \multicolumn{2}{c|}{\textbf{Gaussian}} & \multicolumn{2}{c|}{\textbf{GG}} & \multicolumn{2}{c|}{\textbf{Binarised}} & \textbf{Intensity} \\
+ & $\Delta d$ (\%) & $\rho$ & $\Delta d$ (\%) & $\rho$ & $\Delta d$ (\%) & $\rho$ & $\Delta I$ (\%) \\
 \hline
-Gaussian (\% Change) & \textbf{9.2} & $p < 0.0005$ & \textbf{9.6} & $p = 0.0019$ & 1.5 & $p = 0.59$ & \textbf{28.5} & $p < 0.0005$ & \textbf{4.9} & $p = 0.0008$ \\
-Gen.\ Gaussian (\% Change) & 1.5 & $p = 0.28$ & \textbf{9.9} & $p < 0.0005$ & $-0.6$ & $p = 0.79$ & \textbf{28.4} & $p < 0.0005$ & \textbf{3.1} & $p = 0.0034$ \\
-Binarised (\% Change) & $\mathbf{-12.5}$ & $p < 0.0005$ & $\mathbf{-10.2}$ & $p < 0.0005$ & $\mathbf{-4.2}$ & $p = 0.0011$ & 1.0 & $p = 0.404$ & $\mathbf{-9.3}$ & $p < 0.0005$ \\
-Angiogram Intensity (\% Change) & $\mathbf{-14.1}$ & $p < 0.0005$ & $\mathbf{-18.2}$ & $p < 0.0005$ & $\mathbf{-14.3}$ & $p < 0.0005$ & $\mathbf{-19.9}$ & $p < 0.0005$ & $\mathbf{-16.3}$ & $p < 0.0005$ \\
+Vessel 1 & $\mathbf{+9.2}^{***}$ & $-0.07$ & $+1.5$ & $0.03$ & $\mathbf{-12.5}^{***}$ & $\mathbf{0.59}^{***}$ & $\mathbf{-14.1}^{***}$ \\
+Vessel 2 & $\mathbf{+9.6}^{**}$ & $\mathbf{0.23}^{*}$ & $\mathbf{+9.9}^{***}$ & $0.07$ & $\mathbf{-10.2}^{***}$ & $\mathbf{0.80}^{***}$ & $\mathbf{-18.2}^{***}$ \\
+Vessel 3 & $+1.5$ & $\mathbf{-0.28}^{**}$ & $-0.6$ & $\mathbf{-0.28}^{**}$ & $\mathbf{-4.2}^{**}$ & $\mathbf{0.27}^{**}$ & $\mathbf{-14.3}^{***}$ \\
+Vessel 4 & $\mathbf{+28.5}^{***}$ & $-0.15$ & $\mathbf{+28.4}^{***}$ & $-0.14$ & $+1.0$ & $\mathbf{0.46}^{***}$ & $\mathbf{-19.9}^{***}$ \\
+Vessel 5 & $\mathbf{+4.9}^{***}$ & $\mathbf{-0.24}^{*}$ & $\mathbf{+3.1}^{**}$ & $-0.18$ & $\mathbf{-9.3}^{***}$ & $\mathbf{0.52}^{***}$ & $\mathbf{-16.3}^{***}$ \\
 \hline
-\\[-0.5em]
+Overall $\rho$ & & $-0.101$ & & $-0.098$ & & $0.523$ \\
 \hline
-\textbf{Correlation to Intensity} & \multicolumn{2}{c}{\textbf{Vessel 1}} & \multicolumn{2}{c}{\textbf{Vessel 2}} & \multicolumn{2}{c}{\textbf{Vessel 3}} & \multicolumn{2}{c}{\textbf{Vessel 4}} & \multicolumn{2}{c}{\textbf{Vessel 5}} \\
-\hline
-Gaussian Diameter Corr.\ & $-0.07$ & $p = 0.48$ & \textbf{0.23} & $p = 0.019$ & $\mathbf{-0.28}$ & $p = 0.0044$ & $-0.15$ & $p = 0.14$ & $\mathbf{-0.24}$ & $p = 0.018$ \\
-Gen.\ Gaussian Diameter Corr.\ & 0.03 & $p = 0.79$ & 0.07 & $p = 0.47$ & $\mathbf{-0.28}$ & $p = 0.0056$ & $-0.14$ & $p = 0.16$ & $-0.18$ & $p = 0.081$ \\
-Binarised Diameter Corr.\ & \textbf{0.59} & $p < 0.0005$ & \textbf{0.80} & $p < 0.0005$ & \textbf{0.27} & $p = 0.0077$ & \textbf{0.46} & $p < 0.0005$ & \textbf{0.52} & $p < 0.0005$ \\
-\hline
-\end{tabular}%
-}
+\end{tabular}
 \end{table}
-% ~\FloatBarrier~%print all pending figures/tables right here, don’t let them move past this point.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+
+% ~\FloatBarrier~%print all pending figures/tables right here, don’t let them move past this point
