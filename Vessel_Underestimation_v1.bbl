@@ -2,57 +2,117 @@
 \newcommand{\enquote}[1]{``#1''}
 
 \bibitem{javedOpticalCoherenceTomography2023}
-A.~Javed, A.~Khanna, E.~Palmer, \emph{et~al.}, \enquote{Optical coherence tomography angiography: A review of the current literature,} {\protect\JournalTitle{Journal of International Medical Research}} \textbf{51}, 03000605231187933 (2023). Doi: 10.1177/03000605231187933.
+A.~Javed, A.~Khanna, E.~Palmer, \emph{et~al.}, \enquote{Optical coherence
+  tomography angiography: A review of the current literature,}
+  {\protect\JournalTitle{Journal of International Medical Research}}
+  \textbf{51}, 03000605231187933 (2023). Doi: 10.1177/03000605231187933.
 
 \bibitem{fialovaPolarizationPropertiesSingle2016}
-S.~Fialov{\'a}, M.~Augustin, M.~Gl{\"o}smann, \emph{et~al.}, \enquote{Polarization properties of single layers in the posterior eyes of mice and rats investigated using high resolution polarization sensitive optical coherence tomography,} {\protect\JournalTitle{Biomedical Optics Express}} \textbf{7}, 1479--1495 (2016).
+S.~Fialov{\'a}, M.~Augustin, M.~Gl{\"o}smann, \emph{et~al.},
+  \enquote{Polarization properties of single layers in the posterior eyes of
+  mice and rats investigated using high resolution polarization sensitive
+  optical coherence tomography,} {\protect\JournalTitle{Biomedical Optics
+  Express}} \textbf{7}, 1479--1495 (2016).
 
 \bibitem{merkleHighresolutionDepthresolvedVascular2021}
-C.~W. Merkle, M.~Augustin, D.~J. Harper, \emph{et~al.}, \enquote{High-resolution, depth-resolved vascular leakage measurements using contrast-enhanced, correlation-gated optical coherence tomography in mice,} {\protect\JournalTitle{Biomedical Optics Express}} \textbf{12}, 1774--1791 (2021).
+C.~W. Merkle, M.~Augustin, D.~J. Harper, \emph{et~al.},
+  \enquote{High-resolution, depth-resolved vascular leakage measurements using
+  contrast-enhanced, correlation-gated optical coherence tomography in mice,}
+  {\protect\JournalTitle{Biomedical Optics Express}} \textbf{12}, 1774--1791
+  (2021).
 
 \bibitem{fuPhototransductionMouseRods2007}
-Y.~Fu and K.-W. Yau, \enquote{Phototransduction in mouse rods and cones,} {\protect\JournalTitle{Pfl{\"u}gers Archiv-European Journal of Physiology}} \textbf{454}, 805--819 (2007).
+Y.~Fu and K.-W. Yau, \enquote{Phototransduction in mouse rods and cones,}
+  {\protect\JournalTitle{Pfl{\"u}gers Archiv-European Journal of Physiology}}
+  \textbf{454}, 805--819 (2007).
 
 \bibitem{panUltrasensitiveDetection3D2014}
-Y.~Pan, J.~You, N.~D. Volkow, \emph{et~al.}, \enquote{Ultrasensitive detection of {{3D}} cerebral microvascular network dynamics in vivo,} {\protect\JournalTitle{NeuroImage}} \textbf{103}, 492--501 (2014).
+Y.~Pan, J.~You, N.~D. Volkow, \emph{et~al.}, \enquote{Ultrasensitive detection
+  of {{3D}} cerebral microvascular network dynamics in vivo,}
+  {\protect\JournalTitle{NeuroImage}} \textbf{103}, 492--501 (2014).
 
 \bibitem{cimallaShearFlowinducedOptical2011}
-P.~Cimalla, J.~Walther, M.~Mittasch, and E.~Koch, \enquote{Shear flow-induced optical inhomogeneity of blood assessed in vivo and in vitro by spectral domain optical coherence tomography in the 1.3 {$\mu$}m wavelength range,} {\protect\JournalTitle{Journal of Biomedical Optics}} \textbf{16}, 116020 (2011).
+P.~Cimalla, J.~Walther, M.~Mittasch, and E.~Koch, \enquote{Shear flow-induced
+  optical inhomogeneity of blood assessed in vivo and in vitro by spectral
+  domain optical coherence tomography in the 1.3 {$\mu$}m wavelength range,}
+  {\protect\JournalTitle{Journal of Biomedical Optics}} \textbf{16}, 116020
+  (2011).
 
 \bibitem{merkleLaminarMicrovascularTransit2016}
-C.~W. Merkle and V.~J. Srinivasan, \enquote{Laminar microvascular transit time distribution in the mouse somatosensory cortex revealed by {{Dynamic Contrast Optical Coherence Tomography}},} {\protect\JournalTitle{NeuroImage}} \textbf{125}, 350--362 (2016).
+C.~W. Merkle and V.~J. Srinivasan, \enquote{Laminar microvascular transit time
+  distribution in the mouse somatosensory cortex revealed by {{Dynamic Contrast
+  Optical Coherence Tomography}},} {\protect\JournalTitle{NeuroImage}}
+  \textbf{125}, 350--362 (2016).
 
 \bibitem{augustinMultifunctionalOCTImage2016}
-M.~Augustin, S.~Fialov{\'a}, R.~Plasenzotti, \emph{et~al.}, \enquote{Multi-functional {{OCT}} image processing for rodent eyes,} in \emph{Optical Tomography and Spectroscopy,}  (OSA - The Optical Society, Center for Medical Physics and Biomedical Engineering, Medical University of Vienna, Waehringer Guertel 18-20, 4L, Vienna, A-1090, Austria, 2016), p.~3. Export Date: 10 June 2020 Correspondence Address: Augustin, M.; Center for Medical Physics and Biomedical Engineering, Medical University of Vienna, Waehringer Guertel 18-20, 4L, Austria; email: marco.augustin@meduniwien.ac.at.
+M.~Augustin, S.~Fialov{\'a}, R.~Plasenzotti, \emph{et~al.},
+  \enquote{Multi-functional {{OCT}} image processing for rodent eyes,} in
+  \emph{Optical Tomography and Spectroscopy,}  (OSA - The Optical Society,
+  Center for Medical Physics and Biomedical Engineering, Medical University of
+  Vienna, Waehringer Guertel 18-20, 4L, Vienna, A-1090, Austria, 2016), p.~3.
+  Export Date: 10 June 2020 Correspondence Address: Augustin, M.; Center for
+  Medical Physics and Biomedical Engineering, Medical University of Vienna,
+  Waehringer Guertel 18-20, 4L, Austria; email:
+  marco.augustin@meduniwien.ac.at.
 
 \bibitem{srinivasanRapidVolumetricAngiography2010}
-V.~J. Srinivasan, J.~Y. Jiang, M.~A. Yaseen, \emph{et~al.}, \enquote{Rapid volumetric angiography of cortical microvasculature with optical coherence tomography,} {\protect\JournalTitle{Optics Letters}} \textbf{35}, 43--45 (2010).
+V.~J. Srinivasan, J.~Y. Jiang, M.~A. Yaseen, \emph{et~al.}, \enquote{Rapid
+  volumetric angiography of cortical microvasculature with optical coherence
+  tomography,} {\protect\JournalTitle{Optics Letters}} \textbf{35}, 43--45
+  (2010).
 
 \bibitem{harperRetinalAnalysisMouse2020}
-D.~J. Harper, M.~Augustin, A.~Lichtenegger, \emph{et~al.}, \enquote{Retinal analysis of a mouse model of {{Alzheimer}}'s disease with multicontrast optical coherence tomography,} {\protect\JournalTitle{Neurophotonics}} \textbf{7}, 015006 (2020). Export Date: 4 June 2020 Correspondence Address: Harper, D.J.; Medical University of Vienna, Center for Medical Physics and Biomedical EngineeringAustria; email: danielle.harper@meduniwien.ac.at.
+D.~J. Harper, M.~Augustin, A.~Lichtenegger, \emph{et~al.}, \enquote{Retinal
+  analysis of a mouse model of {{Alzheimer}}'s disease with multicontrast
+  optical coherence tomography,} {\protect\JournalTitle{Neurophotonics}}
+  \textbf{7}, 015006 (2020). Export Date: 4 June 2020 Correspondence Address:
+  Harper, D.J.; Medical University of Vienna, Center for Medical Physics and
+  Biomedical EngineeringAustria; email: danielle.harper@meduniwien.ac.at.
 
 \bibitem{untrachtTowardsStandardisingRetinal2024}
-G.~R. Untracht, M.~S. Durkee, M.~Zhao, \emph{et~al.}, \enquote{Towards standardising retinal oct angiography image analysis with open-source toolbox octava,} {\protect\JournalTitle{Scientific Reports}} \textbf{14} (2024).
+G.~R. Untracht, M.~S. Durkee, M.~Zhao, \emph{et~al.}, \enquote{Towards
+  standardising retinal oct angiography image analysis with open-source toolbox
+  octava,} {\protect\JournalTitle{Scientific Reports}} \textbf{14} (2024).
 
 \bibitem{hormelMaximumValueProjection2018}
-T.~T. Hormel, J.~Wang, S.~T. Bailey, \emph{et~al.}, \enquote{Maximum value projection produces better en face oct angiograms than mean value projection,} {\protect\JournalTitle{Biomedical Optics Express}} \textbf{9}, 6412 (2018).
+T.~T. Hormel, J.~Wang, S.~T. Bailey, \emph{et~al.}, \enquote{Maximum value
+  projection produces better en face oct angiograms than mean value
+  projection,} {\protect\JournalTitle{Biomedical Optics Express}} \textbf{9},
+  6412 (2018).
 
 \bibitem{sampsonTowardsStandardizingRetinal2022}
-D.~M. Sampson, A.~M. Dubis, F.~K. Chen, \emph{et~al.}, \enquote{Towards standardizing retinal optical coherence tomography angiography: a review,} {\protect\JournalTitle{Light, Science \& Applications}} \textbf{11} (2022).
+D.~M. Sampson, A.~M. Dubis, F.~K. Chen, \emph{et~al.}, \enquote{Towards
+  standardizing retinal optical coherence tomography angiography: a review,}
+  {\protect\JournalTitle{Light, Science \& Applications}} \textbf{11} (2022).
 
 \bibitem{leeGeneratingRetinalFlow2019}
-C.~S. Lee, A.~J. Tyring, Y.~Wu, \emph{et~al.}, \enquote{Generating retinal flow maps from structural optical coherence tomography with artificial intelligence,} {\protect\JournalTitle{Scientific Reports}} \textbf{9} (2019).
+C.~S. Lee, A.~J. Tyring, Y.~Wu, \emph{et~al.}, \enquote{Generating retinal flow
+  maps from structural optical coherence tomography with artificial
+  intelligence,} {\protect\JournalTitle{Scientific Reports}} \textbf{9} (2019).
 
 \bibitem{bernucciInvestigationArtifactsRetinal2018}
-M.~T. Bernucci, C.~W. Merkle, and V.~J. Srinivasan, \enquote{Investigation of artifacts in retinal and choroidal {{OCT}} angiography with a contrast agent,} {\protect\JournalTitle{Biomedical Optics Express}} \textbf{9}, 1020--1040 (2018).
+M.~T. Bernucci, C.~W. Merkle, and V.~J. Srinivasan, \enquote{Investigation of
+  artifacts in retinal and choroidal {{OCT}} angiography with a contrast
+  agent,} {\protect\JournalTitle{Biomedical Optics Express}} \textbf{9},
+  1020--1040 (2018).
 
-\bibitem{Garhofer2004}
-G.~Garh{\"o}fer, C.~Zawinka, H.~Resch, \emph{et~al.}, \enquote{Diffuse luminance flicker increases blood flow in major retinal arteries and veins,} {\protect\JournalTitle{Vision Research}} \textbf{44}, 833--838 (2004).
+\bibitem{garhoferDiffuseLuminanceFlicker2004}
+G.~Garh{\"o}fer, C.~Zawinka, H.~Resch, \emph{et~al.}, \enquote{Diffuse
+  luminance flicker increases blood flow in major retinal arteries and veins,}
+  {\protect\JournalTitle{Vision Research}} \textbf{44}, 833--838 (2004).
 
 \bibitem{sharifizadFactorsDeterminingFlickerinduced2016}
-M.~Sharifizad, K.~J. Witkowska, G.~C. Aschinger, \emph{et~al.}, \enquote{Factors determining flicker-induced retinal vasodilation in healthy subjects,} {\protect\JournalTitle{Investigative Ophthalmology and Visual Science}} \textbf{57}, 3306--3312 (2016). Cited By :12 Export Date: 10 June 2020 CODEN: IOVSD Correspondence Address: Schmetterer, L.; Department of Clinical Pharmacology, Medical University of Vienna, W\"ahringer G\"urtel 18-20, Austria; email: Leopold.schmetterer@meduniwien.ac.at.
+M.~Sharifizad, K.~J. Witkowska, G.~C. Aschinger, \emph{et~al.},
+  \enquote{Factors determining flicker-induced retinal vasodilation in healthy
+  subjects,} {\protect\JournalTitle{Investigative Ophthalmology and Visual
+  Science}} \textbf{57}, 3306--3312 (2016). Cited By :12 Export Date: 10 June
+  2020 CODEN: IOVSD Correspondence Address: Schmetterer, L.; Department of
+  Clinical Pharmacology, Medical University of Vienna, W\"ahringer G\"urtel
+  18-20, Austria; email: Leopold.schmetterer@meduniwien.ac.at.
 
 \bibitem{sonFunctionalOCTReveals2024}
-T.~Son, G.~Ma, and X.~Yao, \enquote{Functional {{OCT}} reveals anisotropic changes of retinal flicker-evoked vasodilation,} {\protect\JournalTitle{Optics Letters}} \textbf{49}, 2121--2124 (2024).
+T.~Son, G.~Ma, and X.~Yao, \enquote{Functional {{OCT}} reveals anisotropic
+  changes of retinal flicker-evoked vasodilation,}
+  {\protect\JournalTitle{Optics Letters}} \textbf{49}, 2121--2124 (2024).
 
 \end{thebibliography}
