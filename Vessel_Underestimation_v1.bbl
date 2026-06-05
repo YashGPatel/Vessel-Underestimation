@@ -110,9 +110,54 @@ M.~Sharifizad, K.~J. Witkowska, G.~C. Aschinger, \emph{et~al.},
   Clinical Pharmacology, Medical University of Vienna, W\"ahringer G\"urtel
   18-20, Austria; email: Leopold.schmetterer@meduniwien.ac.at.
 
+\bibitem{frangiMultiscaleVesselEnhancement1998}
+A.~F. Frangi, W.~J. Niessen, K.~L. Vincken, and M.~A. Viergever,
+  \enquote{Multiscale vessel enhancement filtering,} in \emph{Medical Image
+  Computing and Computer-Assisted Intervention --- {MICCAI}'98,}  vol. 1496 of
+  \emph{Lecture Notes in Computer Science} W.~M. Wells, A.~Colchester, and
+  S.~Delp, eds. (Springer, Berlin, Heidelberg, 1998), pp. 130--137.
+
 \bibitem{sonFunctionalOCTReveals2024}
 T.~Son, G.~Ma, and X.~Yao, \enquote{Functional {{OCT}} reveals anisotropic
   changes of retinal flicker-evoked vasodilation,}
   {\protect\JournalTitle{Optics Letters}} \textbf{49}, 2121--2124 (2024).
+
+\bibitem{albannaNonInvasiveEvaluation2018}
+W.~Albanna, K.~Kotliar, J.~N. L{\"u}ke, \emph{et~al.}, \enquote{Non-invasive
+  evaluation of neurovascular coupling in the murine retina by dynamic retinal
+  vessel analysis,} {\protect\JournalTitle{PLOS ONE}} \textbf{13}, e0204689
+  (2018).
+
+\bibitem{neumaierEvaluationFlickerInduced2021}
+F.~Neumaier, K.~Kotliar, A.~Reiner, \emph{et~al.}, \enquote{Evaluation of
+  flicker-induced retinal vessel response in cav2.3-deficient mice using
+  dynamic retinal vessel analysis,} {\protect\JournalTitle{Frontiers in
+  Neurology}} \textbf{12}, 659890 (2021).
+
+\bibitem{chanFlickerLightStimulation2025}
+Y.~Y.~V. Chan \emph{et~al.}, \enquote{Flicker light stimulation increases
+  retinal blood flow in mice,} {\protect\JournalTitle{Documenta
+  Ophthalmologica}}  (2025).
+
+\bibitem{nagelFlickerObservationLight2004}
+E.~Nagel and W.~Vilser, \enquote{Flicker observation light induces diameter
+  response in retinal arterioles: A clinical methodological study,}
+  {\protect\JournalTitle{Der Ophthalmologe}} \textbf{102}, 305--309 (2005).
+
+\bibitem{Aschinger2017}
+G.~C. Aschinger, L.~Schmetterer, K.~Fondi, \emph{et~al.}, \enquote{Effect of
+  {{Diffuse Luminance Flicker Light Stimulation}} on {{Total Retinal Blood Flow
+  Assessed With Dual-Beam Bidirectional Doppler OCT}},}
+  {\protect\JournalTitle{Investigative Ophthalmology \& Visual Science}}
+  \textbf{58}, 1167--1178 (2017).
+
+\bibitem{kallabPlexusSpecificEffect2020}
+M.~Kallab, N.~Hommer, B.~Tan, \emph{et~al.}, \enquote{Plexus-specific effect of
+  flicker-light stimulation on the retinal microvasculature assessed with
+  optical coherence tomography angiography,} {\protect\JournalTitle{American
+  Journal of Physiology-Heart and Circulatory Physiology}} \textbf{320},
+  H23--H28 (2020). Doi: 10.1152/ajpheart.00495.2020 \par Export Date: 17 June
+  2021 CODEN: AJPPD Correspondence Address: Garh\"ofer, G.; Department of
+  Clinical Pharmacology, Austria; email: gerhard.garhoefer@meduniwien.ac.at.
 
 \end{thebibliography}
