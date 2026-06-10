@@ -2,7 +2,7 @@ close all
 clear
 
 %% Output directory for individual subplot PDFs
-out_dir = 'C:\Users\BM-Optik01\ownCloud\Vessel Underestimation\figures';   % paper's figures/ folder
+out_dir = 'C:\Users\BM-Optik01\ownCloud\Vessel Underestimation\figures';
 if ~exist(out_dir,'dir'); mkdir(out_dir); end
 
 %% Plots
@@ -633,7 +633,7 @@ ylabel('R^2');
 xticklabels({'BW-1', 'BW-2', 'BW-3', 'BW-4', 'BW-5', 'G-e2', 'GG-HM', 'GG-e2'});
 ylim([0 1]);
 format_font();
-yticks(0:0.2:1); ax = gca; set(ax,'FontSize',28,'FontWeight','bold'); ax.XAxis.FontSize = 22; set(get(ax,'YLabel'),'FontSize',38,'FontWeight','bold');
+yticks(0:0.2:1); ax = gca; set(ax,'FontSize',12,'FontWeight','bold'); set(get(ax,'YLabel'),'FontSize',16,'FontWeight','bold','Color','k');
 exportgraphics(gcf, fullfile(out_dir,'cov_r2_c.pdf'), 'ContentType','vector','BackgroundColor','white');
 % figure; bar(x, RMSE(:,inds)');
 figure; 
@@ -645,12 +645,12 @@ b(2).CData = [0, 1, 0];
 b(3).CData = [1, 0, 0];
 set(gcf,'Position',[100 100 650 420])
 hold on; errorbar(x2, reshape(CoV(:,inds),[],1)', reshape(CoV_std(:,inds),[],1)','k.');
-ylabel('Coefficient of Variation');
+ylabel('CoV');
 legend({'Pre-Contrast', 'Peak-Contrast', 'Post-Contrast'});
 xticklabels({'BW-1', 'BW-2', 'BW-3', 'BW-4', 'BW-5', 'G-e2', 'GG-HM', 'GG-e2'});
 ylim([0 .8]);
 format_font();
-yticks(0:0.2:0.8); ax = gca; set(ax,'FontSize',28,'FontWeight','bold'); ax.XAxis.FontSize = 22; set(get(ax,'YLabel'),'FontSize',38,'FontWeight','bold'); set(findobj(gcf,'Type','legend'),'FontSize',22,'FontWeight','bold');
+yticks(0:0.2:0.8); ax = gca; set(ax,'FontSize',12,'FontWeight','bold'); set(get(ax,'YLabel'),'FontSize',16,'FontWeight','bold','Color','k'); set(findobj(gcf,'Type','legend'),'FontSize',11,'FontWeight','bold','Location','northeast');
 exportgraphics(gcf, fullfile(out_dir,'cov_r2_a.pdf'), 'ContentType','vector','BackgroundColor','white');
 
 inds = [4, 7, 8, 10, 12, 14, 16, 18]; %mean
@@ -665,7 +665,7 @@ ylabel('R^2');
 xticklabels({'BW-1', 'BW-2', 'BW-3', 'BW-4', 'BW-5', 'G-e2', 'GG-HM', 'GG-e2'});
 ylim([0 1]);
 format_font();
-yticks(0:0.2:1); ax = gca; set(ax,'FontSize',28,'FontWeight','bold'); ax.XAxis.FontSize = 22; set(get(ax,'YLabel'),'FontSize',38,'FontWeight','bold');
+yticks(0:0.2:1); ax = gca; set(ax,'FontSize',12,'FontWeight','bold'); set(get(ax,'YLabel'),'FontSize',16,'FontWeight','bold','Color','k');
 exportgraphics(gcf, fullfile(out_dir,'cov_r2_d.pdf'), 'ContentType','vector','BackgroundColor','white');
 % figure; bar(x, RMSE(:,inds)');
 figure; 
@@ -677,11 +677,11 @@ b(2).CData = [0, 1, 0];
 b(3).CData = [1, 0, 0];
 set(gcf,'Position',[100 100 650 420])
 hold on; errorbar(x2, reshape(CoV(:,inds),[],1)', reshape(CoV_std(:,inds),[],1)','k.');
-ylabel('Coefficient of Variation');
+ylabel('CoV');
 xticklabels({'BW-1', 'BW-2', 'BW-3', 'BW-4', 'BW-5', 'G-e2', 'GG-HM', 'GG-e2'});
 ylim([0 .8]);
 format_font();
-yticks(0:0.2:0.8); ax = gca; set(ax,'FontSize',28,'FontWeight','bold'); ax.XAxis.FontSize = 22; set(get(ax,'YLabel'),'FontSize',38,'FontWeight','bold');
+yticks(0:0.2:0.8); ax = gca; set(ax,'FontSize',12,'FontWeight','bold'); set(get(ax,'YLabel'),'FontSize',16,'FontWeight','bold','Color','k');
 exportgraphics(gcf, fullfile(out_dir,'cov_r2_b.pdf'), 'ContentType','vector','BackgroundColor','white');
 
 %% Mean intensity projections

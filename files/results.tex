@@ -3,21 +3,9 @@
 \subsection{Qualitative assessment of vessel underestimation}
 \label{subsec:qualitative}
 
-% \begin{figure}[htbp] 
-% [htbp] = placement suggestion “try Here, otherwise Top, Bottom, or a dedicated Page" in that order
-% \begin{figure}[H] 
-% H = “Here definitely”, requires \usepackage{float}
-% \centering\includegraphics[width=\linewidth,height=\dimexpr\textheight-\pagetotal-3\baselineskip\relax,keepaspectratio]{figures/Figure_1.pdf} 
-% height=\dimexpr\textheight-\pagetotal-#\baselineskip\relax = set the figure height to the remaining space on the page, accounting for the current vertical position and leaving room for caption and label.
-    % \dimexpr = allow for dynamic calculation of figure height based on the remaining space on the page.
-    % -\pagetotal = account for the vertical space already used on the page, ensuring the figure does not exceed the remaining space.
-    % -#\baselineskip = leave room for the figure caption and label, which typically require a few lines of text. Adjust the number of baselineskip (#) as needed to ensure the figure fits well without excessive whitespace.
-    % \relax = allow the figure to scale down if necessary to fit within the specified height while maintaining aspect ratio.
-% \label{fig:enface}
-% \end{figure}
-
 \begin{figure}[htb] 
 \centering\includegraphics[width=0.45\linewidth,keepaspectratio]{figures/enface_contrast.pdf} 
+\setlength{\abovecaptionskip}{4pt}\setlength{\belowcaptionskip}{2pt}
 \caption{OCTA MIP en face of the SVP, ICP, and DCP before (left) and after (right) the administration of Intralipid 20\%. Vessels appear visibly wider and brighter post-contrast across all layers, most prominently in the larger vessels.}
 \label{fig:enface_contrast}
 \end{figure}
@@ -29,6 +17,7 @@ These observations confirm that the contrast agent does significantly enhance ve
 
 \begin{figure}[htb]
 \centering\includegraphics[width=\linewidth,height=\dimexpr\textheight-\pagetotal-8\baselineskip\relax,keepaspectratio]{figures/dycoct.pdf}
+\setlength{\abovecaptionskip}{4pt}\setlength{\belowcaptionskip}{2pt}
 \caption{DyC-OCT B-scan angiograms at (a) pre-contrast, (b) peak contrast, and (c) post-contrast timepoints.~(d) MIP and (e) binarisation of the vessel cross-sections over time, with coloured boxes indicating the pre-contrast (blue), peak-contrast (green), and post-contrast (red) windows.~(f) Mean OCTA intensity over time, showing the temporal intensity dynamics.~\textcolor{red}{All scale bars are 100\,\textmu{}m.}}
 \label{fig:dycoct}
 \end{figure}
@@ -40,10 +29,7 @@ The accuracy ($m$, $R^2$) and precision (CoV) of all diameter measurement method
 \begin{figure}[p]
 \centering
 \setlength{\abovecaptionskip}{4pt}\setlength{\belowcaptionskip}{2pt}
-\captionsetup[subfigure]{position=top,font=bf}
-% Rows separated by explicit \\ breaks (not blank lines), so the layout is
-% deterministic and won't scramble if the auto-formatter swaps blank lines for
-% \vspace. Trailing % after \hfill kills stray inter-panel spaces.
+\captionsetup[subfigure]{position=top,font=bf,skip=2pt}
 \begin{subfigure}{0.27\linewidth}\centering\caption{MIP $w_{1/e^2,\,\mathrm{G}}$}\label{fig:scatter_model_a}\includegraphics[width=\linewidth]{figures/scatter_model_a.pdf}\end{subfigure}\hfill%
 \begin{subfigure}{0.27\linewidth}\centering\caption{MIP $\mathrm{FWHM}_{\mathrm{GG}}$}\label{fig:scatter_model_b}\includegraphics[width=\linewidth]{figures/scatter_model_b.pdf}\end{subfigure}\hfill%
 \begin{subfigure}{0.27\linewidth}\centering\caption{MIP $w_{1/e^2,\,\mathrm{GG}}$}\label{fig:scatter_model_c}\includegraphics[width=\linewidth]{figures/scatter_model_c.pdf}\end{subfigure}\\[2pt]
@@ -57,7 +43,7 @@ The accuracy ($m$, $R^2$) and precision (CoV) of all diameter measurement method
 \begin{figure}[p]
 \centering
 \setlength{\abovecaptionskip}{4pt}\setlength{\belowcaptionskip}{2pt}
-\captionsetup[subfigure]{position=top,font=bf}
+\captionsetup[subfigure]{position=top,font=bf,skip=2pt}
 \begin{subfigure}{0.27\linewidth}\centering\caption{MIP, BW-1}\label{fig:scatter_bw_mip_a}\includegraphics[width=\linewidth]{figures/scatter_bw_mip_a.pdf}\end{subfigure}\hfill%
 \begin{subfigure}{0.27\linewidth}\centering\caption{MIP, BW-2}\label{fig:scatter_bw_mip_b}\includegraphics[width=\linewidth]{figures/scatter_bw_mip_b.pdf}\end{subfigure}\hfill%
 \begin{subfigure}{0.27\linewidth}\centering\caption{MIP, BW-3}\label{fig:scatter_bw_mip_c}\includegraphics[width=\linewidth]{figures/scatter_bw_mip_c.pdf}\end{subfigure}\\[2pt]
@@ -71,11 +57,11 @@ All model-based methods underestimated vessel diameter in pre-contrast data, wit
 
 \begin{figure}[htbp]
 \centering
-\captionsetup[subfigure]{position=top,font=bf}
+\setlength{\abovecaptionskip}{0pt}\setlength{\belowcaptionskip}{2pt}
+\captionsetup[subfigure]{position=top,font=bf,skip=2pt}
 \begin{subfigure}{0.32\linewidth}\centering\caption{MeIP, BW-1}\label{fig:scatter_bw_meip_a}\includegraphics[width=\linewidth]{figures/scatter_bw_meip_a.pdf}\end{subfigure}\hfill
 \begin{subfigure}{0.32\linewidth}\centering\caption{MeIP, BW-2}\label{fig:scatter_bw_meip_b}\includegraphics[width=\linewidth]{figures/scatter_bw_meip_b.pdf}\end{subfigure}\hfill
 \begin{subfigure}{0.32\linewidth}\centering\caption{MeIP, BW-3}\label{fig:scatter_bw_meip_c}\includegraphics[width=\linewidth]{figures/scatter_bw_meip_c.pdf}\end{subfigure}
-
 \medskip
 \begin{subfigure}{0.32\linewidth}\centering\caption{MeIP, BW-4}\label{fig:scatter_bw_meip_d}\includegraphics[width=\linewidth]{figures/scatter_bw_meip_d.pdf}\end{subfigure}\hspace{0.02\linewidth}
 \begin{subfigure}{0.32\linewidth}\centering\caption{MeIP, BW-5}\label{fig:scatter_bw_meip_e}\includegraphics[width=\linewidth]{figures/scatter_bw_meip_e.pdf}\end{subfigure}
@@ -89,18 +75,19 @@ The precision of each method was assessed via the CoV (Table~\ref{tab:accuracy_l
 
 \begin{figure}[htbp]
 \centering
-\captionsetup[subfigure]{position=top,font=bf}
+\setlength{\abovecaptionskip}{0pt}\setlength{\belowcaptionskip}{2pt}
+\captionsetup[subfigure]{position=top,font=bf,skip=2pt}
 \begin{subfigure}{0.48\linewidth}\centering\caption{CoV, MIP}\label{fig:cov_r2_a}\includegraphics[width=\linewidth]{figures/cov_r2_a.pdf}\end{subfigure}\hfill
 \begin{subfigure}{0.48\linewidth}\centering\caption{CoV, MeIP}\label{fig:cov_r2_b}\includegraphics[width=\linewidth]{figures/cov_r2_b.pdf}\end{subfigure}
-
 \medskip
 \begin{subfigure}{0.48\linewidth}\centering\caption{$R^2$, MIP}\label{fig:cov_r2_c}\includegraphics[width=\linewidth]{figures/cov_r2_c.pdf}\end{subfigure}\hfill
 \begin{subfigure}{0.48\linewidth}\centering\caption{$R^2$, MeIP}\label{fig:cov_r2_d}\includegraphics[width=\linewidth]{figures/cov_r2_d.pdf}\end{subfigure}
-\caption{Summary of accuracy and precision across all diameter measurement methods. (a,\,b) Coefficient of variation (CoV) and (c,\,d) coefficient of determination ($R^2$) for MIP (a,\,c) and MeIP (b,\,d), respectively. Bars are grouped by method (BW-1 through BW-5, G-$e^2$, GG-HM, GG-$e^2$) and colour-coded by contrast condition: pre-contrast (blue), peak-contrast (green), and post-contrast (red).}
+\caption{Summary of accuracy and precision across all diameter measurement methods. (a,\,b) Coefficient of variation (CoV) and (c,\,d) coefficient of determination ($R^2$) for MIP (a,\,c) and MeIP (b,\,d), respectively. Bars are grouped by method (BW-1 through BW-5, G-$e^2$, GG-HM, GG-$e^2$) and colour-coded by contrast conditions.}
 \label{fig:cov_r2}
 \end{figure}
 
 \begin{table}[htbp]
+\setlength{\abovecaptionskip}{4pt}\setlength{\belowcaptionskip}{2pt}
 \caption{Summary of slope ($m$), coefficient of determination ($R^2$), and coefficient of variation (CoV) for all diameter measurement methods across pre-contrast, peak contrast, and post-contrast conditions. Methods are grouped as binary mask based and model-based. Bold values indicate slope agreement within 10\% of unity ($0.9 \leq m \leq 1.1$), strong linearity ($R^2 \geq 0.90$), or high precision ($\mathrm{CoV} \leq 0.10$). \textcolor{red}{(confirm values with MATLAB.)}}
 \label{tab:accuracy_linearity}
 \centering
@@ -138,18 +125,17 @@ The model-based diameter time series (Figs.~\ref{fig:flicker}a,b) showed increas
 
 \begin{figure}[htbp]
 \centering
-\begin{subfigure}{0.32\linewidth}\centering\includegraphics[width=\linewidth]{figures/flicker_a.pdf}\caption{Gaussian model}\label{fig:flicker_a}\end{subfigure}\hfill
-\begin{subfigure}{0.32\linewidth}\centering\includegraphics[width=\linewidth]{figures/flicker_b.pdf}\caption{GG model}\label{fig:flicker_b}\end{subfigure}\hfill
-\begin{subfigure}{0.32\linewidth}\centering\includegraphics[width=\linewidth]{figures/flicker_c.pdf}\caption{Binarised angiogram}\label{fig:flicker_c}\end{subfigure}
-
-\medskip
-\begin{subfigure}{0.32\linewidth}\centering\includegraphics[width=\linewidth]{figures/flicker_d.pdf}\caption{Gaussian model}\label{fig:flicker_d}\end{subfigure}\hfill
-\begin{subfigure}{0.32\linewidth}\centering\includegraphics[width=\linewidth]{figures/flicker_e.pdf}\caption{GG model}\label{fig:flicker_e}\end{subfigure}\hfill
-\begin{subfigure}{0.32\linewidth}\centering\includegraphics[width=\linewidth]{figures/flicker_f.pdf}\caption{Binarised angiogram}\label{fig:flicker_f}\end{subfigure}
-
-\medskip
-\begin{subfigure}{0.32\linewidth}\centering\includegraphics[width=\linewidth]{figures/flicker_g.pdf}\caption{Angiogram intensity}\label{fig:flicker_g}\end{subfigure}\hfill
-\begin{subfigure}{0.32\linewidth}\centering\includegraphics[width=\linewidth]{figures/flicker_h.pdf}\caption{Mean angiogram intensity}\label{fig:flicker_h}\end{subfigure}
+\setlength{\abovecaptionskip}{2pt}\setlength{\belowcaptionskip}{2pt}
+\captionsetup[subfigure]{position=top,font=bf,skip=2pt}
+\begin{subfigure}{0.32\linewidth}\centering\caption{Gaussian model}\label{fig:flicker_a}\includegraphics[width=\linewidth]{figures/flicker_a.pdf}\end{subfigure}\hfill%
+\begin{subfigure}{0.32\linewidth}\centering\caption{GG model}\label{fig:flicker_b}\includegraphics[width=\linewidth]{figures/flicker_b.pdf}\end{subfigure}\hfill%
+\begin{subfigure}{0.32\linewidth}\centering\caption{Binarised angiogram}\label{fig:flicker_c}\includegraphics[width=\linewidth]{figures/flicker_c.pdf}\end{subfigure}\\
+\begin{subfigure}{0.32\linewidth}\centering\caption{Gaussian model}\label{fig:flicker_d}\includegraphics[width=\linewidth]{figures/flicker_d.pdf}\end{subfigure}\hfill%
+\begin{subfigure}{0.32\linewidth}\centering\caption{GG model}\label{fig:flicker_e}\includegraphics[width=\linewidth]{figures/flicker_e.pdf}\end{subfigure}\hfill%
+\begin{subfigure}{0.32\linewidth}\centering\caption{Binarised angiogram}\label{fig:flicker_f}\includegraphics[width=\linewidth]{figures/flicker_f.pdf}\end{subfigure}\\
+\begin{subfigure}{0.32\linewidth}\centering\caption{Angiogram intensity}\label{fig:flicker_g}\includegraphics[width=\linewidth]{figures/flicker_g.pdf}\end{subfigure}\hfill%
+\begin{subfigure}{0.32\linewidth}\centering\caption{Mean angiogram intensity}\label{fig:flicker_h}\includegraphics[width=\linewidth]{figures/flicker_h.pdf}\end{subfigure}\hfill%
+\begin{subfigure}[t]{0.32\linewidth}\centering\raisebox{12pt}{\includegraphics[width=0.6\linewidth]{figures/flicker_legend.pdf}}\end{subfigure}
 \caption{Functional flicker stimulation results. (a--c) Vessel diameter time series pre- and post-stimulation for (a) Gaussian model, (b) Generalised Gaussian model, and (c) binarised angiogram, across five vessels. Vertical dashed lines indicate stimulation onset and offset. (d--f) Mean diameter per vessel before (dark bars) and after (light bars) stimulation for each method. Veins are shown in blue/cyan and arteries in dark/light red. Significance levels: $^{**}p < 0.01$, $^{***}p < 0.001$. (g) Angiogram intensity time series and (h) mean angiogram intensity per vessel pre- and post-stimulation.}
 \label{fig:flicker}
 \end{figure}
@@ -160,6 +146,7 @@ The angiogram intensity time series (Fig.~\ref{fig:flicker}g) showed a visible d
 \caption{Flicker stimulation results. $\Delta d$: diameter change (\%); $\rho$: Correlation between diameter and angiogram intensity; $\Delta I$: intensity change (\%). Statistically significant values are bold ($^{*}p < 0.05$, $^{**}p < 0.01$, $^{***}p < 0.001$).}
 \label{tab:flicker}
 \centering
+\setlength{\abovecaptionskip}{2pt}\setlength{\belowcaptionskip}{2pt}
 \footnotesize
 \begin{tabular}{l | c c | c c | c c | c}
 \hline
@@ -176,5 +163,3 @@ Overall $\rho$ & & $-0.101$ & & $-0.098$ & & $0.523$ \\
 \hline
 \end{tabular}
 \end{table}
-
-% ~\FloatBarrier~ %print all pending figures/tables right here, don’t let them move past this point

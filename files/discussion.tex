@@ -28,10 +28,12 @@ The functional flicker stimulation experiment provided a direct demonstration of
 
 \begin{figure}[htbp]
 \centering
-\begin{subfigure}{0.32\linewidth}\centering\includegraphics[width=\linewidth]{figures/scatter_intensity_a.pdf}\caption{Gaussian model}\label{fig:scatter_intensity_a}\end{subfigure}\hfill
-\begin{subfigure}{0.32\linewidth}\centering\includegraphics[width=\linewidth]{figures/scatter_intensity_b.pdf}\caption{GG model}\label{fig:scatter_intensity_b}\end{subfigure}\hfill
-\begin{subfigure}{0.32\linewidth}\centering\includegraphics[width=\linewidth]{figures/scatter_intensity_c.pdf}\caption{Binary mask based}\label{fig:scatter_intensity_c}\end{subfigure}
-\caption{Measured vessel diameter as a function of angiogram signal intensity during functional flicker stimulation for (a) Gaussian model, (b) generalised Gaussian model, and (c) binary mask based method. Each colour represents one of five vessels. $\rho$ denotes the Pearson correlation coefficient.}
+\setlength{\abovecaptionskip}{2pt}\setlength{\belowcaptionskip}{2pt}
+\captionsetup[subfigure]{position=top,font=bf,skip=2pt}
+\begin{subfigure}{0.32\linewidth}\centering\caption{Gaussian model}\label{fig:scatter_intensity_a}\includegraphics[width=\linewidth]{figures/scatter_intensity_a.pdf}\end{subfigure}\hfill%
+\begin{subfigure}{0.32\linewidth}\centering\caption{GG model}\label{fig:scatter_intensity_b}\includegraphics[width=\linewidth]{figures/scatter_intensity_b.pdf}\end{subfigure}\hfill%
+\begin{subfigure}{0.32\linewidth}\centering\caption{Binary mask based}\label{fig:scatter_intensity_c}\includegraphics[width=\linewidth]{figures/scatter_intensity_c.pdf}\end{subfigure}
+\caption{Measured vessel diameter as a function of angiogram signal intensity during functional flicker stimulation for (a) Gaussian model, (b) Generalised Gaussian model, and (c) binary mask based method. Each colour represents one of five vessels. $\rho$ denotes the Pearson correlation coefficient.}
 \label{fig:scatter_intensity}
 \end{figure}
 
