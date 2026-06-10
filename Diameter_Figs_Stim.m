@@ -505,11 +505,20 @@ hL = gobjects(1,9);
 for n = 1:5
     hL(n) = plot(nan, nan, '-', 'Color', leg_colors(n,:), 'LineWidth', 4, 'DisplayName', ['Vessel ' num2str(n)]);
 end
-hL(6) = plot(nan, nan, 's', 'MarkerFaceColor', [0 0 1],      'MarkerEdgeColor','k', 'MarkerSize', 14, 'LineStyle','none', 'DisplayName','Vein - Baseline');
-hL(7) = plot(nan, nan, 's', 'MarkerFaceColor', [0 1 1],      'MarkerEdgeColor','k', 'MarkerSize', 14, 'LineStyle','none', 'DisplayName','Vein - Post-Stim');
-hL(8) = plot(nan, nan, 's', 'MarkerFaceColor', [.64 .08 .18],'MarkerEdgeColor','k', 'MarkerSize', 14, 'LineStyle','none', 'DisplayName','Artery - Baseline');
-hL(9) = plot(nan, nan, 's', 'MarkerFaceColor', [1 0 0],      'MarkerEdgeColor','k', 'MarkerSize', 14, 'LineStyle','none', 'DisplayName','Artery - Post-Stim');
+hL(6) = patch(nan,nan,[0 0 1],      ...
+    'EdgeColor','k', ...
+    'DisplayName','Vein - Baseline');
+hL(7) = patch(nan,nan,[0 1 1],      ...
+    'EdgeColor','k', ...
+    'DisplayName','Vein - Post-Stim');
+hL(8) = patch(nan,nan,[.64 .08 .18],...
+    'EdgeColor','k', ...
+    'DisplayName','Artery - Baseline');
+hL(9) = patch(nan,nan,[1 0 0],      ...
+    'EdgeColor','k', ...
+    'DisplayName','Artery - Post-Stim');
 lg = legend(hL, 'FontSize', 22, 'Location', 'west'); lg.Box = 'off';
+lg.ItemTokenSize = [30, 18];   % [width height]
 set(gcf,'Position',[300 300 400 600]);
 exportgraphics(gcf, fullfile(out_dir,'flicker_legend.pdf'), 'ContentType','vector','BackgroundColor','white');
 
@@ -542,5 +551,4 @@ exportgraphics(gcf, fullfile(out_dir,'flicker_legend.pdf'), 'ContentType','vecto
 % xlim([-.5 11]);
 % legend('Vein - Pre', 'Vein - Post', 'Artery - Pre', 'Artery - Post');
 % xticks([1.5, 4, 6.5, 9]);
-% xticklabels({'1', '2', '3', '4'});
-% xlabel('Vesse
+% xticklabels({'1', 

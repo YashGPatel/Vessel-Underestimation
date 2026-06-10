@@ -665,7 +665,7 @@ ylabel('R^2');
 xticklabels({'BW-1', 'BW-2', 'BW-3', 'BW-4', 'BW-5', 'G-e2', 'GG-HM', 'GG-e2'});
 ylim([0 1]);
 format_font();
-yticks(0:0.2:1); ax = gca; set(ax,'FontSize',12,'FontWeight','bold'); set(get(ax,'YLabel'),'FontSize',16,'FontWeight','bold','Color','k');
+yticks(0:0.2:1); ax = gca; set(ax,'FontSize',12,'FontWeight','bold'); set(get(ax,'YLabel'),'FontSize',16,'FontWeight','bold','Color','w');
 exportgraphics(gcf, fullfile(out_dir,'cov_r2_d.pdf'), 'ContentType','vector','BackgroundColor','white');
 % figure; bar(x, RMSE(:,inds)');
 figure; 
@@ -681,7 +681,7 @@ ylabel('CoV');
 xticklabels({'BW-1', 'BW-2', 'BW-3', 'BW-4', 'BW-5', 'G-e2', 'GG-HM', 'GG-e2'});
 ylim([0 .8]);
 format_font();
-yticks(0:0.2:0.8); ax = gca; set(ax,'FontSize',12,'FontWeight','bold'); set(get(ax,'YLabel'),'FontSize',16,'FontWeight','bold','Color','k');
+yticks(0:0.2:0.8); ax = gca; set(ax,'FontSize',12,'FontWeight','bold'); set(get(ax,'YLabel'),'FontSize',16,'FontWeight','bold','Color','w');
 exportgraphics(gcf, fullfile(out_dir,'cov_r2_b.pdf'), 'ContentType','vector','BackgroundColor','white');
 
 %% Mean intensity projections
