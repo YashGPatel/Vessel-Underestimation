@@ -1,9 +1,13 @@
 close all
 clear
 
+%% Run / output options  --  set to false to test-run without writing files
+save_figs   = 1;    % write figure PDFs (exportgraphics)
+save_tables = 1;    % write stats tables (xlsx/csv/mat)
+
 %% Output directory for individual subplot PDFs
 out_dir = 'C:\Users\BM-Optik01\ownCloud\Vessel Underestimation\figures';
-if ~exist(out_dir,'dir'); mkdir(out_dir); end
+if save_figs && ~exist(out_dir,'dir'); mkdir(out_dir); end
 
 %% Plots
 load('X:\results\Conrad\Vessel Width\vessel_width3_model.mat');
@@ -121,6 +125,7 @@ end
 CoV = [];
 CoV_std = [];
 R2 = [];
+Slope = [];
 RSME = [];
 CoV_names = {};
 CoV_ind = 1;
@@ -160,6 +165,7 @@ for n = 1:3
     CoV_std(n,CoV_ind) = std(std(g_max_x.d_fwhm(:,range),[],2)./mean(g_max_x.d_fwhm(:,range),2));
     R2(n,CoV_ind) = fittedLinearModel.Rsquared.Ordinary;
     RMSE(n,CoV_ind) = fittedLinearModel.RMSE;
+    Slope(n,CoV_ind) = fittedLinearModel.Coefficients.Estimate;
 end
 CoV_names{CoV_ind} = 'G Max FWHM';
 CoV_ind = CoV_ind + 1;
@@ -207,6 +213,7 @@ for n = 1:3
     CoV_std(n,CoV_ind) = std(std(g_max_x.d_e2(:,range),[],2)./mean(g_max_x.d_e2(:,range),2));
     R2(n,CoV_ind) = fittedLinearModel.Rsquared.Ordinary;
     RMSE(n,CoV_ind) = fittedLinearModel.RMSE;
+    Slope(n,CoV_ind) = fittedLinearModel.Coefficients.Estimate;
 end
 CoV_names{CoV_ind} = 'G Max e2';
 CoV_ind = CoV_ind + 1;
@@ -220,7 +227,7 @@ xlim([plot_range]);
 ylim([plot_range]);
 format_font();
 xticks(0:20:100); yticks(0:20:100); set(gca,'FontSize',28,'FontWeight','bold'); set([get(gca,'XLabel');get(gca,'YLabel')],'FontSize',38,'FontWeight','bold'); set(findobj(gca,'Type','text'),'FontSize',26,'FontWeight','normal');
-exportgraphics(gcf, fullfile(out_dir,'scatter_model_a.pdf'), 'ContentType','vector','BackgroundColor','white');
+if save_figs; exportgraphics(gcf, fullfile(out_dir,'scatter_model_a.pdf'), 'ContentType','vector','BackgroundColor','white'); end
 
 figure; hold on;
 %comparing type across phases
@@ -256,6 +263,7 @@ for n = 1:3
     CoV_std(n,CoV_ind) = std(std(g_mean_x.d_fwhm(:,range),[],2)./mean(g_mean_x.d_fwhm(:,range),2));
     R2(n,CoV_ind) = fittedLinearModel.Rsquared.Ordinary;
     RMSE(n,CoV_ind) = fittedLinearModel.RMSE;
+    Slope(n,CoV_ind) = fittedLinearModel.Coefficients.Estimate;
 end
 CoV_names{CoV_ind} = 'G Mean FWHM';
 CoV_ind = CoV_ind + 1;
@@ -303,6 +311,7 @@ for n = 1:3
     CoV_std(n,CoV_ind) = std(std(g_mean_x.d_e2(:,range),[],2)./mean(g_mean_x.d_e2(:,range),2));
     R2(n,CoV_ind) = fittedLinearModel.Rsquared.Ordinary;
     RMSE(n,CoV_ind) = fittedLinearModel.RMSE;
+    Slope(n,CoV_ind) = fittedLinearModel.Coefficients.Estimate;
 end
 CoV_names{CoV_ind} = 'G Mean e2';
 CoV_ind = CoV_ind + 1;
@@ -315,7 +324,7 @@ xlim([plot_range]);
 ylim([plot_range]);
 format_font();
 xticks(0:20:100); yticks(0:20:100); set(gca,'FontSize',28,'FontWeight','bold'); set([get(gca,'XLabel');get(gca,'YLabel')],'FontSize',38,'FontWeight','bold'); set(findobj(gca,'Type','text'),'FontSize',26,'FontWeight','normal');
-exportgraphics(gcf, fullfile(out_dir,'scatter_model_d.pdf'), 'ContentType','vector','BackgroundColor','white');
+if save_figs; exportgraphics(gcf, fullfile(out_dir,'scatter_model_d.pdf'), 'ContentType','vector','BackgroundColor','white'); end
 %% comparing type across phases - Generalized Gaussian Model
 plot_range = [0 100];
 figure; hold on;
@@ -352,6 +361,7 @@ for n = 1:3
     CoV_std(n,CoV_ind) = std(std(gg_max_x.d_fwhm(:,range),[],2)./mean(gg_max_x.d_fwhm(:,range),2));
     R2(n,CoV_ind) = fittedLinearModel.Rsquared.Ordinary;
     RMSE(n,CoV_ind) = fittedLinearModel.RMSE;
+    Slope(n,CoV_ind) = fittedLinearModel.Coefficients.Estimate;
 end
 CoV_names{CoV_ind} = 'GG Max FWHM';
 CoV_ind = CoV_ind + 1;
@@ -364,7 +374,7 @@ ylim([plot_range]);
 format_font();
 ylabel('Modeled Diameter (\mum)','Color','w');   % reserve width to match panels a,d; hidden on white bg
 xticks(0:20:100); yticks(0:20:100); set(gca,'FontSize',28,'FontWeight','bold'); set([get(gca,'XLabel');get(gca,'YLabel')],'FontSize',38,'FontWeight','bold'); set(findobj(gca,'Type','text'),'FontSize',26,'FontWeight','normal');
-exportgraphics(gcf, fullfile(out_dir,'scatter_model_b.pdf'), 'ContentType','vector','BackgroundColor','white');
+if save_figs; exportgraphics(gcf, fullfile(out_dir,'scatter_model_b.pdf'), 'ContentType','vector','BackgroundColor','white'); end
 
 
 figure; hold on;
@@ -400,6 +410,7 @@ for n = 1:3
     CoV_std(n,CoV_ind) = std(std(gg_max_x.d_e2(:,range),[],2)./mean(gg_max_x.d_e2(:,range),2));
     R2(n,CoV_ind) = fittedLinearModel.Rsquared.Ordinary;
     RMSE(n,CoV_ind) = fittedLinearModel.RMSE;
+    Slope(n,CoV_ind) = fittedLinearModel.Coefficients.Estimate;
 end
 CoV_names{CoV_ind} = 'GG Max e2';
 CoV_ind = CoV_ind + 1;
@@ -413,7 +424,7 @@ ylim([plot_range]);
 format_font();
 ylabel('Modeled Diameter (\mum)','Color','w');   % reserve width to match panels a,d; hidden on white bg
 xticks(0:20:100); yticks(0:20:100); set(gca,'FontSize',28,'FontWeight','bold'); set([get(gca,'XLabel');get(gca,'YLabel')],'FontSize',38,'FontWeight','bold'); set(findobj(gca,'Type','text'),'FontSize',26,'FontWeight','normal');
-exportgraphics(gcf, fullfile(out_dir,'scatter_model_c.pdf'), 'ContentType','vector','BackgroundColor','white');
+if save_figs; exportgraphics(gcf, fullfile(out_dir,'scatter_model_c.pdf'), 'ContentType','vector','BackgroundColor','white'); end
 
 figure; hold on;
 %comparing type across phases
@@ -449,6 +460,7 @@ for n = 1:3
     CoV_std(n,CoV_ind) = std(std(gg_mean_x.d_fwhm(:,range),[],2)./mean(gg_mean_x.d_fwhm(:,range),2));
     R2(n,CoV_ind) = fittedLinearModel.Rsquared.Ordinary;
     RMSE(n,CoV_ind) = fittedLinearModel.RMSE;
+    Slope(n,CoV_ind) = fittedLinearModel.Coefficients.Estimate;
 end
 CoV_names{CoV_ind} = 'GG Mean FWHM';
 CoV_ind = CoV_ind + 1;
@@ -461,7 +473,7 @@ ylim([plot_range]);
 format_font();
 ylabel('Modeled Diameter (\mum)','Color','w');   % reserve width to match panels a,d; hidden on white bg
 xticks(0:20:100); yticks(0:20:100); set(gca,'FontSize',28,'FontWeight','bold'); set([get(gca,'XLabel');get(gca,'YLabel')],'FontSize',38,'FontWeight','bold'); set(findobj(gca,'Type','text'),'FontSize',26,'FontWeight','normal');
-exportgraphics(gcf, fullfile(out_dir,'scatter_model_e.pdf'), 'ContentType','vector','BackgroundColor','white');
+if save_figs; exportgraphics(gcf, fullfile(out_dir,'scatter_model_e.pdf'), 'ContentType','vector','BackgroundColor','white'); end
 
 figure; hold on;
 %comparing type across phases
@@ -497,6 +509,7 @@ for n = 1:3
     CoV_std(n,CoV_ind) = std(std(gg_mean_x.d_e2(:,range),[],2)./mean(gg_mean_x.d_e2(:,range),2));
     R2(n,CoV_ind) = fittedLinearModel.Rsquared.Ordinary;
     RMSE(n,CoV_ind) = fittedLinearModel.RMSE;
+    Slope(n,CoV_ind) = fittedLinearModel.Coefficients.Estimate;
 end
 CoV_names{CoV_ind} = 'GG Mean e2';
 CoV_ind = CoV_ind + 1;
@@ -509,7 +522,7 @@ ylim([plot_range]);
 format_font();
 ylabel('Modeled Diameter (\mum)','Color','w');   % reserve width to match panels a,d; hidden on white bg
 xticks(0:20:100); yticks(0:20:100); set(gca,'FontSize',28,'FontWeight','bold'); set([get(gca,'XLabel');get(gca,'YLabel')],'FontSize',38,'FontWeight','bold'); set(findobj(gca,'Type','text'),'FontSize',26,'FontWeight','normal');
-exportgraphics(gcf, fullfile(out_dir,'scatter_model_f.pdf'), 'ContentType','vector','BackgroundColor','white');
+if save_figs; exportgraphics(gcf, fullfile(out_dir,'scatter_model_f.pdf'), 'ContentType','vector','BackgroundColor','white'); end
 %% Thresholding-Based
 letters = {'a','b','c','d','e'};
 for th = 1:length(bw_mean.thresh)
@@ -550,6 +563,7 @@ for th = 1:length(bw_mean.thresh)
         CoV_std(n,CoV_ind) = std(std(bw_max.diameter(:,range,th),[],2)./mean(bw_max.diameter(:,range,th),2));
         R2(n,CoV_ind) = fittedLinearModel.Rsquared.Ordinary;
         RMSE(n,CoV_ind) = fittedLinearModel.RMSE;
+        Slope(n,CoV_ind) = fittedLinearModel.Coefficients.Estimate;
     end
     CoV_names{CoV_ind} = 'BW Max';
     CoV_ind = CoV_ind + 1;
@@ -562,7 +576,7 @@ for th = 1:length(bw_mean.thresh)
     ylim([plot_range]);
     format_font();
     xticks(0:20:100); yticks(0:20:100); set(gca,'FontSize',28,'FontWeight','bold'); set([get(gca,'XLabel');get(gca,'YLabel')],'FontSize',38,'FontWeight','bold'); set(findobj(gca,'Type','text'),'FontSize',26,'FontWeight','normal');
-    exportgraphics(gcf, fullfile(out_dir, ['scatter_bw_mip_' letters{th} '.pdf']), 'ContentType','vector','BackgroundColor','white');
+    if save_figs; exportgraphics(gcf, fullfile(out_dir, ['scatter_bw_mip_' letters{th} '.pdf']), 'ContentType','vector','BackgroundColor','white'); end
     
     figure; hold on;
     %comparing type across phases
@@ -598,6 +612,7 @@ for th = 1:length(bw_mean.thresh)
         CoV_std(n,CoV_ind) = std(std(bw_mean.diameter(:,range,th),[],2)./mean(bw_mean.diameter(:,range,th),2));
         R2(n,CoV_ind) = fittedLinearModel.Rsquared.Ordinary;
         RMSE(n,CoV_ind) = fittedLinearModel.RMSE;
+        Slope(n,CoV_ind) = fittedLinearModel.Coefficients.Estimate;
     end
     CoV_names{CoV_ind} = 'BW Mean';
     CoV_ind = CoV_ind + 1;
@@ -610,7 +625,7 @@ for th = 1:length(bw_mean.thresh)
     ylim([plot_range]);
     format_font();
     xticks(0:20:100); yticks(0:20:100); set(gca,'FontSize',28,'FontWeight','bold'); set([get(gca,'XLabel');get(gca,'YLabel')],'FontSize',38,'FontWeight','bold'); set(findobj(gca,'Type','text'),'FontSize',26,'FontWeight','normal');
-    exportgraphics(gcf, fullfile(out_dir, ['scatter_bw_meip_' letters{th} '.pdf']), 'ContentType','vector','BackgroundColor','white');
+    if save_figs; exportgraphics(gcf, fullfile(out_dir, ['scatter_bw_meip_' letters{th} '.pdf']), 'ContentType','vector','BackgroundColor','white'); end
 end
 %% Plot R2 and errors
 x = [7:9 1:5];
@@ -634,7 +649,7 @@ xticklabels({'BW-1', 'BW-2', 'BW-3', 'BW-4', 'BW-5', 'G-e2', 'GG-HM', 'GG-e2'});
 ylim([0 1]);
 format_font();
 yticks(0:0.2:1); ax = gca; set(ax,'FontSize',12,'FontWeight','bold'); set(get(ax,'YLabel'),'FontSize',16,'FontWeight','bold','Color','k');
-exportgraphics(gcf, fullfile(out_dir,'cov_r2_c.pdf'), 'ContentType','vector','BackgroundColor','white');
+if save_figs; exportgraphics(gcf, fullfile(out_dir,'cov_r2_c.pdf'), 'ContentType','vector','BackgroundColor','white'); end
 % figure; bar(x, RMSE(:,inds)');
 figure; 
 b = bar(x, CoV(:,inds)','FaceColor','Flat');
@@ -651,7 +666,7 @@ xticklabels({'BW-1', 'BW-2', 'BW-3', 'BW-4', 'BW-5', 'G-e2', 'GG-HM', 'GG-e2'});
 ylim([0 .8]);
 format_font();
 yticks(0:0.2:0.8); ax = gca; set(ax,'FontSize',12,'FontWeight','bold'); set(get(ax,'YLabel'),'FontSize',16,'FontWeight','bold','Color','k'); set(findobj(gcf,'Type','legend'),'FontSize',11,'FontWeight','bold','Location','northeast');
-exportgraphics(gcf, fullfile(out_dir,'cov_r2_a.pdf'), 'ContentType','vector','BackgroundColor','white');
+if save_figs; exportgraphics(gcf, fullfile(out_dir,'cov_r2_a.pdf'), 'ContentType','vector','BackgroundColor','white'); end
 
 inds = [4, 7, 8, 10, 12, 14, 16, 18]; %mean
 figure; b = bar(x, R2(:,inds)','FaceColor','Flat');
@@ -666,7 +681,7 @@ xticklabels({'BW-1', 'BW-2', 'BW-3', 'BW-4', 'BW-5', 'G-e2', 'GG-HM', 'GG-e2'});
 ylim([0 1]);
 format_font();
 yticks(0:0.2:1); ax = gca; set(ax,'FontSize',12,'FontWeight','bold'); set(get(ax,'YLabel'),'FontSize',16,'FontWeight','bold','Color','w');
-exportgraphics(gcf, fullfile(out_dir,'cov_r2_d.pdf'), 'ContentType','vector','BackgroundColor','white');
+if save_figs; exportgraphics(gcf, fullfile(out_dir,'cov_r2_d.pdf'), 'ContentType','vector','BackgroundColor','white'); end
 % figure; bar(x, RMSE(:,inds)');
 figure; 
 b = bar(x, CoV(:,inds)','FaceColor','Flat');
@@ -682,7 +697,47 @@ xticklabels({'BW-1', 'BW-2', 'BW-3', 'BW-4', 'BW-5', 'G-e2', 'GG-HM', 'GG-e2'});
 ylim([0 .8]);
 format_font();
 yticks(0:0.2:0.8); ax = gca; set(ax,'FontSize',12,'FontWeight','bold'); set(get(ax,'YLabel'),'FontSize',16,'FontWeight','bold','Color','w');
-exportgraphics(gcf, fullfile(out_dir,'cov_r2_b.pdf'), 'ContentType','vector','BackgroundColor','white');
+if save_figs; exportgraphics(gcf, fullfile(out_dir,'cov_r2_b.pdf'), 'ContentType','vector','BackgroundColor','white'); end
+
+%% ======================================================================
+%  Table 1 (accuracy / linearity) for the manuscript -> tables/accuracy_table.xlsx
+%  Reproduces results.tex \label{tab:accuracy_linearity}: slope m, R^2 and CoV
+%  for each method (BW-1..5, w_{1/e2,G}, FWHM_GG, w_{1/e2,GG}) x projection
+%  (MIP = max, MeIP = mean) across Pre / Peak / Post contrast phases.
+%  Column -> CoV_ind map (MIP,MeIP): BW1 (9,10) BW2 (11,12) BW3 (13,14)
+%  BW4 (15,16) BW5 (17,18) G-e2 (2,4) FWHM-GG (5,7) GG-e2 (6,8).
+%  Convert to the LaTeX table with:  python tables\accuracy_to_tex.py
+% ======================================================================
+tbl_dir  = 'C:\Users\BM-Optik01\ownCloud\Vessel Underestimation\tables';
+col_inds = [9 10 11 12 13 14 15 16 17 18 2 4 5 7 6 8];   % table column order -> CoV_ind
+colnames = {'BW1_MIP','BW1_MeIP','BW2_MIP','BW2_MeIP','BW3_MIP','BW3_MeIP', ...
+            'BW4_MIP','BW4_MeIP','BW5_MIP','BW5_MeIP','G_MIP','G_MeIP', ...
+            'FWHMGG_MIP','FWHMGG_MeIP','GGe2_MIP','GGe2_MeIP'};
+phase_names  = {'Pre','Peak','Post'};
+metric_names = {'Slope','R2','CoV'};
+metric_src   = {Slope, R2, CoV};   % each is 3 (phase) x 18 (CoV_ind)
+
+Metric = strings(0,1); Phase = strings(0,1); Mvals = [];
+for mi = 1:numel(metric_src)
+    src = metric_src{mi};
+    for ph = 1:3
+        Metric(end+1,1) = metric_names{mi};
+        Phase(end+1,1)  = phase_names{ph};
+        Mvals(end+1,:)  = src(ph, col_inds);
+    end
+end
+accuracy_table = [table(Metric, Phase), array2table(Mvals, 'VariableNames', colnames)];
+
+disp('=== Table 1 (accuracy/linearity): Slope, R^2, CoV by phase ===');
+disp(accuracy_table);
+
+if save_tables
+    if ~exist(tbl_dir,'dir'); mkdir(tbl_dir); end
+    writetable(accuracy_table, fullfile(tbl_dir,'accuracy_table.xlsx'));
+    writetable(accuracy_table, fullfile(tbl_dir,'accuracy_table.csv'));
+    save(fullfile(tbl_dir,'accuracy_table.mat'), 'accuracy_table');
+    fprintf('Saved accuracy Table 1 to %s\n', fullfile(tbl_dir,'accuracy_table.xlsx'));
+end
 
 %% Mean intensity projections
 % % % fits = {g_mean_x, gg_mean_x, g_max_x, gg_max_x};
