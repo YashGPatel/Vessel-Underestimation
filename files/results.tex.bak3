@@ -3,7 +3,7 @@
 \subsection{Qualitative assessment of vessel underestimation}
 \label{subsec:qualitative}
 
-\begin{figure}[p]
+\begin{figure}[ht]
 \centering
 \setlength{\abovecaptionskip}{4pt}\setlength{\belowcaptionskip}{2pt}
 % Row and column labels are set here rather than baked into the images, so they stay live text at the document's font. The tabular keeps the six panels on a common grid; \arraystretch 0 and \tabcolsep 0 stop it adding its own spacing, leaving the explicit 2pt gutters as the only separation.
@@ -25,7 +25,7 @@
 \label{fig:enface_contrast}
 \end{figure}
 
-\begin{figure}[p]
+\begin{figure}[h]
 \centering
 \setlength{\abovecaptionskip}{4pt}\setlength{\belowcaptionskip}{2pt}
 \captionsetup[subfigure]{position=top,font=bf,skip=1pt}
@@ -90,7 +90,7 @@ The accuracy ($m$, $R^2$) and precision (CoV) of all diameter measurement method
 \label{fig:scatter_bw_mip}
 \end{figure}
 
-\begin{figure}[p]
+\begin{figure}[htbp]
 \centering
 \setlength{\abovecaptionskip}{0pt}\setlength{\belowcaptionskip}{2pt}
 \captionsetup[subfigure]{position=top,font=bf,skip=2pt}
@@ -105,7 +105,7 @@ The accuracy ($m$, $R^2$) and precision (CoV) of all diameter measurement method
 \label{fig:scatter_bw_meip}
 \end{figure}
 
-\begin{table}[p]
+\begin{table}[htbp]
 \setlength{\abovecaptionskip}{4pt}\setlength{\belowcaptionskip}{2pt}
 \caption{Summary of slope ($m$), coefficient of determination ($R^2$), and coefficient of variation (CoV) for all diameter measurement methods across pre-contrast, peak contrast, and post-contrast conditions. Methods are grouped as binary mask based and model-based. Bold values indicate slope agreement within 10\% of unity ($0.9 \leq m \leq 1.1$), strong linearity ($R^2 \geq 0.90$), or high precision ($\mathrm{CoV} \leq 0.10$).}
 \label{tab:accuracy_linearity}
@@ -162,11 +162,9 @@ Among the model-based metrics, $w_{fwhm,\,\mathrm{GG}}$ showed the largest under
 
 \subsection{Functional flicker stimulation}
 \label{subsec:flicker}
-To assess whether angiogram intensity itself biases the diameter measurements, we examined the intensity time series alongside the diameter time series. The model-based diameter time series (Figs.~\ref{fig:flicker}a,b) showed a significant increase in diameter post-stimulation for most of the vessels. The binary mask based diameter time series (BW-5;~Fig.~\ref{fig:flicker}c) showed a mixed trend, where most vessels showed a decrease in diameter post-stimulation. Bar plots of the mean diameter pre- and post-stimulation (Figs.~\ref{fig:flicker}d--f) confirmed this pattern. For the Gaussian model, four of five vessels showed significant diameter increases ($p < 0.01$), and the GG model showed significant increases in four of five vessels (Table~\ref{tab:flicker}). In contrast, the binary mask based diameter showed significant decreases in four of five vessels.
+To assess whether angiogram intensity itself biases the diameter measurements, we examined the intensity time series alongside the diameter time series. The model-based diameter time series (Figs.~\ref{fig:flicker}a,b) showed a significant increase in diameter post-stimulation for most of the vessels. The binary mask based diameter time series (BW-5;Fig.~\ref{fig:flicker}c) showed a mixed trend, where most vessels showed a decrease in diameter post-stimulation. Bar plots of the mean diameter pre- and post-stimulation (Figs.~\ref{fig:flicker}d--f) confirmed this pattern. For the Gaussian model, four of five vessels showed significant diameter increases ($p < 0.01$), and the GG model showed significant increases in four of five vessels (Table~\ref{tab:flicker}). In contrast, the binary mask based diameter showed significant decreases in four of five vessels.
 
-The binary mask based method showed uniformly positive per-vessel correlations, with an overall correlation of $\rho = 0.526$ ($p < 0.0005$; Fig.~\ref{fig:scatter_intensity}c). The Gaussian and GG models yielded overall correlations of $\rho = -0.101$ and $\rho = -0.098$, respectively (Fig.~\ref{fig:scatter_intensity}a,b). The angiogram intensity time series (Fig.~\ref{fig:flicker}g) showed a visible decline in angiogram intensity throughout the duration of the DyC-OCT scan across all five vessels. The mean intensity comparison pre- and post-stimulation (Fig.~\ref{fig:flicker}h) confirmed that the decrease was significant for all vessels, ranging from $-13.6\%$ to $-19.8\%$ (Table~\ref{tab:flicker}). 
-
-\begin{figure}[p]
+\begin{figure}[htbp]
 \centering
 \setlength{\abovecaptionskip}{2pt}\setlength{\belowcaptionskip}{2pt}
 \captionsetup[subfigure]{position=top,font=bf,skip=2pt}
@@ -181,11 +179,13 @@ The binary mask based method showed uniformly positive per-vessel correlations, 
 \begin{subfigure}{0.32\linewidth}\centering\captionsetup{margin={5.40mm,0mm}}\caption{Angiogram intensity}\label{fig:flicker_g}\includegraphics[width=\linewidth]{figures/flicker_g.pdf}\end{subfigure}\hfill%
 \begin{subfigure}{0.32\linewidth}\centering\captionsetup{margin={2.70mm,-2.70mm}}\caption{Mean angiogram intensity}\label{fig:flicker_h}\includegraphics[width=\linewidth]{figures/flicker_h.pdf}\end{subfigure}\hfill%
 \begin{subfigure}[t]{0.32\linewidth}\centering\raisebox{12pt}{\includegraphics[width=0.6\linewidth]{figures/flicker_legend.pdf}}\end{subfigure}
-\caption{Functional flicker stimulation results.~(a--c) Vessel diameter time series pre- and post-stimulation across five vessels.~(d--f) Mean diameter per vessel before (dark bars) and after (light bars) stimulation for each method. Veins are shown in blue/cyan and arteries in dark/light red.~(g) Angiogram intensity time series. (h) mean angiogram intensity per vessel pre- and post-stimulation. All measurements used MeIP.}
+\caption{Functional flicker stimulation results.~(a--c) Vessel diameter time series pre- and post-stimulation for (a) Gaussian model, (b) Generalised Gaussian model, and (c) binarised mask (BW-5), across five vessels. All measurements used the mean intensity projection. Vertical dashed lines indicate stimulation onset and offset.~(d--f) Mean diameter per vessel before (dark bars) and after (light bars) stimulation for each method. Veins are shown in blue/cyan and arteries in dark/light red. Significance levels: $^{**}p < 0.01$, $^{***}p < 0.001$.~(g) Angiogram intensity time series and (h) mean angiogram intensity per vessel pre- and post-stimulation.}
 \label{fig:flicker}
 \end{figure}
 
-\begin{figure}[p]
+The binary mask based method showed uniformly positive per-vessel correlations, with an overall correlation of $\rho = 0.526$ ($p < 0.0005$; Fig.~\ref{fig:scatter_intensity}c). The Gaussian and GG models yielded overall correlations of $\rho = -0.101$ and $\rho = -0.098$, respectively (Fig.~\ref{fig:scatter_intensity}a,b). The angiogram intensity time series (Fig.~\ref{fig:flicker}g) showed a visible decline in angiogram intensity throughout the duration of the DyC-OCT scan across all five vessels. The mean intensity comparison pre- and post-stimulation (Fig.~\ref{fig:flicker}h) confirmed that the decrease was significant for all vessels, ranging from $-13.6\%$ to $-19.8\%$ (Table~\ref{tab:flicker}). 
+
+\begin{figure}[htbp]
 \centering
 \setlength{\abovecaptionskip}{4pt}\setlength{\belowcaptionskip}{2pt}
 \captionsetup[subfigure]{position=top,font=bf,skip=2pt}
@@ -197,8 +197,8 @@ The binary mask based method showed uniformly positive per-vessel correlations, 
 \label{fig:scatter_intensity}
 \end{figure}
 
-\begin{table}[htb]
-\caption{Flicker stimulation results. $\Delta d$: diameter change (\%); $\rho$: Correlation between diameter and angiogram intensity; $\Delta I$: intensity change (\%). Statistically significant values are bold.}
+\begin{table}[htbp]
+\caption{Flicker stimulation results. $\Delta d$: diameter change (\%); $\rho$: Correlation between diameter and angiogram intensity; $\Delta I$: intensity change (\%). Statistically significant values are bold ($^{*}p < 0.05$, $^{**}p < 0.01$, $^{***}p < 0.001$).}
 \label{tab:flicker}
 \centering
 \setlength{\abovecaptionskip}{2pt}\setlength{\belowcaptionskip}{2pt}

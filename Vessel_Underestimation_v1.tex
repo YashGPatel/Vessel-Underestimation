@@ -15,7 +15,7 @@
 
 \begin{document}
 
-\title{Universal manuscript template for Optica Publishing Group journals}
+\title{Characterising and correcting the underestimation of vessel diameter in optical coherence tomography angiography}
 
 \author{Yash Patel,\authormark{1} Prajakta Belekar,\authormark{1} Georg Ladurner,\authormark{1} Sybren Worm,\authormark{1} Lucas May,\authormark{1} Maria Varaka,\authormark{1} Theresa Rohrmoser,\authormark{1} Fernando Garc\'{i}a-Ram\'{i}rez,\authormark{1} Ren\'{e} Werkmeister,\authormark{1} Bernhard Baumann,\authormark{1,2} and Conrad W. Merkle\authormark{1,*}}
 
@@ -27,8 +27,7 @@
 % use {asbstract*} to suppress the copyright line. Copyright information will be added in production
 
 \begin{abstract*} 
-This template contains important information on submissions to Optica Publishing Group journals. We encourage authors to focus foremost on their content and not on formatting. The template is provided as a guide, but following the visual styling is optional. Each manuscript will be formatted in a consistent way during production. Authors also have the option to \href{https://opticaopen.org}{submit articles} to the Optica Publishing Group preprint server, \href{https://opticaopen.org/figshare}{Optica Open}. You may find it helpful to use our optional \href{https://preflight.paperpal.com/partner/optica/opticapublishinggroupjournals}{Paperpal manuscript readiness check}  and \href{https://languageediting.optica.org/}{language polishing service}. Note that copyright and licensing information should not be added to your journal or Optica Open manuscript. 
-
+\input{files/abstract.tex}
 \end{abstract*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%  body  %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -43,6 +42,9 @@ This template contains important information on submissions to Optica Publishing
 
 \section{Discussion}
  \input{files/discussion.tex}
+
+\section{Conclusion}
+ \input{files/conclusion.tex}
 
 
 % \section{Corresponding author}
@@ -324,16 +326,19 @@ This template contains important information on submissions to Optica Publishing
 % \section{Conclusion}
 % After proofreading the manuscript, compress your .tex manuscript file and all figures (which should be in EPS or PDF format) in a ZIP, TAR, or TAR-GZIP package. All files must be referenced at the root level (e.g., file \texttt{figure-1.eps}, not \texttt{/myfigs/figure-1.eps}). If there are supplementary materials, the associated files should not be included in your manuscript archive but be uploaded separately through the Prism interface.
 
-% %%%%%%%%%%%%%%%%%%%%%%% References %%%%%%%%%%%%%%%%%%%%%%%%%
-
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% References %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Add references with BibTeX or manually 
 % \cite{Zhang:14,OPTICA,FORSTER2007,Dean2006,testthesis,Yelin:03,Masajada:13,codeexample}.
 
 %%%%%%%%%% If using BibTeX:
 % \bibliography{sameple}
 % \bibliography{sample,Merkle_Master_Library,Vessel_Underestimation}
-\bibliography{sample,Vessel_Underestimation} %include the new ones from Merkle_Master_Library_Copy
-% keep only the unique ones into a separate bib file and use two bib files 
+\bibliography{Merkle_Master_Library,Vessel_Underestimation}
+% Merkle_Master_Library_Copy.bib = PI's curated master library (do NOT use the older
+%   Merkle_Master_Library.bib - it is stale and was locally modified).
+% Vessel_Underestimation.bib = only refs NOT in the PI's copy; duplicates removed.
 
 % %%%%%%%%%% If preparing manually:
 % % \begin{thebibliography}{1}
