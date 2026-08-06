@@ -353,11 +353,6 @@ A.~F. Frangi, W.~J. Niessen, K.~L. Vincken, and M.~A. Viergever,
   \emph{Lecture Notes in Computer Science} W.~M. Wells, A.~Colchester, and
   S.~Delp, eds. (Springer, Berlin, Heidelberg, 1998), pp. 130--137.
 
-\bibitem{sonFunctionalOCTReveals2024}
-T.~Son, G.~Ma, and X.~Yao, \enquote{Functional {OCT} reveals anisotropic
-  changes of retinal flicker-evoked vasodilation,}
-  {\protect\JournalTitle{Optics Letters}} \textbf{49}, 2121--2124 (2024).
-
 \bibitem{formazDiffuseLuminanceFlicker1997}
 F.~Formaz, C.~E. Riva, and M.~Geiser, \enquote{Diffuse luminance flicker
   increases retinal vessel diameter in humans,} {\protect\JournalTitle{Current
@@ -381,6 +376,17 @@ M.~Kallab, N.~Hommer, B.~Tan, \emph{et~al.}, \enquote{Plexus-specific effect of
   Journal of Physiology-Heart and Circulatory Physiology}} \textbf{320},
   H23--H28 (2020).
 
+\bibitem{sonFunctionalOCTReveals2024}
+T.~Son, G.~Ma, and X.~Yao, \enquote{Functional {OCT} reveals anisotropic
+  changes of retinal flicker-evoked vasodilation,}
+  {\protect\JournalTitle{Optics Letters}} \textbf{49}, 2121--2124 (2024).
+
+\bibitem{radhakrishnanMultiparametricOpticalCoherence2013}
+H.~Radhakrishnan and V.~J. Srinivasan, \enquote{Multiparametric optical
+  coherence tomography imaging of the inner retinal hemodynamic response to
+  visual stimulation,} {\protect\JournalTitle{Journal of Biomedical Optics}}
+  \textbf{18}, 086010 (2013).
+
 \bibitem{albannaNonInvasiveEvaluation2018}
 W.~Albanna, K.~Kotliar, J.~N. L{\"u}ke, \emph{et~al.}, \enquote{Non-invasive
   evaluation of neurovascular coupling in the murine retina by dynamic retinal
@@ -398,11 +404,5 @@ M.~Rai, Y.~Lakshmanan, K.~Y. Choi, and H.~H.-l. Chan, \enquote{Effects of
   flickering light stimulation on retinal blood flow and full-field
   electroretinogram in mice,} {\protect\JournalTitle{Documenta
   Ophthalmologica}} \textbf{151}, 205--218 (2025).
-
-\bibitem{radhakrishnanMultiparametricOpticalCoherence2013}
-H.~Radhakrishnan and V.~J. Srinivasan, \enquote{Multiparametric optical
-  coherence tomography imaging of the inner retinal hemodynamic response to
-  visual stimulation,} {\protect\JournalTitle{Journal of Biomedical Optics}}
-  \textbf{18}, 086010 (2013).
 
 \end{thebibliography}

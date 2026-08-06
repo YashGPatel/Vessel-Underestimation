@@ -34,8 +34,12 @@
 % (a)-(c) are labelled inside the images by DyCOCT_Figs.m. A printed top subcaption on each would add ~1.2cm of white space between them, so the counter is advanced with \phantomsubcaption and the letters come from the figures themselves - keep the two in the same order.
 % \offinterlineskip: without it LaTeX puts a full \baselineskip between the stacked panels - measured at 11pt, i.e. a 0.4cm white band between each pair. With it off, \\[2pt] sets the separation exactly.
 % \vspace{0pt} makes [t] align the TOP of each minipage rather than its first baseline. Without it the bare-image column floats up by a panel height relative to the caption-first column, leaving dead space under (c).
-% 15.4pt spacer = the height of the (d)/(e) subcaption row, so the (a) image top lines up with the (d) image top rather than with the caption text.
-\begin{minipage}[t]{0.38\linewidth}\vspace{15.4pt}\offinterlineskip
+% The header replaces what used to be a bare 15.4pt spacer, whose only job was to match the height of the (d)/(e) subcaption row so the (a) image top lines up with the (d) image top rather than with the caption text. Set at the subcaption size and weight, it occupies that same row and now labels the column as well. It measures ~70pt against the 144pt available, so it stays on one line and the alignment holds.
+% The header row is shorter than the 15.4pt it replaced, which lifted this column 6pt above the right-hand one. The 6pt goes in front of the header rather than after it, so the header sits level with the (d)/(e) subcaption text and the 1pt below it still matches their skip=1pt.
+% It must sit before \offinterlineskip, which strips interline glue so the three B-scans butt together on the explicit \\[2pt]; after it the header would land flush on image (a).
+\begin{minipage}[t]{0.38\linewidth}\vspace{6pt}
+{\centering\small\bfseries B-scan angiogram\par}\vspace{1pt}
+\offinterlineskip
 \begin{subfigure}[t]{\linewidth}\includegraphics[width=\linewidth]{figures/dycoct_a.pdf}\phantomsubcaption\label{fig:dycoct_a}\end{subfigure}\\
 \begin{subfigure}[t]{\linewidth}\includegraphics[width=\linewidth]{figures/dycoct_b.pdf}\phantomsubcaption\label{fig:dycoct_b}\end{subfigure}\\
 \begin{subfigure}[t]{\linewidth}\includegraphics[width=\linewidth]{figures/dycoct_c.pdf}\phantomsubcaption\label{fig:dycoct_c}\end{subfigure}
