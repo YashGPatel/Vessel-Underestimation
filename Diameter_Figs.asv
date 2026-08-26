@@ -655,6 +655,7 @@ format_font();
 yticks(0:0.2:1); ax = gca; set(ax,'FontSize',12,'FontWeight','bold'); set(get(ax,'YLabel'),'FontSize',16,'FontWeight','bold','Color','k'); set(get(ax,'XLabel'),'FontSize',16,'FontWeight','bold','Color','k');
 if save_figs; export_pmb(gcf, fullfile(out_dir,'cov_r2_c.png'), 600, 2); end
 % figure; bar(x, RMSE(:,inds)');
+%%
 figure; 
 b = bar(x, CoV(:,inds)','FaceColor','Flat');
 b(2).CData = [.47, .67, .19];

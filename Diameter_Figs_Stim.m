@@ -155,7 +155,7 @@ xlim([0 1.2e-5]); ylim([0 120]);
 ylabel('Measured Diameter (\mum)');
 xlabel('Angiogram Signal (AU) \times10^{-5}');
 format_font();
-axis square; set(gca,'FontSize',28,'FontWeight','bold'); set([get(gca,'XLabel');get(gca,'YLabel')],'FontSize',38,'FontWeight','bold'); set(findobj(gca,'Type','text'),'FontSize',26,'FontWeight','normal'); ax9=gca; ax9.XAxis.Exponent=-5; ax9.XAxis.SecondaryLabel.Visible='off'; xticks(0:0.2e-5:1.2e-5);
+axis square; set(gca,'FontSize',28,'FontWeight','bold'); set([get(gca,'XLabel');get(gca,'YLabel')],'FontSize',30,'FontWeight','bold'); set(findobj(gca,'Type','text'),'FontSize',26,'FontWeight','normal'); ax9=gca; ax9.XAxis.Exponent=-5; ax9.XAxis.SecondaryLabel.Visible='off'; xticks(0:0.2e-5:1.2e-5);
 if save_figs; exportgraphics(gcf, fullfile(out_dir,'scatter_intensity_a.pdf'), 'ContentType','vector','BackgroundColor','white'); end
 mean(rho_mat)
 
@@ -282,7 +282,7 @@ xlim([0 1.2e-5]); ylim([0 120]);
 ylabel('Measured Diameter (\mum)');
 xlabel('Angiogram Signal (AU) \times10^{-5}');
 format_font();
-axis square; set(gca,'FontSize',28,'FontWeight','bold'); set(get(gca,'XLabel'),'FontSize',38,'FontWeight','bold','Color','k'); set(get(gca,'YLabel'),'FontSize',38,'FontWeight','bold','Color','w'); set(findobj(gca,'Type','text'),'FontSize',26,'FontWeight','normal'); ax9=gca; ax9.XAxis.Exponent=-5; ax9.XAxis.SecondaryLabel.Visible='off'; xticks(0:0.2e-5:1.2e-5);
+axis square; set(gca,'FontSize',28,'FontWeight','bold'); set(get(gca,'XLabel'),'FontSize',30,'FontWeight','bold','Color','k'); set(get(gca,'YLabel'),'FontSize',30,'FontWeight','bold','Color','w'); set(findobj(gca,'Type','text'),'FontSize',26,'FontWeight','normal'); ax9=gca; ax9.XAxis.Exponent=-5; ax9.XAxis.SecondaryLabel.Visible='off'; xticks(0:0.2e-5:1.2e-5);
 if save_figs; exportgraphics(gcf, fullfile(out_dir,'scatter_intensity_b.pdf'), 'ContentType','vector','BackgroundColor','white'); end
 mean(rho_mat)
 % width = .2;
@@ -414,7 +414,7 @@ xlim([0 1.2e-5]); ylim([0 120]);
 ylabel('Measured Diameter (\mum)');
 xlabel('Angiogram Signal (AU) \times10^{-5}');
 format_font();
-axis square; set(gca,'FontSize',28,'FontWeight','bold'); set(get(gca,'XLabel'),'FontSize',38,'FontWeight','bold','Color','k'); set(get(gca,'YLabel'),'FontSize',38,'FontWeight','bold','Color','w'); set(findobj(gca,'Type','text'),'FontSize',26,'FontWeight','normal'); ax9=gca; ax9.XAxis.Exponent=-5; ax9.XAxis.SecondaryLabel.Visible='off'; xticks(0:0.2e-5:1.2e-5);
+axis square; set(gca,'FontSize',28,'FontWeight','bold'); set(get(gca,'XLabel'),'FontSize',30,'FontWeight','bold','Color','k'); set(get(gca,'YLabel'),'FontSize',30,'FontWeight','bold','Color','w'); set(findobj(gca,'Type','text'),'FontSize',26,'FontWeight','normal'); ax9=gca; ax9.XAxis.Exponent=-5; ax9.XAxis.SecondaryLabel.Visible='off'; xticks(0:0.2e-5:1.2e-5);
 if save_figs; exportgraphics(gcf, fullfile(out_dir,'scatter_intensity_c.pdf'), 'ContentType','vector','BackgroundColor','white'); end
 mean(rho_mat)
 % width = .2;
