@@ -93,8 +93,8 @@ bar(x([6, 10]), means([6, 10]),width1,'c');
 bar(x([1, 3, 7]), means([1, 3, 7]),width2,'FaceColor',[.64,.08,.18]); 
 bar(x([2, 4, 8]), means([2, 4, 8]),width2,'r'); 
 errorbar(x, means, stds, 'k.','HandleVisibility','off','CapSize',12,'LineWidth',1.2);
-scatter(x(1:2:9), info.diam, 'kx');
-scatter(x(2:2:10), info.width_2.*info.diam./info.width, 'kx');
+scatter(x(1:2:9), info.diam, 90, 'x', 'MarkerEdgeColor','k', 'LineWidth', 2.5);
+scatter(x(2:2:10), info.width_2.*info.diam./info.width, 90, 'x', 'MarkerEdgeColor','k', 'LineWidth', 2.5);
 ylim([0 80]);
 xlim([-.5 13.5]);
 % legend('Vein - Pre', 'Vein - Post', 'Artery - Pre', 'Artery - Post');
@@ -219,8 +219,8 @@ bar(x([5, 9]), means([5, 9]),width1,'b'); hold on;
 bar(x([6, 10]), means([6, 10]),width1,'c'); 
 bar(x([1, 3, 7]), means([1, 3, 7]),width2,'FaceColor',[.64,.08,.18]); 
 bar(x([2, 4, 8]), means([2, 4, 8]),width2,'r'); 
-scatter(x(1:2:9), info.diam, 'kx');
-scatter(x(2:2:10), info.width_2.*info.diam./info.width, 'kx');
+scatter(x(1:2:9), info.diam, 90, 'x', 'MarkerEdgeColor','k', 'LineWidth', 2.5);
+scatter(x(2:2:10), info.width_2.*info.diam./info.width, 90, 'x', 'MarkerEdgeColor','k', 'LineWidth', 2.5);
 errorbar(x, means, stds, 'k.','HandleVisibility','off','CapSize',12,'LineWidth',1.2);
 ylim([0 80]);
 xlim([-.5 13.5]);
@@ -344,8 +344,8 @@ bar(x([5, 9]), means([5, 9]),width1,'b'); hold on;
 bar(x([6, 10]), means([6, 10]),width1,'c'); 
 bar(x([1, 3, 7]), means([1, 3, 7]),width2,'FaceColor',[.64,.08,.18]); 
 bar(x([2, 4, 8]), means([2, 4, 8]),width2,'r'); 
-scatter(x(1:2:9), info.diam, 'kx');
-scatter(x(2:2:10), info.width_2.*info.diam./info.width, 'kx');
+scatter(x(1:2:9), info.diam, 90, 'x', 'MarkerEdgeColor','k', 'LineWidth', 2.5);
+scatter(x(2:2:10), info.width_2.*info.diam./info.width, 90, 'x', 'MarkerEdgeColor','k', 'LineWidth', 2.5);
 errorbar(x, means, stds, 'k.','HandleVisibility','off','CapSize',12,'LineWidth',1.2);
 ylim([0 80]);
 xlim([-.5 13.5]);
@@ -510,7 +510,7 @@ if save_figs; exportgraphics(gcf, fullfile(out_dir,'flicker_h.pdf'), 'ContentTyp
 %% Standalone shared legend for Fig 8 (placed in the empty bottom-row cell in LaTeX)
 leg_colors = [0, .45, .74; 0.85, .33, .1; .93, .69, .13; .49, .18, .56; .47, .67, .19];
 figure; hold on; axis off;
-hL = gobjects(1,9);
+hL = gobjects(1,10);
 for n = 1:5
     hL(n) = plot(nan, nan, '-', 'Color', leg_colors(n,:), 'LineWidth', 4, 'DisplayName', ['Vessel ' num2str(n)]);
 end
@@ -526,6 +526,11 @@ hL(8) = patch(nan,nan,[.64 .08 .18],...
 hL(9) = patch(nan,nan,[1 0 0],      ...
     'EdgeColor','k', ...
     'DisplayName','Artery - Post-Dilation');
+% plot(), not scatter(): legend draws scatter markers at a reduced size
+% regardless of SizeData, so the key came out far smaller than the crosses
+% on the panels. A line object's marker is drawn at its MarkerSize.
+hL(10) = plot(nan, nan, 'x', 'Color','k', 'MarkerSize', 13, 'LineWidth', 3, ...
+    'DisplayName','Ground Truth');
 lg = legend(hL, 'FontSize', 22, 'Location', 'west'); lg.Box = 'off';
 lg.ItemTokenSize = [30, 18];   % [width height]
 set(gcf,'Position',[300 300 400 600]);
