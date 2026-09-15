@@ -67,8 +67,8 @@ R.~J. Hernandez and W.~K. {El-Bouri}, \enquote{Microvascular retinal digital
 
 \bibitem{huangOpticalCoherenceTomography1991}
 D.~Huang, E.~A. Swanson, C.~P. Lin, \emph{et~al.}, \enquote{Optical coherence
-  tomography,} {\protect\JournalTitle{Science (New York, N.Y.)}} \textbf{254},
-  1178--1181 (1991).
+  tomography,} {\protect\JournalTitle{{Science} (New York, N.Y.)}}
+  \textbf{254}, 1178--1181 (1991).
 
 \bibitem{fercherVivoOpticalCoherence1993}
 A.~F. Fercher, C.~K. Hitzenberger, W.~Drexler, \emph{et~al.}, \enquote{In vivo
@@ -123,8 +123,8 @@ W.~Tan, X.~Yao, T.-T. Le, \emph{et~al.}, \enquote{The application of optical
 \bibitem{yaoComparisonRetinalVessel2021}
 X.~Yao, M.~Ke, Y.~Ho, \emph{et~al.}, \enquote{Comparison of retinal vessel
   diameter measurements from swept-source {OCT} angiography and adaptive optics
-  ophthalmoscope,} {\protect\JournalTitle{The British Journal of
-  Ophthalmology}} \textbf{105}, 426--431 (2021).
+  ophthalmoscope,} {\protect\JournalTitle{British Journal of Ophthalmology}}
+  \textbf{105}, 426--431 (2021).
 
 \bibitem{leeQUANTIFICATIONRETINALVESSEL2018}
 H.~Lee, M.~Lee, H.~Chung, and H.~C. Kim, \enquote{Quantification of retinal
@@ -326,10 +326,9 @@ S.~Worm, G.~Ladurner, L.~May, \emph{et~al.}, \enquote{Retinal {OCT} parameters
 
 \bibitem{augustinMultifunctionalOCTImage2016}
 M.~Augustin, S.~Fialov{\'a}, R.~Plasenzotti, \emph{et~al.},
-  \enquote{Multi-functional {OCT} image processing for rodent eyes,}  (OSA -
-  The Optical Society, Center for Medical Physics and Biomedical Engineering,
-  Medical University of Vienna, Waehringer Guertel 18-20, 4L, Vienna, A-1090,
-  Austria, 2016), p.~3.
+  \enquote{Multi-functional {OCT} image processing for rodent eyes,} in
+  \emph{Optical Tomography and Spectroscopy,} Optica Publishing Group (Optical
+  Society of America, 2016), pp. OTh4C--2.
 
 \bibitem{hormelMaximumValueProjection2018}
 T.~T. Hormel, J.~Wang, S.~T. Bailey, \emph{et~al.}, \enquote{Maximum value
