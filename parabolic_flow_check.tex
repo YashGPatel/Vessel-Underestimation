@@ -1,0 +1,97 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.4cm]{geometry}
+\usepackage{amsmath,booktabs,siunitx,xcolor,tabularx}
+\usepackage[colorlinks=true,urlcolor=blue!60!black,citecolor=black]{hyperref}
+\setlength{\parskip}{0.45em}\setlength{\parindent}{0pt}
+\title{Is a parabolic flow profile a defensible idealisation for the vessels in this study?}
+\author{Working note for the OCTA vessel-diameter manuscript}
+\date{17 September 2026}
+\begin{document}\maketitle
+
+\section*{Why this note exists}
+Section 4.7 proposes a forward model that starts from a vessel of circular cross-section carrying a
+parabolic flow profile. This note checks that assumption against the vessels actually measured here,
+so that the claim rests on arithmetic rather than on a rule of thumb. Everything needed to reproduce
+the numbers is below.
+
+\section*{Inputs}
+\begin{tabularx}{\textwidth}{@{}l l X@{}}
+\toprule
+Quantity & Value used & Where it comes from \\ \midrule
+Vessel diameter $d$ & \SIrange{26}{62}{\micro\metre} & ground truth, $n=7$, this study (flicker set: \SIrange{28}{48}{\micro\metre}, $n=5$) \\
+Blood density $\rho$ & \SI{1060}{\kilo\gram\per\cubic\metre} & standard value for whole blood, uncited \\
+Blood viscosity $\mu$ & \SI{3.5}{\milli\pascal\second}, swept \SIrange{2.5}{4.0}{\milli\pascal\second} & bulk value; see the note on apparent viscosity \cite{pries1992} \\
+Mean velocity $v$ & derived, see below & total arterial flow \SI{2.82}{\micro\litre\per\minute} over six vessels \cite{zhi2012} \\
+Heart rate $f$ & \SIrange{5}{10}{\hertz} (300 to 600 bpm) & swept; anaesthesia lowers heart rate and cardiac output \cite{janssen2004} \\ \bottomrule
+\end{tabularx}
+
+\paragraph{Velocity.} No measured velocity exists for these vessels, so it is derived. Zhi \textit{et al.}
+measured a total arterial flow of \SI{2.82}{\micro\litre\per\minute} in the mouse retina across the six
+main vessels \cite{zhi2012}. Per vessel that is $Q = 2.82/6/60 = \SI{7.83e-3}{\cubic\milli\metre\per\second}$,
+and the mean velocity follows from continuity,
+\begin{equation}
+v = \frac{Q}{\pi (d/2)^2}.
+\end{equation}
+This is an estimate from a different mouse strain under a different anaesthetic, and their wording leaves it
+open whether those six are six arteries or six vessels in total. If the per-vessel flow were twice what is
+assumed here, every Reynolds number below would double, reaching at most $0.23$. The conclusion is
+therefore also stress-tested at a velocity far above anything plausible here.
+
+\paragraph{Apparent viscosity.} In tubes of this calibre the apparent viscosity of blood is lower than the
+bulk value, the F\aa hr\ae us--Lindqvist effect, quantified over diameters from \SI{3.3}{\micro\metre} to
+\SI{1978}{\micro\metre} by Pries \textit{et al.} \cite{pries1992}. A lower viscosity raises the Reynolds
+number, so the sweep down to \SI{2.5}{\milli\pascal\second} is the conservative direction.
+
+\section*{The three numbers}
+\begin{align}
+\text{Reynolds number} \qquad \mathrm{Re} &= \frac{\rho v d}{\mu} \\
+\text{Entrance length} \qquad L_e &= \left[0.619^{1.6} + (0.0567\,\mathrm{Re})^{1.6}\right]^{1/1.6} d \\
+\text{Womersley number} \qquad \alpha &= \frac{d}{2}\sqrt{\frac{2\pi f \rho}{\mu}}
+\end{align}
+$\mathrm{Re}$ decides laminar against turbulent. $L_e$ decides whether the parabola has room to form before
+the measurement site. $\alpha$ decides whether pulsatility blunts the profile: for $\alpha \ll 1$ the flow is
+quasi-steady and stays parabolic through the cardiac cycle.
+
+\paragraph{A caution on $L_e$.} The textbook correlation $L_e \approx 0.06\,\mathrm{Re}\,d$ is not usable at
+these Reynolds numbers. It is fitted at moderate $\mathrm{Re}$ and tends to zero as $\mathrm{Re}\to 0$, which
+is unphysical: in creeping flow the development length tends to a constant of roughly $0.6\,d$. The
+expression above carries that limit, and it is what the table uses; it is Eq.~(16) of Durst \textit{et al.},
+whose constants are the $\mathrm{Re}\to 0$ and $\mathrm{Re}\to\infty$ limits of $L/D$ \cite{durst2005}.
+
+\section*{Results}
+\begin{tabular}{@{}rrrrrrr@{}}
+\toprule
+$d$ (\si{\micro\metre}) & $v$ (\si{\milli\metre\per\second}) & $\mathrm{Re}$ & $\mathrm{Re}$, $\mu$ \SIrange{2.5}{4.0}{\milli\pascal\second} & $L_e$ (\si{\micro\metre}) & $\alpha$ (\SI{5}{\hertz}) & $\alpha$ (\SI{10}{\hertz}) \\ \midrule
+26 & 14.8 & 0.116 & 0.102--0.163 & 16 & 0.040 & 0.057 \\
+30 & 11.1 & 0.101 & 0.088--0.141 & 19 & 0.046 & 0.065 \\
+38 & 6.9 & 0.079 & 0.070--0.111 & 24 & 0.059 & 0.083 \\
+48 & 4.3 & 0.063 & 0.055--0.088 & 30 & 0.074 & 0.105 \\
+62 & 2.6 & 0.049 & 0.043--0.068 & 38 & 0.096 & 0.135 \\
+\bottomrule
+\end{tabular}
+
+\paragraph{Stress test.} Forcing \SI{20}{\milli\metre\per\second} through the largest vessel, several times
+the derived velocity, still gives $\mathrm{Re} = 0.38$ and an entrance length of \SI{38}{\micro\metre},
+that is $0.63\,d$.
+
+\section*{What this supports, and what it does not}
+The flow in these vessels is laminar by roughly four orders of magnitude, fully developed within about two
+thirds of one diameter, which is short against the spacing of bifurcations, and quasi-steady. A parabolic
+profile is therefore a defensible starting point for a forward model of the OCTA signal.
+
+Three things it does not establish. First, the profile of the \textit{OCTA signal} is not the profile of the
+flow: the signal also depends on the RBC orientation artefact, on fringe washout, and on the nonlinear
+relation between signal and flow speed, which is why those terms appear in the proposed model rather than flow
+alone. Second, the velocity is inferred, not measured; the DyC-OCT data behind this manuscript could supply a
+measured velocity for exactly these vessels and would remove that assumption. Third, a parabolic profile is
+the profile of the \textit{plasma and cell mixture} treated as a continuum; it says nothing about the cell-free
+layer at the wall, which is the very feature that separates the OCTA-visible red blood cell column from the
+lumen boundary seen with contrast.
+
+\begin{thebibliography}{9}
+\bibitem{pries1992} A.~R. Pries, D.~Neuhaus, and P.~Gaehtgens, ``Blood viscosity in tube flow: dependence on diameter and hematocrit,'' \textit{Am. J. Physiol.} \textbf{263}(6 Pt 2), H1770--H1778 (1992). \href{https://doi.org/10.1152/ajpheart.1992.263.6.H1770}{10.1152/ajpheart.1992.263.6.H1770}
+\bibitem{zhi2012} Z.~Zhi, X.~Yin, S.~Dziennis, T.~Wietecha, K.~L. Hudkins, C.~E. Alpers, and R.~K. Wang, ``Optical microangiography of retina and choroid and measurement of total retinal blood flow in mice,'' \textit{Biomed. Opt. Express} \textbf{3}(11), 2976--2986 (2012). \href{https://doi.org/10.1364/BOE.3.002976}{10.1364/BOE.3.002976}
+\bibitem{durst2005} F.~Durst, S.~Ray, B.~\"Unsal, and O.~A. Bayoumi, ``The development lengths of laminar pipe and channel flows,'' \textit{J. Fluids Eng.} \textbf{127}(6), 1154--1160 (2005). Source of the $L_e$ expression, their Eq.~(16) for pipe flow.
+\bibitem{janssen2004} B.~J.~A. Janssen, T.~De Celle, J.~J.~M. Debets, A.~E. Brouns, M.~F. Callahan, and T.~L. Smith, ``Effects of anesthetics on systemic hemodynamics in mice,'' \textit{Am. J. Physiol. Heart Circ. Physiol.} \textbf{287}(4), H1618--H1624 (2004). Cited for the direction of the effect only; the abstract reports cardiac output and blood pressure, not heart rate. \href{https://doi.org/10.1152/ajpheart.01192.2003}{10.1152/ajpheart.01192.2003}
+\end{thebibliography}
+\end{document}
