@@ -40,20 +40,21 @@ S.~Tzaridis, M.~W.~M. Wintergerst, C.~Mai, \emph{et~al.},
 
 \bibitem{kwapongRetinalMicrovascularImpairment2018}
 W.~R. Kwapong, H.~Ye, C.~Peng, \emph{et~al.}, \enquote{Retinal microvascular
-  impairment in the early stages of parkinson's disease,}
+  impairment in the early stages of {P}arkinson's disease,}
   {\protect\JournalTitle{Investigative Ophthalmology \& Visual Science}}
   \textbf{59}, 4115--4122 (2018).
 
 \bibitem{sampsonTowardsStandardizingRetinal2022}
 D.~M. Sampson, A.~M. Dubis, F.~K. Chen, \emph{et~al.}, \enquote{Towards
   standardizing retinal optical coherence tomography angiography: a review,}
-  {\protect\JournalTitle{Light, Science \& Applications}} \textbf{11} (2022).
+  {\protect\JournalTitle{Light Science \& Applications}} \textbf{11}, 63
+  (2022).
 
 \bibitem{untrachtTowardsStandardisingRetinal2024}
 G.~R. Untracht, M.~S. Durkee, M.~Zhao, \emph{et~al.}, \enquote{Towards
   standardising retinal {OCT} angiography image analysis with open-source
-  toolbox {OCTAVA},} {\protect\JournalTitle{Scientific Reports}} \textbf{14}
-  (2024).
+  toolbox {OCTAVA},} {\protect\JournalTitle{Scientific Reports}} \textbf{14},
+  5979 (2024).
 
 \bibitem{uenoAssociationChangesRetinal2021}
 Y.~Ueno, T.~Iwase, K.~Goto, \emph{et~al.}, \enquote{Association of changes of
@@ -103,8 +104,8 @@ R.~J. Hernandez and W.~K. {El-Bouri}, \enquote{Microvascular retinal digital
 
 \bibitem{huangOpticalCoherenceTomography1991}
 D.~Huang, E.~A. Swanson, C.~P. Lin, \emph{et~al.}, \enquote{Optical coherence
-  tomography,} {\protect\JournalTitle{Science (New York, N.Y.)}} \textbf{254},
-  1178--1181 (1991).
+  tomography,} {\protect\JournalTitle{Science}} \textbf{254}, 1178--1181
+  (1991).
 
 \bibitem{fercherVivoOpticalCoherence1993}
 A.~F. Fercher, C.~K. Hitzenberger, W.~Drexler, \emph{et~al.}, \enquote{In vivo
@@ -177,7 +178,7 @@ N.~Mehta, K.~Liu, A.~Y. Alibhai, \emph{et~al.}, \enquote{Impact of binarization
 \bibitem{rabioloComparisonMethodsQuantify2018}
 A.~Rabiolo, F.~Gelormini, R.~Sacconi, \emph{et~al.}, \enquote{Comparison of
   methods to quantify macular and peripapillary vessel density in optical
-  coherence tomography angiography,} {\protect\JournalTitle{PloS One}}
+  coherence tomography angiography,} {\protect\JournalTitle{PLOS ONE}}
   \textbf{13}, e0205773 (2018).
 
 \bibitem{borrelliOPTICALCOHERENCETOMOGRAPHY2021}
@@ -239,7 +240,8 @@ Y.~Pan, J.~You, N.~D. Volkow, \emph{et~al.}, \enquote{Ultrasensitive detection
 C.~W. Merkle, C.~Leahy, and V.~J. Srinivasan, \enquote{Dynamic contrast optical
   coherence tomography images transit time and quantifies microvascular plasma
   volume and flow in the retina and choriocapillaris,}
-  {\protect\JournalTitle{Biomedical Optics Express}} \textbf{7}, 4289 (2016).
+  {\protect\JournalTitle{Biomedical Optics Express}} \textbf{7}, 4289--4312
+  (2016).
 
 \bibitem{merkleLaminarMicrovascularTransit2016}
 C.~W. Merkle and V.~J. Srinivasan, \enquote{Laminar microvascular transit time
@@ -273,7 +275,7 @@ G.~Garh{\"o}fer, C.~Zawinka, H.~Resch, \emph{et~al.}, \enquote{Diffuse
 \bibitem{sharifizadFactorsDeterminingFlickerinduced2016}
 M.~Sharifizad, K.~J. Witkowska, G.~C. Aschinger, \emph{et~al.},
   \enquote{Factors determining flicker-induced retinal vasodilation in healthy
-  subjects,} {\protect\JournalTitle{Investigative Ophthalmology and Visual
+  subjects,} {\protect\JournalTitle{Investigative Ophthalmology \& Visual
   Science}} \textbf{57}, 3306--3312 (2016).
 
 \bibitem{michelsonFlickeringLightIncreases2002}
@@ -290,8 +292,8 @@ G.~C. Aschinger, L.~Schmetterer, K.~Fondi, \emph{et~al.}, \enquote{Effect of
 
 \bibitem{kornfieldRegulationBloodFlow2014}
 T.~E. Kornfield and E.~A. Newman, \enquote{Regulation of blood flow in the
-  retinal trilaminar vascular network,} {\protect\JournalTitle{The Journal of
-  Neuroscience}} \textbf{34}, 11504 LP -- 11513 (2014).
+  retinal trilaminar vascular network,} {\protect\JournalTitle{Journal of
+  Neuroscience}} \textbf{34}, 11504--11513 (2014).
 
 \bibitem{shihQuantitativeRetinalChoroidal2013}
 Y.-Y.~I. Shih, L.~Wang, B.~H. {De La Garza}, \emph{et~al.},
@@ -327,8 +329,8 @@ Y.~Geng, L.~A. Schery, R.~Sharma, \emph{et~al.}, \enquote{Optical properties of
 
 \bibitem{schmuckerParaxialSchematicEye2004}
 C.~Schmucker and F.~Schaeffel, \enquote{A paraxial schematic eye model for the
-  growing c57bl/6 mouse,} {\protect\JournalTitle{Vision Research}} \textbf{44},
-  1857--1867 (2004).
+  growing {C57BL/6} mouse,} {\protect\JournalTitle{Vision Research}}
+  \textbf{44}, 1857--1867 (2004).
 
 \bibitem{harperRetinalAnalysisMouse2020}
 D.~J. Harper, M.~Augustin, A.~Lichtenegger, \emph{et~al.}, \enquote{Retinal
@@ -343,25 +345,25 @@ M.~Born and E.~Wolf, \emph{Principles of Optics: Electromagnetic Theory of
 
 \bibitem{fuPhototransductionMouseRods2007}
 Y.~Fu and K.-W. Yau, \enquote{Phototransduction in mouse rods and cones,}
-  {\protect\JournalTitle{Pfl{\"u}gers Archiv-European Journal of Physiology}}
+  {\protect\JournalTitle{Pfl{\"u}gers Archiv - European Journal of Physiology}}
   \textbf{454}, 805--819 (2007).
 
 \bibitem{olssonProtectingAnimalsEnabling2016}
 I.~A.~S. Olsson, S.~P.~d. Silva, D.~Townend, and P.~Sandøe,
-  \enquote{Protecting animals and enabling research in the european union: An
-  overview of development and implementation of directive 2010/63/eu,}
+  \enquote{Protecting animals and enabling research in the {European Union}: An
+  overview of development and implementation of {Directive 2010/63/EU},}
   {\protect\JournalTitle{ILAR Journal}} \textbf{57}, 347--357 (2016).
 
 \bibitem{augustinOpticalCoherenceTomography2020}
 M.~Augustin, D.~J. Harper, C.~W. Merkle, \emph{et~al.}, \enquote{Optical
-  {{Coherence Tomography Findings}} in the {{Retinas}} of {{SOD1 Knockout
-  Mice}},} {\protect\JournalTitle{Translational Vision Science \& Technology}}
+  coherence tomography findings in the retinas of {SOD1} knockout mice,}
+  {\protect\JournalTitle{Translational Vision Science \& Technology}}
   \textbf{9}, 15 (2020).
 
 \bibitem{augustinMultifunctionalOCTEnables2016}
 M.~Augustin, S.~Fialov{\'a}, T.~Himmel, \emph{et~al.},
   \enquote{Multi-functional {{OCT}} enables longitudinal study of retinal
-  changes in a {{VLDLR}} knockout mouse model,} {\protect\JournalTitle{PLoS
+  changes in a {{VLDLR}} knockout mouse model,} {\protect\JournalTitle{PLOS
   ONE}} \textbf{11}, e0164419 (2016).
 
 \bibitem{sullenderDynamicsIsofluraneInduced2022}
@@ -379,14 +381,14 @@ S.~Worm, G.~Ladurner, L.~May, \emph{et~al.}, \enquote{Retinal {OCT} parameters
 \bibitem{augustinMultifunctionalOCTImage2016}
 M.~Augustin, S.~Fialov{\'a}, R.~Plasenzotti, \emph{et~al.},
   \enquote{Multi-functional {OCT} image processing for rodent eyes,} in
-  \emph{Optical Tomography and Spectroscopy,} Optica Publishing Group (Optical
-  Society of America, 2016), pp. OTh4C--2.
+  \emph{Optical Tomography and Spectroscopy,}  (Optical Society of America,
+  2016), p. OTh4C.2.
 
 \bibitem{hormelMaximumValueProjection2018}
 T.~T. Hormel, J.~Wang, S.~T. Bailey, \emph{et~al.}, \enquote{Maximum value
   projection produces better en face {OCT} angiograms than mean value
   projection,} {\protect\JournalTitle{Biomedical Optics Express}} \textbf{9},
-  6412 (2018).
+  6412--6424 (2018).
 
 \bibitem{fengHighresolutionStructuralFunctional2023}
 G.~Feng, A.~Joseph, K.~Dholakia, \emph{et~al.}, \enquote{High-resolution
@@ -444,8 +446,8 @@ J.~B. Muhlestein, Q.~Zhang, D.~J. Parker, \emph{et~al.}, \enquote{A comparison
 A.~F. Frangi, W.~J. Niessen, K.~L. Vincken, and M.~A. Viergever,
   \enquote{Multiscale vessel enhancement filtering,} in \emph{Medical Image
   Computing and Computer-Assisted Intervention --- {MICCAI}'98,}  vol. 1496 of
-  \emph{Lecture Notes in Computer Science} W.~M. Wells, A.~Colchester, and
-  S.~Delp, eds. (Springer, Berlin, Heidelberg, 1998), pp. 130--137.
+  \emph{Lecture Notes in Computer Science} (Springer, Berlin, Heidelberg,
+  1998), pp. 130--137.
 
 \bibitem{sonFunctionalOCTReveals2024}
 T.~Son, G.~Ma, and X.~Yao, \enquote{Functional {OCT} reveals anisotropic

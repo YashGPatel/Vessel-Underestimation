@@ -1,0 +1,99 @@
+CORRECTIONS MADE TO Merkle_Master_Library.bib
+Vessel Underestimation manuscript, reference list clean-up
+Date: 17 September 2026
+
+These entries were edited locally while fixing the reference list of the
+Vessel Underestimation manuscript. They are corrections to the source data,
+not to the citation style, so they should also be applied in Zotero -- 
+otherwise the next Better BibTeX export will undo them.
+
+A backup of the file before these edits is at Merkle_Master_Library.bib.bak.
+
+--------------------------------------------------------------------------
+1. huangOpticalCoherenceTomography1991
+   field:  journal
+   was:    Science (New York, N.Y.)
+   now:    Science
+   why:    The jabbrv package (loaded by optica-article.cls) abbreviates
+           journal names at typesetting time, but leaves one-word titles
+           alone. With the PubMed-style parenthetical the title counted as
+           several words, so it printed as "Sci. (New York, N.Y.)".
+
+2. kornfieldRegulationBloodFlow2014
+   field:  journal
+   was:    The Journal of Neuroscience
+   now:    Journal of Neuroscience
+   why:    Printed as "The J. Neurosci.".
+
+3. kornfieldRegulationBloodFlow2014
+   field:  pages
+   was:    11504 LP  - 11513
+   now:    11504--11513
+   why:    "LP" is a HighWire page-marker artifact from the publisher's
+           citation export. Printed as "11504 LP - 11513".
+
+4. merkleDynamicContrastOptical2016
+   field:  pages
+   was:    4289
+   now:    4289--4312
+   why:    Only the first page was stored. Correct range per the article
+           record (Biomed. Opt. Express 7(10), 4289-4312).
+
+5. augustinMultifunctionalOCTImage2016
+   field:  pages
+   was:    OTh4C--2
+   now:    OTh4C.2
+   why:    This is a conference paper number, not a page range. The double
+           hyphen made BibTeX print it as "OTh4C-2".
+
+6. augustinMultifunctionalOCTImage2016
+   field:  organization  (removed)
+   was:    organization = {Optica Publishing Group}
+   why:    The entry also has publisher = {Optical Society of America}, so
+           the reference printed two publishers:
+           "Optica Publishing Group (Optical Society of America, 2016)".
+
+7. augustinOpticalCoherenceTomography2020
+   field:  title
+   was:    Optical {{Coherence Tomography Findings}} in the {{Retinas}} of
+           {{SOD1 Knockout Mice}}
+   now:    Optical Coherence Tomography Findings in the Retinas of {SOD1}
+           Knockout Mice
+   why:    The double braces forced Title Case, making this the only
+           title-cased reference in an otherwise sentence-case list. Only
+           SOD1 needs protecting.
+
+8. sharifizadFactorsDeterminingFlickerinduced2016
+   field:  journal
+   was:    Investigative Ophthalmology and Visual Science
+   now:    Investigative Ophthalmology \& Visual Science
+   why:    Printed as "Investig. Ophthalmol. Vis. Sci." while every other
+           IOVS reference printed "Investig. Ophthalmol. & Vis. Sci.".
+   note:   The master library holds 17 entries spelled with "&", 20 with
+           "and" and 1 all-lowercase. Only the entry cited here was
+           changed; the rest are still inconsistent.
+
+9. rabioloComparisonMethodsQuantify2018
+   field:  journal
+   was:    PloS One
+   now:    PLOS ONE
+   why:    Printed as "PloS One" next to "PLoS ONE" from another entry.
+
+10. augustinMultifunctionalOCTEnables2016
+   field:  journal
+   was:    PLoS ONE
+   now:    PLOS ONE
+   why:    Same inconsistency as above.
+   note:   The master library holds four spellings of this journal
+           (PLOS ONE, PLoS ONE, PloS One, PloS one). Only the two entries
+           cited here were changed.
+
+--------------------------------------------------------------------------
+NOT changed in the library, fixed in the manuscript preamble instead:
+
+   zhouDetectionQuantificationRetinopathy1994
+   lowellMeasurementRetinalVessel2004
+   Both printed as "IEEE Trans. on Med. Imaging". jabbrv does not drop the
+   word "on". The journal names are correct as stored, so the fix was
+   \DefineSpuriousJournalWord{on} in the manuscript preamble rather than an
+   edit to the library.

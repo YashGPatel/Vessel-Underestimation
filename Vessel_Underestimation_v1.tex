@@ -4,6 +4,14 @@
 
 \articletype{Research Article}
 
+% jabbrv (loaded by optica-article.cls) does not drop "on" from journal titles,
+% which left "IEEE Trans. on Med. Imaging" in the reference list.
+\DefineSpuriousJournalWord{on}
+% jabbrv's word list does not cover these two, leaving "Sci. Reports"
+% and "IEEE Sensors J." in the reference list.
+\DefineJournalAbbreviation{Reports}{Rep}
+\DefineJournalAbbreviation{Sensors}{Sens}
+
 \usepackage{lineno}
 \usepackage{textcomp}
 \usepackage{placeins}
