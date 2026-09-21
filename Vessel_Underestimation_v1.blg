@@ -7,44 +7,44 @@ Reallocating 'name_of_file' (item size: 1) to 22 items.
 Reallocating 'name_of_file' (item size: 1) to 23 items.
 Database file #1: Merkle_Master_Library.bib
 Database file #2: Vessel_Underestimation.bib
-You've used 79 entries,
+You've used 82 entries,
             2638 wiz_defined-function locations,
-            1125 strings with 30046 characters,
-and the built_in function-call counts, 32692 in all, are:
-= -- 2504
-> -- 1267
+            1144 strings with 30555 characters,
+and the built_in function-call counts, 33836 in all, are:
+= -- 2598
+> -- 1301
 < -- 8
-+ -- 591
-- -- 296
-* -- 2409
-:= -- 3760
-add.period$ -- 160
-call.type$ -- 79
-change.case$ -- 80
++ -- 608
+- -- 304
+* -- 2489
+:= -- 3890
+add.period$ -- 166
+call.type$ -- 82
+change.case$ -- 83
 chr.to.int$ -- 9
-cite$ -- 79
-duplicate$ -- 2990
-empty$ -- 3029
-format.name$ -- 376
-if$ -- 7243
+cite$ -- 82
+duplicate$ -- 3103
+empty$ -- 3140
+format.name$ -- 386
+if$ -- 7492
 int.to.chr$ -- 0
-int.to.str$ -- 79
-missing$ -- 778
-newline$ -- 241
-num.names$ -- 81
-pop$ -- 998
+int.to.str$ -- 82
+missing$ -- 806
+newline$ -- 250
+num.names$ -- 82
+pop$ -- 1028
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 698
+skip$ -- 725
 stack$ -- 0
-substring$ -- 1947
-swap$ -- 1983
+substring$ -- 2021
+swap$ -- 2054
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 206
-width$ -- 81
-write$ -- 714
+while$ -- 217
+width$ -- 84
+write$ -- 740
