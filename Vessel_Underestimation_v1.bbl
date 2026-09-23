@@ -56,6 +56,13 @@ G.~R. Untracht, M.~S. Durkee, M.~Zhao, \emph{et~al.}, \enquote{Towards
   toolbox {OCTAVA},} {\protect\JournalTitle{Scientific Reports}} \textbf{14},
   5979 (2024).
 
+\bibitem{kimQuantifyingMicrovascularDensity2016}
+A.~Y. Kim, Z.~Chu, A.~Shahidzadeh, \emph{et~al.}, \enquote{Quantifying
+  microvascular density and morphology in diabetic retinopathy using
+  spectral-domain optical coherence tomography angiography,}
+  {\protect\JournalTitle{Investigative Ophthalmology \& Visual Science}}
+  \textbf{57}, OCT362--OCT370 (2016).
+
 \bibitem{uenoAssociationChangesRetinal2021}
 Y.~Ueno, T.~Iwase, K.~Goto, \emph{et~al.}, \enquote{Association of changes of
   retinal vessels diameter with ocular blood flow in eyes with diabetic
@@ -249,6 +256,23 @@ C.~W. Merkle and V.~J. Srinivasan, \enquote{Laminar microvascular transit time
   optical coherence tomography,} {\protect\JournalTitle{NeuroImage}}
   \textbf{125}, 350--362 (2016).
 
+\bibitem{hammerLineScanningLaser2006}
+D.~X. Hammer, R.~D. Ferguson, T.~E. Ustun, \emph{et~al.},
+  \enquote{Line-scanning laser ophthalmoscope,} {\protect\JournalTitle{Journal
+  of Biomedical Optics}} \textbf{11}, 041126 (2006).
+
+\bibitem{hammerAngiographyMultifunctionalLine2012}
+D.~X. Hammer, R.~D. Ferguson, A.~H. Patel, \emph{et~al.}, \enquote{Angiography
+  with a multifunctional line scanning ophthalmoscope,}
+  {\protect\JournalTitle{Journal of Biomedical Optics}} \textbf{17}, 026008
+  (2012).
+
+\bibitem{garroneQuantitativeCoronaryAngiography2009}
+P.~Garrone, G.~Biondi-Zoccai, I.~Salvetti, \emph{et~al.}, \enquote{Quantitative
+  coronary angiography in the current era: Principles and applications,}
+  {\protect\JournalTitle{Journal of Interventional Cardiology}} \textbf{22},
+  527--536 (2009).
+
 \bibitem{zhouDetectionQuantificationRetinopathy1994}
 L.~Zhou, M.~S. Rzeszotarski, L.~J. Singerman, and J.~M. Chokreff, \enquote{The
   detection and quantification of retinopathy using digital angiograms,}
@@ -338,11 +362,6 @@ D.~J. Harper, M.~Augustin, A.~Lichtenegger, \emph{et~al.}, \enquote{Retinal
   coherence tomography,} {\protect\JournalTitle{Neurophotonics}} \textbf{7},
   015006 (2020).
 
-\bibitem{bornPrinciplesOptics1999}
-M.~Born and E.~Wolf, \emph{Principles of Optics: Electromagnetic Theory of
-  Propagation, Interference and Diffraction of Light} (Cambridge University
-  Press, Cambridge, 1999), 7th ed.
-
 \bibitem{fuPhototransductionMouseRods2007}
 Y.~Fu and K.-W. Yau, \enquote{Phototransduction in mouse rods and cones,}
   {\protect\JournalTitle{Pfl{\"u}gers Archiv - European Journal of Physiology}}
@@ -405,42 +424,6 @@ G.~J. McLellan and C.~A. Rasmussen, \enquote{Optical coherence tomography for
   the evaluation of retinal and optic nerve morphology in animal subjects:
   Practical considerations,} {\protect\JournalTitle{Veterinary Ophthalmology}}
   \textbf{15}, 13--28 (2012).
-
-\bibitem{hammerLineScanningLaser2006}
-D.~X. Hammer, R.~D. Ferguson, T.~E. Ustun, \emph{et~al.},
-  \enquote{Line-scanning laser ophthalmoscope,} {\protect\JournalTitle{Journal
-  of Biomedical Optics}} \textbf{11}, 041126 (2006).
-
-\bibitem{hammerAngiographyMultifunctionalLine2012}
-D.~X. Hammer, R.~D. Ferguson, A.~H. Patel, \emph{et~al.}, \enquote{Angiography
-  with a multifunctional line scanning ophthalmoscope,}
-  {\protect\JournalTitle{Journal of Biomedical Optics}} \textbf{17}, 026008
-  (2012).
-
-\bibitem{garroneQuantitativeCoronaryAngiography2009}
-P.~Garrone, G.~Biondi-Zoccai, I.~Salvetti, \emph{et~al.}, \enquote{Quantitative
-  coronary angiography in the current era: Principles and applications,}
-  {\protect\JournalTitle{Journal of Interventional Cardiology}} \textbf{22},
-  527--536 (2009).
-
-\bibitem{georgeReproducibleEstimationRetinal1990}
-G.~S. George, M.~L. Wolbarsht, and M.~B. Landers, \enquote{Reproducible
-  estimation of retinal vessel width by computerized microdensitometry,}
-  {\protect\JournalTitle{International Ophthalmology}} \textbf{14}, 89--95
-  (1990).
-
-\bibitem{rassamAccurateVesselWidth1994}
-S.~M. Rassam, V.~Patel, O.~Brinchmann-Hansen, \emph{et~al.}, \enquote{Accurate
-  vessel width measurement from fundus photographs: A new concept,}
-  {\protect\JournalTitle{British Journal of Ophthalmology}} \textbf{78}, 24--29
-  (1994).
-
-\bibitem{muhlesteinComparisonAccuracyReproducibility1997}
-J.~B. Muhlestein, Q.~Zhang, D.~J. Parker, \emph{et~al.}, \enquote{A comparison
-  of the accuracy and reproducibility of digital three-dimensional coronary
-  artery reconstructions using edge detection or videodensitometry,}
-  {\protect\JournalTitle{Computers and Biomedical Research}} \textbf{30},
-  415--426 (1997).
 
 \bibitem{frangiMultiscaleVesselEnhancement1998}
 A.~F. Frangi, W.~J. Niessen, K.~L. Vincken, and M.~A. Viergever,
