@@ -484,4 +484,22 @@ S.~A. Abbasi, D.~Mei, Y.~Wei, \emph{et~al.}, \enquote{Deconvolution techniques
   prospects,} {\protect\JournalTitle{Laser \& Photonics Reviews}} \textbf{19},
   2401394 (2025).
 
+\bibitem{plonerQuantitativeOpticalCoherence2016}
+S.~B. Ploner, E.~M. Moult, W.~Choi, \emph{et~al.}, \enquote{Toward quantitative
+  optical coherence tomography angiography: {{Visualizing}} blood flow speeds
+  in ocular: {{Pathology}} using variable interscan time analysis,}
+  {\protect\JournalTitle{Retina}} \textbf{36}, S118--S126 (2016).
+
+\bibitem{yunMotionArtifactsOptical2004}
+S.~H. Yun, G.~J. Tearney, J.~F. {de Boer}, and B.~E. Bouma, \enquote{Motion
+  artifacts in optical coherence tomography with frequency-domain ranging,}
+  {\protect\JournalTitle{Optics Express}} \textbf{12}, 2977--2998 (2004).
+
+\bibitem{waltherSignalPowerDecrease2010}
+J.~Walther, G.~Mueller, H.~Morawietz, and E.~Koch, \enquote{Signal power
+  decrease due to fringe washout as an extension of the limited doppler flow
+  measurement range in spectral domain optical coherence tomography,}
+  {\protect\JournalTitle{Journal of Biomedical Optics}} \textbf{15}, 041511
+  (2010).
+
 \end{thebibliography}
