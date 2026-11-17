@@ -175,6 +175,36 @@ H.~Lee, M.~Lee, H.~Chung, and H.~C. Kim, \enquote{Quantification of retinal
   vessel tortuosity in diabetic retinopathy using optical coherence tomography
   angiography,} {\protect\JournalTitle{Retina}} \textbf{38}, 976--985 (2018).
 
+\bibitem{choiUltrahighSpeedSweptSourceOptical2015}
+W.~Choi, E.~M. Moult, N.~K. Waheed, \emph{et~al.},
+  \enquote{Ultrahigh-{{Speed}}, {{Swept-Source Optical Coherence Tomography
+  Angiography}} in {{Nonexudative Age-Related Macular Degeneration}} with
+  {{Geographic Atrophy}},} {\protect\JournalTitle{Ophthalmology}} \textbf{122},
+  2532--2544 (2015).
+
+\bibitem{wangAutocorrelationOpticalCoherence2010}
+Y.~Wang and R.~Wang, \enquote{Autocorrelation optical coherence tomography for
+  mapping transverse particle-flow velocity,} {\protect\JournalTitle{Optics
+  Letters}} \textbf{35}, 3538--3540 (2010).
+
+\bibitem{srinivasanOCTMethodsCapillary2012}
+V.~J. Srinivasan, H.~Radhakrishnan, E.~H. Lo, \emph{et~al.}, \enquote{{{OCT}}
+  methods for capillary velocimetry,} {\protect\JournalTitle{Biomedical Optics
+  Express}} \textbf{3}, 612--629 (2012).
+
+\bibitem{binottiAutomatedImageThreshold2022}
+W.~W. Binotti, D.~Saukkonen, Y.~Seyed-Razavi, \emph{et~al.}, \enquote{Automated
+  image threshold method comparison for conjunctival vessel quantification on
+  optical coherence tomography angiography,}
+  {\protect\JournalTitle{Translational Vision Science \& Technology}}
+  \textbf{11}, 15 (2022).
+
+\bibitem{chuQuantificationChoriocapillarisPhansalkar2020}
+Z.~Chu, Y.~Cheng, Q.~Zhang, \emph{et~al.}, \enquote{Quantification of
+  choriocapillaris with {Phansalkar} local thresholding: pitfalls to avoid,}
+  {\protect\JournalTitle{American Journal of Ophthalmology}} \textbf{213},
+  161--176 (2020).
+
 \bibitem{mehtaImpactBinarizationThresholding2019}
 N.~Mehta, K.~Liu, A.~Y. Alibhai, \emph{et~al.}, \enquote{Impact of binarization
   thresholding and brightness/contrast adjustment methodology on optical
@@ -219,24 +249,46 @@ J.~Hong, M.~Ke, B.~Tan, \emph{et~al.}, \enquote{Effect of vessel enhancement
   swept-source optical coherence tomography angiography,}
   {\protect\JournalTitle{Scientific Reports}} \textbf{10}, 22179 (2020).
 
+\bibitem{anvariArtifactsOpticalCoherence2021}
+P.~Anvari, M.~Ashrafkhorasani, A.~Habibi, and K.~G. Falavarjani,
+  \enquote{Artifacts in optical coherence tomography angiography,}
+  {\protect\JournalTitle{Journal of Ophthalmic \& Vision Research}}
+  \textbf{16}, 271--286 (2021).
+
+\bibitem{spaideImageArtifactsOptical2015}
+R.~F. Spaide, J.~G. Fujimoto, and N.~K. Waheed, \enquote{Image artifacts in
+  optical coherence tomography angiography,} {\protect\JournalTitle{Retina}}
+  \textbf{35}, 2163--2180 (2015).
+
+\bibitem{liBloodVesselTail2022}
+Y.~Li and J.~Tang, \enquote{Blood vessel tail artifacts suppression in optical
+  coherence tomography angiography,} {\protect\JournalTitle{Neurophotonics}}
+  \textbf{9}, 021906 (2022).
+
+\bibitem{zhangProjectionresolvedOpticalCoherence2016}
+M.~Zhang, T.~S. Hwang, J.~P. Campbell, \emph{et~al.},
+  \enquote{Projection-resolved optical coherence tomographic angiography,}
+  {\protect\JournalTitle{Biomedical Optics Express}} \textbf{7}, 816--828
+  (2016).
+
+\bibitem{zhouAdaptiveDynamicAnalysisbased2023}
+J.~Zhou, Y.~Li, and J.~Tang, \enquote{Adaptive dynamic analysis-based optical
+  coherence tomography angiography for blood vessel projection artifact
+  suppression,} {\protect\JournalTitle{Biomedical Optics Express}} \textbf{14},
+  477--488 (2023).
+
+\bibitem{stefanDeepLearningToolbox2020}
+S.~Stefan and J.~Lee, \enquote{Deep learning toolbox for automated enhancement,
+  segmentation, and graphing of cortical optical coherence tomography
+  microangiograms,} {\protect\JournalTitle{Biomedical Optics Express}}
+  \textbf{11}, 7325--7342 (2020).
+
 \bibitem{cimallaShearFlowinducedOptical2011}
 P.~Cimalla, J.~Walther, M.~Mittasch, and E.~Koch, \enquote{Shear flow-induced
   optical inhomogeneity of blood assessed in vivo and in vitro by spectral
   domain optical coherence tomography in the 1.3 {$\mu$}m wavelength range,}
   {\protect\JournalTitle{Journal of Biomedical Optics}} \textbf{16}, 116020
   (2011).
-
-\bibitem{zhuVisibilityMicrovesselsOptical2020}
-J.~Zhu, M.~T. Bernucci, C.~W. Merkle, and V.~J. Srinivasan, \enquote{Visibility
-  of microvessels in optical coherence tomography angiography depends on
-  angular orientation,} {\protect\JournalTitle{Journal of Biophotonics}}
-  \textbf{13}, e202000090 (2020).
-
-\bibitem{bernucciInvestigationArtifactsRetinal2018}
-M.~T. Bernucci, C.~W. Merkle, and V.~J. Srinivasan, \enquote{Investigation of
-  artifacts in retinal and choroidal {OCT} angiography with a contrast agent,}
-  {\protect\JournalTitle{Biomedical Optics Express}} \textbf{9}, 1020--1040
-  (2018).
 
 \bibitem{panUltrasensitiveDetection3D2014}
 Y.~Pan, J.~You, N.~D. Volkow, \emph{et~al.}, \enquote{Ultrasensitive detection
@@ -255,6 +307,30 @@ C.~W. Merkle and V.~J. Srinivasan, \enquote{Laminar microvascular transit time
   distribution in the mouse somatosensory cortex revealed by dynamic contrast
   optical coherence tomography,} {\protect\JournalTitle{NeuroImage}}
   \textbf{125}, 350--362 (2016).
+
+\bibitem{zhuVisibilityMicrovesselsOptical2020}
+J.~Zhu, M.~T. Bernucci, C.~W. Merkle, and V.~J. Srinivasan, \enquote{Visibility
+  of microvessels in optical coherence tomography angiography depends on
+  angular orientation,} {\protect\JournalTitle{Journal of Biophotonics}}
+  \textbf{13}, e202000090 (2020).
+
+\bibitem{bernucciInvestigationArtifactsRetinal2018}
+M.~T. Bernucci, C.~W. Merkle, and V.~J. Srinivasan, \enquote{Investigation of
+  artifacts in retinal and choroidal {OCT} angiography with a contrast agent,}
+  {\protect\JournalTitle{Biomedical Optics Express}} \textbf{9}, 1020--1040
+  (2018).
+
+\bibitem{tangNormalizedFieldAutocorrelation2019}
+J.~Tang, S.~E. Erdener, S.~Sunil, and D.~A. Boas, \enquote{Normalized field
+  autocorrelation function-based optical coherence tomography three-dimensional
+  angiography,} {\protect\JournalTitle{Journal of Biomedical Optics}}
+  \textbf{24}, 036005 (2019).
+
+\bibitem{glandorfBesselBeamOptical2024}
+L.~Glandorf, B.~Wittmann, J.~Droux, \emph{et~al.}, \enquote{Bessel beam optical
+  coherence microscopy enables multiscale assessment of cerebrovascular network
+  morphology and function,} {\protect\JournalTitle{Light: Science \&
+  Applications}} \textbf{13}, 307 (2024).
 
 \bibitem{hammerLineScanningLaser2006}
 D.~X. Hammer, R.~D. Ferguson, T.~E. Ustun, \emph{et~al.},
@@ -379,6 +455,17 @@ M.~Augustin, D.~J. Harper, C.~W. Merkle, \emph{et~al.}, \enquote{Optical
   {\protect\JournalTitle{Translational Vision Science \& Technology}}
   \textbf{9}, 15 (2020).
 
+\bibitem{radhakrishnanMultiparametricOpticalCoherence2013}
+H.~Radhakrishnan and V.~J. Srinivasan, \enquote{Multiparametric optical
+  coherence tomography imaging of the inner retinal hemodynamic response to
+  visual stimulation,} {\protect\JournalTitle{Journal of Biomedical Optics}}
+  \textbf{18}, 086010 (2013).
+
+\bibitem{sonFunctionalOCTReveals2024}
+T.~Son, G.~Ma, and X.~Yao, \enquote{Functional {OCT} reveals anisotropic
+  changes of retinal flicker-evoked vasodilation,}
+  {\protect\JournalTitle{Optics Letters}} \textbf{49}, 2121--2124 (2024).
+
 \bibitem{augustinMultifunctionalOCTEnables2016}
 M.~Augustin, S.~Fialov{\'a}, T.~Himmel, \emph{et~al.},
   \enquote{Multi-functional {{OCT}} enables longitudinal study of retinal
@@ -431,17 +518,6 @@ A.~F. Frangi, W.~J. Niessen, K.~L. Vincken, and M.~A. Viergever,
   Computing and Computer-Assisted Intervention --- {MICCAI}'98,}  vol. 1496 of
   \emph{Lecture Notes in Computer Science} (Springer, Berlin, Heidelberg,
   1998), pp. 130--137.
-
-\bibitem{sonFunctionalOCTReveals2024}
-T.~Son, G.~Ma, and X.~Yao, \enquote{Functional {OCT} reveals anisotropic
-  changes of retinal flicker-evoked vasodilation,}
-  {\protect\JournalTitle{Optics Letters}} \textbf{49}, 2121--2124 (2024).
-
-\bibitem{radhakrishnanMultiparametricOpticalCoherence2013}
-H.~Radhakrishnan and V.~J. Srinivasan, \enquote{Multiparametric optical
-  coherence tomography imaging of the inner retinal hemodynamic response to
-  visual stimulation,} {\protect\JournalTitle{Journal of Biomedical Optics}}
-  \textbf{18}, 086010 (2013).
 
 \bibitem{polakInfluenceFlickerFrequency2002}
 K.~Polak, L.~Schmetterer, and C.~E. Riva, \enquote{Influence of flicker

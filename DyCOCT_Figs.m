@@ -8,7 +8,7 @@ clear
 save_figs   = 1;    % write figure PDFs (exportgraphics)
 
 %% Output directory for individual subplot PDFs
-out_dir = 'C:\Users\BM-Optik01\ownCloud\Vessel Underestimation\figures';
+out_dir = 'C:\Users\BM-Optik01\ownCloud\Characterising Correcting Vessel Underestimation\figures';
 if save_figs && ~exist(out_dir,'dir'); mkdir(out_dir); end
 
 %% Data
@@ -79,6 +79,65 @@ px_um = 2;                      % um per pixel, lateral and axial
 
 sb_px = sb_um / px_um;          % scale bar length in pixels
 
+%% Zoomed single-vessel crops for panels (a)-(c)
+% A square crop of one vessel at each contrast phase, to show the hourglass
+% appearance pre-contrast and how the lumen fills in with Intralipid at peak
+% and post-contrast (reviewer comment on lines 68-69). The same crop and the
+% same display range are used for all three phases, so the crops are directly
+% comparable with each other and with panels (a)-(c).
+zoom_on     = 1;            % show the zoomed crop as an inset on (a)-(c)
+zoom_files  = 0;            % also write the crops as separate PDFs
+mark_crop   = 1;            % outline the crop on panels (a)-(c)
+zoom_half   = 24;           % half-width of the square crop (px): 48 px = 96 um
+zoom_ctr    = [];           % [row col] of the crop centre in the displayed
+                            % B-scan. [] picks the brightest vessel-sized spot
+                            % in the post-contrast slab and prints it, so it can
+                            % be checked and pasted back in here.
+zoom_clim   = clim_bscan;   % same display range as panels (a)-(c)
+zoom_lw     = 2;            % width of the crop outline on (a)-(c)
+zoom_col    = 'w';          % crop outline and inset frame, so the eye links them.
+                            % Neutral on purpose: blue, green and red already mean
+                            % the contrast phases, and yellow sits too close to the
+                            % bright green used for peak.
+zoom_file   = {'dycoct_a_zoom.pdf', 'dycoct_b_zoom.pdf', 'dycoct_c_zoom.pdf'};
+
+% Inset placement. It sits in the bottom-right corner below the slab box: its
+% frame's outer right edge lines up with the slab box's outer right edge, and
+% its gap to the bottom of the image equals its gap to the right edge. The
+% magnification is inset_side divided by the crop width, and is printed when
+% the script runs.
+inset_side   = 152;         % rows; doubled on request, so it now runs past the RPE band
+slab_lw      = 3;           % line width of the slab box (points)
+
+% Mean B-scan angiogram of each phase, shared by panels (a)-(c) and the crops
+bimg = cell(1,3);
+for p = 1:3
+    bimg{p} = mean(angio(bscan_depth,:,phase_range{p}),3);
+end
+
+if zoom_on
+    [nzb, nxb] = size(bimg{1});
+    if isempty(zoom_ctr)
+        % Smooth with a box the size of a large vessel (~50 um) and take the
+        % maximum within the projected slab, using the post-contrast image
+        % where the lumen is filled and the vessel is most compact.
+        k  = 25;
+        sm = conv2(bimg{3}, ones(k)/k^2, 'same');
+        slab_rows = 1:min(depth_range(end) - bscan_depth(1) + 1, nzb);
+        mask = false(nzb, nxb); mask(slab_rows,:) = true;
+        sm(~mask) = -Inf;
+        [~, ix] = max(sm(:));
+        [zr, zc] = ind2sub(size(sm), ix);
+        zoom_ctr = [zr zc];
+        fprintf('Zoom centre (auto): [%d %d]  - paste into zoom_ctr to fix it\n', zr, zc);
+    end
+    % keep the whole square inside the image
+    zr = min(max(zoom_ctr(1), zoom_half + 1), nzb - zoom_half + 1);
+    zc = min(max(zoom_ctr(2), zoom_half + 1), nxb - zoom_half + 1);
+    zy = [zr - zoom_half - 0.5, zr + zoom_half - 0.5];   % limits in pixel units
+    zx = [zc - zoom_half - 0.5, zc + zoom_half - 0.5];
+end
+
 %% Panels (a)-(c) - B-scan angiograms at each contrast phase
 
 phase_file  = {'dycoct_a.pdf', 'dycoct_b.pdf', 'dycoct_c.pdf'};
@@ -104,7 +163,7 @@ box_in  = 2;
 
 for p = 1:3
     figure;
-    imagesc(mean(angio(bscan_depth,:,phase_range{p}),3), clim_bscan);
+    imagesc(bimg{p}, clim_bscan);
     colormap(gray)
     axis image   % equal aspect AND tight limits; axis equal pads the limits
                  % out to the figure shape, which puts anything positioned
@@ -114,19 +173,70 @@ for p = 1:3
     xlb = xlim; ylb = ylim;
     rectangle('Position', [xlb(1)+box_in, ylb(1)+box_in, ...
         diff(xlb)-2*box_in, y_slab-ylb(1)-box_in], ...
-        'EdgeColor', phase_ecol{p}, 'LineWidth', 3);
+        'EdgeColor', phase_ecol{p}, 'LineWidth', slab_lw);
+    % outline of the zoomed crop, dashed so it reads as a source region
+    if zoom_on && mark_crop
+        rectangle('Position', [zx(1), zy(1), diff(zx), diff(zy)], ...
+            'EdgeColor', zoom_col, 'LineStyle', '--', 'LineWidth', zoom_lw);
+    end
+    % the crop itself, magnified into the outer nuclear layer on the right
+    if zoom_on
+        crop = bimg{p}(zr-zoom_half : zr+zoom_half-1, zc-zoom_half : zc+zoom_half-1);
+        n    = size(crop, 1);
+        s    = inset_side / n;                      % display px per crop px
+        % Line widths are in points, so convert them to data units (px) at the
+        % final figure size before lining up the outer edges of the frames.
+        set(gcf, 'Position', figpos); drawnow;
+        au = get(gca, 'Units'); set(gca, 'Units', 'points');
+        ap = get(gca, 'Position'); set(gca, 'Units', au);
+        px_per_pt = max(diff(xlb)/ap(3), diff(ylb)/ap(4));   % axis image: the tighter side sets it
+        x_out = xlb(2) - box_in + 0.5*slab_lw*px_per_pt;     % slab box, outer right edge
+        gap   = xlb(2) - x_out;                              % its gap to the image edge
+        half  = 0.5*zoom_lw*px_per_pt;                       % half the inset frame width
+        ix0   = x_out - half - inset_side;                   % inset frame path, left
+        it0   = ylb(2) - gap - half - inset_side;            % inset frame path, top
+        image([ix0 + s/2, ix0 + inset_side - s/2], ...
+              [it0 + s/2, it0 + inset_side - s/2], crop, 'CDataMapping', 'scaled');
+        rectangle('Position', [ix0, it0, inset_side, inset_side], ...
+            'EdgeColor', zoom_col, 'LineWidth', zoom_lw);
+        % no scale bar on the inset: next to the 100 um bar it read as 100 um too
+        if p == 1
+            fprintf('Inset: %d px crop shown at %d px, i.e. %.2fx; rows %.1f-%.1f (slab ends at row %d); edge gap %.2f px\n', ...
+                n, inset_side, s, it0, it0 + inset_side, y_slab, gap);
+        end
+    end
     % bottom left: the dark region below the bright band, and clear of the
     % scale bar in the bottom right
     text(0.02, 0.02, phase_label{p}, 'Units','normalized', ...
         'Color', phase_lcol{p}, 'FontSize', fs_panel, 'FontWeight','bold', ...
         'HorizontalAlignment','left', 'VerticalAlignment','bottom');
-    % scale bar, bottom right
+    % scale bar, bottom right; with the inset shown, it moves left to clear it
     yl = ylim; xl = xlim;
     x0 = xl(2) - 0.04*diff(xl) - sb_px;
+    if zoom_on; x0 = min(x0, ix0 - 14 - sb_px); end   % 14 px gap to the inset frame
     y0 = yl(2) - 0.08*diff(yl);
     hold on; plot([x0 x0+sb_px], [y0 y0], 'w', 'LineWidth', sb_lw);
     set(gcf,'Position',figpos);
     if save_figs; exportgraphics(gcf, fullfile(out_dir,phase_file{p}), 'ContentType','vector','BackgroundColor','white'); end
+end
+
+%% Zoomed crops - one square per phase, same region and display range
+% Only needed as separate files now that the crop sits inside (a)-(c).
+if zoom_on && zoom_files
+    for p = 1:3
+        figure;
+        imagesc(bimg{p}, zoom_clim);
+        colormap(gray)
+        axis image      % equal aspect; the limits are then narrowed to the crop
+        xlim(zx); ylim(zy);
+        axis off
+        hold on;
+        % phase-coloured frame, inset half a pixel so it is not clipped
+        rectangle('Position', [zx(1)+0.5, zy(1)+0.5, diff(zx)-1, diff(zy)-1], ...
+            'EdgeColor', phase_ecol{p}, 'LineWidth', 4);
+        set(gcf,'Position',[100 100 600 600]);
+        if save_figs; exportgraphics(gcf, fullfile(out_dir,zoom_file{p}), 'ContentType','vector','BackgroundColor','white'); end
+    end
 end
 
 %% Panel (d) - MIP of the vessel cross-sections over time
