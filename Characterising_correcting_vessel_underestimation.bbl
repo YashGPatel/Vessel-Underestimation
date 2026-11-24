@@ -455,6 +455,25 @@ M.~Augustin, D.~J. Harper, C.~W. Merkle, \emph{et~al.}, \enquote{Optical
   {\protect\JournalTitle{Translational Vision Science \& Technology}}
   \textbf{9}, 15 (2020).
 
+\bibitem{liuNewApproachDeliver2017}
+L.~Liu, Q.~Ye, M.~Lu, \emph{et~al.}, \enquote{A new approach to deliver
+  anti-cancer nanodrugs with reduced off-target toxicities and improved
+  efficiency by temporarily blunting the reticuloendothelial system with
+  {Intralipid},} {\protect\JournalTitle{Scientific Reports}} \textbf{7}, 16106
+  (2017).
+
+\bibitem{patelBloodFlowAnalysis2026}
+Y.~Patel, B.~Baumann, and C.~Merkle, \enquote{Blood flow analysis of retinal
+  neovascularisations in a {{VLDLR}} mouse model using contrast-enhanced
+  optical coherence tomography,} {\protect\JournalTitle{Biomedical Optics
+  Express}} \textbf{17}, 991--1010 (2026).
+
+\bibitem{graberMassiveSubcutaneousFat1964}
+R.~Graber and H.~Laufman, \enquote{Massive subcutaneous fat necrosis after
+  extravasation of intravenous infusion of fat emulsion,}
+  {\protect\JournalTitle{American Journal of Surgery}} \textbf{107}, 878--880
+  (1964).
+
 \bibitem{radhakrishnanMultiparametricOpticalCoherence2013}
 H.~Radhakrishnan and V.~J. Srinivasan, \enquote{Multiparametric optical
   coherence tomography imaging of the inner retinal hemodynamic response to
@@ -495,6 +514,11 @@ T.~T. Hormel, J.~Wang, S.~T. Bailey, \emph{et~al.}, \enquote{Maximum value
   projection produces better en face {OCT} angiograms than mean value
   projection,} {\protect\JournalTitle{Biomedical Optics Express}} \textbf{9},
   6412--6424 (2018).
+
+\bibitem{schindelinFijiOpensourcePlatform2012}
+J.~Schindelin, I.~Arganda-Carreras, E.~Frise, \emph{et~al.}, \enquote{Fiji: an
+  open-source platform for biological-image analysis,}
+  {\protect\JournalTitle{Nature Methods}} \textbf{9}, 676--682 (2012).
 
 \bibitem{fengHighresolutionStructuralFunctional2023}
 G.~Feng, A.~Joseph, K.~Dholakia, \emph{et~al.}, \enquote{High-resolution
